@@ -1,4 +1,4 @@
-f#!/bin/bash
+#!/bin/bash
 
 if [[ $USER != "root" ]]; then
 	echo "Maaf, Anda harus menjalankan ini sebagai root"
@@ -300,8 +300,8 @@ wget -O /usr/bin/user-active-list $source/debian7/user-active-list.sh
 wget -O /usr/bin/user-add $source/debian7/user-add.sh
 wget -O /usr/bin/user-add-pptp $source/debian7/user-add-pptp.sh
 wget -O /usr/bin/user-del $source/debian7/user-del.sh
-wget -O /usr/bin/disable-user-expire $source/Debian7/disable-user-expire.sh
-wget -O /usr/bin/delete-user-expire $source/Debian7/delete-user-expire.sh
+wget -O /usr/bin/disable-user-expire $source/debian7/disable-user-expire.sh
+wget -O /usr/bin/delete-user-expire $source/debian7/delete-user-expire.sh
 wget -O /usr/bin/banned-user $source/debian7/banned-user.sh
 wget -O /usr/bin/user-expire-list $source/debian7/user-expire-list.sh
 wget -O /usr/bin/user-gen $source/debian7/user-gen.sh
