@@ -18,11 +18,11 @@ fi
 #vps="zvur";
 vps="aneka";
 
-if [[ $vps = "zvur" ]]; then
+#if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
 	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
-fi
+#fi
 
 # go to root
 cd
