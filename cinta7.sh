@@ -1,4 +1,4 @@
-#!/bin/bash
+f#!/bin/bash
 
 if [[ $USER != "root" ]]; then
 	echo "Maaf, Anda harus menjalankan ini sebagai root"
@@ -60,7 +60,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
 
 # set repo
-wget -O /etc/apt/sources.list $source/Debian7/sources.list.debian7
+wget -O /etc/apt/sources.list $source/debian7/sources.list.debian7
 wget http://www.dotdeb.org/dotdeb.gpg
 wget http://www.webmin.com/jcameron-key.asc
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
@@ -98,7 +98,7 @@ service vnstat restart
 
 # install screenfetch
 cd
-wget $source/Debian7/screenfetch-dev
+wget $source/debian7/screenfetch-dev
 mv screenfetch-dev /usr/bin/screenfetch
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
@@ -108,11 +108,11 @@ echo "screenfetch" >> .profile
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf $source/Debian7/nginx.conf
+wget -O /etc/nginx/nginx.conf $source/debian7/nginx.conf
 mkdir -p /home/vps/public_html
 echo "<pre>Modified by elang overdosis n' yusuf ardiansyah</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf $source/Debian7/vps.conf
+wget -O /etc/nginx/conf.d/vps.conf $source/debian7/vps.conf
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 service php5-fpm restart
 service nginx restart
@@ -127,9 +127,9 @@ echo "$PASS" >> pass.txt
 cd
 
 # install badvpn
-wget -O /usr/bin/badvpn-udpgw $source/Debian7/badvpn-udpgw
+wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw
 if [[ $OS == "x86_64" ]]; then
-  wget -O /usr/bin/badvpn-udpgw $source/Debian7/badvpn-udpgw64
+  wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw64
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
@@ -137,8 +137,8 @@ screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # install mrtg
 #apt-get update;apt-get -y install snmpd;
-wget -O /etc/snmp/snmpd.conf $source/Debian7/snmpd.conf
-wget -O /root/mrtg-mem $source/Debian7/mrtg-mem.sh
+wget -O /etc/snmp/snmpd.conf $source/debian7/snmpd.conf
+wget -O /root/mrtg-mem $source/debian7/mrtg-mem.sh
 chmod +x /root/mrtg-mem
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -146,7 +146,7 @@ service snmpd restart
 snmpwalk -v 1 -c public localhost 1.3.6.1.4.1.2021.10.1.3.1
 mkdir -p /home/vps/public_html/mrtg
 cfgmaker --zero-speed 100000000 --global 'WorkDir: /home/vps/public_html/mrtg' --output /etc/mrtg.cfg public@localhost
-curl $source/Debian7/mrtg.conf >> /etc/mrtg.cfg
+curl $source/debian7/mrtg.conf >> /etc/mrtg.cfg
 sed -i 's/WorkDir: \/var\/www\/mrtg/# WorkDir: \/var\/www\/mrtg/g' /etc/mrtg.cfg
 sed -i 's/# Options\[_\]: growright, bits/Options\[_\]: growright/g' /etc/mrtg.cfg
 indexmaker --output=/home/vps/public_html/mrtg/index.html /etc/mrtg.cfg
@@ -186,7 +186,7 @@ service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
-wget $source/Debian7/vnstat_php_frontend-1.5.1.tar.gz
+wget $source/debian7/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -261,14 +261,14 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # install squid3
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf $source/Debian7/squid3.conf
+wget -O /etc/squid3/squid.conf $source/debian7/squid3.conf
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
 # install webmin
 cd
 #wget -O webmin-current.deb http://prdownloads.sourceforge.net/webadmin/webmin_1.760_all.deb
-wget -O webmin-current.deb $source/Debian7/webmin-current.deb
+wget -O webmin-current.deb $source/debian7/webmin-current.deb
 dpkg -i --force-all webmin-current.deb
 apt-get -y -f install;
 #sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
@@ -278,38 +278,38 @@ service webmin restart
 service vnstat restart
 
 # install pptp vpn
-wget $source/Debian7/pptp.sh
+wget $source/debian7/pptp.sh
 chmod +x pptp.sh
 ./pptp.sh
 
 # download script
 cd
-wget -O /usr/bin/benchmark $source/Debian7/benchmark.sh
-wget -O /usr/bin/speedtest $source/Debian7/speedtest_cli.py
-wget -O /usr/bin/ps-mem $source/Debian7/ps_mem.py
+wget -O /usr/bin/benchmark $source/debian7/benchmark.sh
+wget -O /usr/bin/speedtest $source/debian7/speedtest_cli.py
+wget -O /usr/bin/ps-mem $source/debian7/ps_mem.py
 if [[ $vps = "zvur" ]]; then
-	wget -O /etc/issue.net $source/Debian7/bannerZ
+	wget -O /etc/issue.net $source/debian7/bannerZ
 else
-	wget -O /etc/issue.net $source/Debian7/bannerA
+	wget -O /etc/issue.net $source/debian7/bannerA
 fi
 # encrypted script
 #wget -O /usr/bin/autokill $source/Debian7/autokill.sh
-wget -O /usr/bin/dropmon $source/Debian7/dropmon.sh
-wget -O /usr/bin/menu $source/Debian7/menu.sh
-wget -O /usr/bin/user-active-list $source/Debian7/user-active-list.sh
-wget -O /usr/bin/user-add $source/Debian7/user-add.sh
-wget -O /usr/bin/user-add-pptp $source/Debian7/user-add-pptp.sh
-wget -O /usr/bin/user-del $source/Debian7/user-del.sh
+wget -O /usr/bin/dropmon $source/debian7/dropmon.sh
+wget -O /usr/bin/menu $source/debian7/menu.sh
+wget -O /usr/bin/user-active-list $source/debian7/user-active-list.sh
+wget -O /usr/bin/user-add $source/debian7/user-add.sh
+wget -O /usr/bin/user-add-pptp $source/debian7/user-add-pptp.sh
+wget -O /usr/bin/user-del $source/debian7/user-del.sh
 wget -O /usr/bin/disable-user-expire $source/Debian7/disable-user-expire.sh
 wget -O /usr/bin/delete-user-expire $source/Debian7/delete-user-expire.sh
-wget -O /usr/bin/banned-user $source/Debian7/banned-user.sh
-wget -O /usr/bin/user-expire-list $source/Debian7/user-expire-list.sh
-wget -O /usr/bin/user-gen $source/Debian7/user-gen.sh
-wget -O /usr/bin/user-limit $source/Debian7/user-limit.sh
-wget -O /usr/bin/user-list $source/Debian7/user-list.sh
-wget -O /usr/bin/user-login $source/Debian7/user-login.sh
-wget -O /usr/bin/user-pass $source/Debian7/user-pass.sh
-wget -O /usr/bin/user-renew $source/Debian7/user-renew.sh
+wget -O /usr/bin/banned-user $source/debian7/banned-user.sh
+wget -O /usr/bin/user-expire-list $source/debian7/user-expire-list.sh
+wget -O /usr/bin/user-gen $source/debian7/user-gen.sh
+wget -O /usr/bin/user-limit $source/debian7/user-limit.sh
+wget -O /usr/bin/user-list $source/debian7/user-list.sh
+wget -O /usr/bin/user-login $source/debian7/user-login.sh
+wget -O /usr/bin/user-pass $source/debian7/user-pass.sh
+wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
 
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
