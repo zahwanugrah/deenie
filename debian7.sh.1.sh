@@ -15,28 +15,28 @@ if [[ $ether = "" ]]; then
         ether=eth0
 fi
 
-#vps="zvur";
-vps="aneka";
 
-if [[ $vps = "zvur" ]]; then
-	source="http://scripts.gapaiasa.com"
-else
-	source="http://anekascript.anekavps.us"
-fi
+#vps="aneka";
+
+#if [[ $vps = "zvur" ]]; then
+	#source="http://scripts.gapaiasa.com"
+#else
+	#source="http://anekascript.anekavps.us"
+#fi
 
 # go to root
-cd
+#cd
 
 # check registered ip
-wget -q -O IP $source/IP.txt
-if ! grep -w -q $MYIP IP; then
-	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: Yuri Bhuana (fb.com/youree82 atau 0858 1500 2021)"
-	else
-		echo "Hubungi: Turut Dwi Hariyanto (fb.com/turut.dwi.hariyanto atau 085735313729)"
-	fi
-	rm -f /root/IP
+#wget -q -O IP $source/IP.txt
+#if ! grep -w -q $MYIP IP; then
+	#echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
+	#if [[ $vps = "zvur" ]]; then
+		#echo "Hubungi: Yuri Bhuana (fb.com/youree82 atau 0858 1500 2021)"
+	#else
+		#echo "Hubungi: Turut Dwi Hariyanto (fb.com/turut.dwi.hariyanto atau 085735313729)"
+	#fi
+	#rm -f /root/IP
 	exit
 fi
 
