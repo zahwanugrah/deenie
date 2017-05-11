@@ -175,9 +175,9 @@ service dropbear restart
 
 # upgrade dropbear 2014
 apt-get install zlib1g-dev
-wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2012.55.tar.bz2
-bzip2 -cd dropbear-2012.55.tar.bz2 | tar xvf -
-cd dropbear-2012.55
+wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2016.74.tar.bz2
+bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
+cd dropbear-2016.74
 ./configure
 make && make install
 mv /usr/sbin/dropbear /usr/sbin/dropbear1
@@ -430,6 +430,6 @@ echo "=======================================================" | tee -a log-inst
 cd ~/
 rm -f /root/cinta7.sh
 rm -f /root/pptp.sh
-rm -f /root/dropbear-2012.55.tar.bz2
-rm -rf /root/dropbear-2012.55
+rm -f /root/dropbear-2016.74.tar.bz2
+rm -rf /root/dropbear-2016.74
 rm -f /root/IP
