@@ -71,6 +71,7 @@ apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove sendmail*;
 apt-get -y --purge remove bind9*;
+apt-get -y --purge remove dropbear*;
 #apt-get -y autoremove;
 
 # update
@@ -103,6 +104,15 @@ mv screenfetch-dev /usr/bin/screenfetch
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
+
+# text pelangi
+sudo apt-get install ruby -y
+sudo gem install lolcat
+
+# text warna
+cd
+rm -rf .bashrc
+wget -O .bashrc $source/debian7/.bashrc
 
 # install webserver
 cd
@@ -156,18 +166,29 @@ if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; e
 cd
 
 # setting port ssh
-sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
+#sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 #sed -i '/Port 22/a Port 80' /etc/ssh/sshd_config
+#sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
+sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
 sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
 service ssh restart
 
 # install dropbear
 #apt-get -y update
-apt-get -y install dropbear
+#apt-get -y install dropbear
+#sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
+#sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
+#sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
+#echo "/bin/false" >> /etc/shells
+#echo "/usr/sbin/nologin" >> /etc/shells
+#service ssh restart
+#service dropbear restart
+
+apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=80/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 443"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 service ssh restart
@@ -258,6 +279,7 @@ echo '.....done'
 echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
+q
 
 # install squid3
 apt-get -y install squid3
@@ -287,12 +309,7 @@ cd
 wget -O /usr/bin/benchmark $source/debian7/benchmark.sh
 wget -O /usr/bin/speedtest $source/debian7/speedtest_cli.py
 wget -O /usr/bin/ps-mem $source/debian7/ps_mem.py
-
-	
-
-	wget -O /etc/issue.net $source/debian7/bannerA
-
-# encrypted script
+wget -O /etc/issue.net $source/debian7/bannerA
 #wget -O /usr/bin/autokill $source/Debian7/autokill.sh
 wget -O /usr/bin/dropmon $source/debian7/dropmon.sh
 wget -O /usr/bin/menu $source/debian7/menu.sh
@@ -314,7 +331,6 @@ wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
 chmod +x /usr/bin/ps-mem
-
 #chmod +x /usr/bin/autokill
 chmod +x /usr/bin/dropmon
 chmod +x /usr/bin/menu
@@ -363,8 +379,8 @@ echo "=======================================================" | tee -a log-inst
 echo "Service :" | tee -a log-install.txt
 echo "---------" | tee -a log-install.txt
 echo "OpenSSH  : 22, 143" | tee -a log-install.txt
-echo "Dropbear : 443, 110, 109" | tee -a log-install.txt
-echo "Squid3   : 80, 8000, 8080, 3128 (limit to IP $MYIP)" | tee -a log-install.txt
+echo "Dropbear : 443, 80" | tee -a log-install.txt
+echo "Squid3   : 8080 (limit to IP $MYIP)" | tee -a log-install.txt
 #echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)" | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300" | tee -a log-install.txt
 echo "PPTP VPN : TCP 1723" | tee -a log-install.txt
