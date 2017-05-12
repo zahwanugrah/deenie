@@ -134,12 +134,14 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	break
 	;;
 	"Ganti Password VPS")
+	clear
 	read -p "Silahkan isi password baru untuk VPS anda: " pass	
         echo "root:$pass" | chpasswd
 	echo "Ciieeee.. Ciieeeeeee.. Abis Ganti Password VPS Nie Yeeee...!!!"| boxes -d boy | lolcat
 	break
 	;;
 	"Bersihkan Cache Ram Manual")
+	clear
 	echo "Sebelum..." | lolcat
         ps-mem
 	echo 1 > /proc/sys/vm/drop_caches
@@ -199,10 +201,16 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	break
 	;;
         "Edit Banner Login")
-	
+	clear
+	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan Enter)
+2. Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" | boxes -d boy | lolcat
+	read -p "Tekan ENTER untuk melanjutkan........................ " | lolcat
+	nano /etc/issue.net
+	service dropbear restart && service ssh restart
 	break
 	;;
 	"Edit Banner Menu")
+	clear
 	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan ENTER)" | lolcat
 	echo -e "2. Membatalkan edit text (CTRL + X,lalu ketik N dan tekan ENTER)" | lolcat
 	echo ""
@@ -210,10 +218,18 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	nano /usr/bin/bannermenu
 	break
 	;;
+	"Lihat Lokasi User")
+	clear
+	user-login
+	echo "Contoh: 112.123.345.126 lalu Enter"
+        read -p "Ketik Salah Satu Alamat IP User: " userip
+        curl ipinfo.io/$userip
+        break
+	;;
 	"Quit")
-		
-		break
-		;;
+	
+	break
+	;;
 	 
         *) echo invalid option;
 	esac
