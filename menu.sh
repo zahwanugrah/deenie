@@ -43,7 +43,7 @@ date +"                            %H:%M:%S %Z" | lolcat
 echo ""
 	echo ""
 	PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" 'Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Kill Multi Login Manual" "Aktifkan Auto Kill Multi Login" "Matikan Auto Kill Multi Login" ganti Password VPS" "Used Data By Users" "Bersihkan cache ram" "Bersihkan Cache Squid" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" 'Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Kill Multi Login Manual" "Aktifkan Auto Kill Multi Login" "Matikan Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -108,17 +108,52 @@ do
         echo "* * * * * root sleep 30; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit4
         echo "* * * * * root sleep 40; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit5
         echo "* * * * * root sleep 50; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit6
-	  
-	    service cron restart
-	    service ssh restart
-	    service dropbear restart
-	    echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" | lolcat
-	    
+	service cron restart
+	service ssh restart
+	service dropbear restart
+	clear
+	echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" | lolcat
 	echo "Dasar pelit!!! user ente marah2 jangan salahkan ane ya boss
 	nanti jangan lupa di matikan boss" | boxes -d boy | lolcat
 	break
 	;;
-	
+	"Matikan Auto Kill Multi Login")
+	clear
+	rm -rf /etc/cron.d/userlimit1
+	rm -rf /etc/cron.d/userlimit2
+	rm -rf /etc/cron.d/userlimit3
+	rm -rf /etc/cron.d/userlimit4
+	rm -rf /etc/cron.d/userlimit5
+	rm -rf /etc/cron.d/userlimit6
+	service cron restart
+	service ssh restart
+	service dropbear restart
+	clear
+	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS 
+User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
+	break
+	;;
+	"Ganti Password VPS")
+	read -p "Silahkan isi password baru untuk VPS anda: " pass	
+        echo "root:$pass" | chpasswd
+	echo "Ciieeee.. Ciieeeeeee.. Abis Ganti Password VPS Nie Yeeee...!!!"| boxes -d boy | lolcat
+	break
+	;;
+	"Bersihkan Cache Ram Manual")
+	echo "Sebelum..." | lolcat
+        ps-mem
+	echo 1 > /proc/sys/vm/drop_caches
+	sleep 1
+	echo 2 > /proc/sys/vm/drop_caches
+	sleep 1
+	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
+	sleep 1
+	echo ""
+	echo "Sesudah..." | lolcat
+	ps-mem
+	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d boy | lolcat
+        break
+	;;
 	"Daftar User Aktif")
 	clear
 	user-active-list
@@ -163,7 +198,18 @@ do
 	benchmark
 	break
 	;;
-        
+        "Edit Banner Login")
+	
+	break
+	;;
+	"Edit Banner Menu")
+	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan ENTER)" | lolcat
+	echo -e "2. Membatalkan edit text (CTRL + X,lalu ketik N dan tekan ENTER)" | lolcat
+	echo ""
+	read -p "Tekan ENTER untuk melanjutkan..................."
+	nano /usr/bin/bannermenu
+	break
+	;;
 	"Quit")
 		
 		break
