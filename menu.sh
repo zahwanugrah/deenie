@@ -68,7 +68,7 @@ echo ""
 	echo -e "\e[031;1m x\e[0m) Exit"
 	echo ""
 	PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User" "Hapus User" "Buat User PPTP VPN" "Monitor User Login" "Aktifkan Kill Multi Login" "Matikan Kill Multi Login" "User Belum Kadaluarsa" "User Sudah Kadaluarsa" "Ganti Password VPS" "Used Data By Users" "bench-network" "Status Ram" "Bersihkan cache ram" "Bersihkan Cache Squid" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" Monitor User Login" "Kill Multi Login Manual" "Aktifkan Kill Multi Login" "Matikan Kill Multi Login" "User Belum Kadaluarsa" "User Sudah Kadaluarsa" "Ganti Password VPS" "Used Data By Users" "Bersihkan cache ram" "Bersihkan Cache Squid" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -92,7 +92,7 @@ do
 	user-pass
 	break
 	;;
-	"Semua User")
+	"Semua User Dan Tanggal Kadaluarsa")
 	clear
 	user-list
 	break
@@ -107,84 +107,68 @@ do
 	user-add-pptp
 	break
 	;;
-	
-		7)
-		clear
-		read -p "Isikan Port Dropbear yang akan dimonitor: " PORT
-		dropmon $PORT
-		exit
-		;;
-		8)
-		clear
-		user-login
-		exit
-		;;
-		9)
-		clear
-		read -p "Isikan Maximal Login (1-2): " MULTILOGIN
-		user-limit $MULTILOGIN
-		exit
-		;;
-		
-		11)
-		clear
-		user-active-list
-		exit
-		;;
-		12)
-		clear
-		user-expire-list
-		exit
-		;;
-		13)
-		clear
-		disable-user-expire
-		exit
-		;;
-		14)
-		clear
-		delete-user-expire
-		exit
-		;;
-		15)
-		clear
-		banned-user
-		exit
-		;;
-		16)
-		clear
-		unbanned-user
-		exit
-		;;
-		17)
-		clear
-		service dropbear restart
-		exit
-		;;
-		18)
-		clear
-		ps-mem
-		exit
-		;;
-		19)
-		clear
-		speedtest --share
-		exit
-		;;
-		20)
-		clear
-		benchmark
-		exit
-		;;
-		21)
-		clear
-		reboot
-		exit
-		;;
-		x)
-		clear
-		exit
-		;;
+	"Monitoring Dropbear Menurut Port")
+	clear
+	read -p "Isikan Port Dropbear Yang Akan Di Monitor: " PORT
+	dropmon $PORT
+	break
+	;;
+	"Monitor User Login")
+	clear
+	user-login
+	break
+	;;
+	"Kill Multi Login Manual")
+	clear
+        read -p "Isikan Maximal Login (1-2): " MULTILOGIN
+        user-limit $MULTILOGIN
+	break
+	;;
+	"Daftar User Aktif")
+	clear
+	user-active-list
+	break
+	;;
+	"Daftar User Kadaluarsa")
+	clear
+	user-expire-list
+	break
+	;;
+	"Disable User Kadaluarsa")
+	clear
+	disable-user-expire
+	break
+	;;
+	"Hapus User Kadaluarsa")
+	clear
+	delete-user-expire
+	break
+	;;
+	"Banned User")
+	clear
+	banned-user
+	break
+	;;
+	"Unbanned User")
+	clear
+	unbanned-user
+	break
+	;;
+	"Penggunaan Ram")
+	clear
+	ps-mem
+	break
+	;;
+	"Speedtest")
+	clear
+	speedtest --share
+	break
+	;;
+	"Benchmark")
+	benchmark
+	break
+	;;
+
 	esac
 done
 
