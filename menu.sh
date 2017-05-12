@@ -19,21 +19,28 @@ do
 
 	clear
 
-	echo "--------------- Selamat datang di Server - IP: $MYIP ---------------"
+	#echo "--------------- Selamat datang di Server - IP: $MYIP ---------------"
 	echo ""
-	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
-	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
-	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
-	tram=$( free -m | awk 'NR==2 {print $2}' )
-	swap=$( free -m | awk 'NR==4 {print $2}' )
-	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
+	echo ""
+	echo ""
+	#cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+	#cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+	#freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
+	#tram=$( free -m | awk 'NR==2 {print $2}' )
+	#swap=$( free -m | awk 'NR==4 {print $2}' )
+	#up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 
-	echo -e "\e[032;1mCPU model:\e[0m $cname"
-	echo -e "\e[032;1mNumber of cores:\e[0m $cores"
-	echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
-	echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
-	echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
-	echo -e "\e[032;1mSystem uptime:\e[0m $up"
+	#echo -e "\e[032;1mCPU model:\e[0m $cname"
+	#echo -e "\e[032;1mNumber of cores:\e[0m $cores"
+	#echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
+	#echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
+	#echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
+	#echo -e "\e[032;1mSystem uptime:\e[0m $up"
+	lolcat -F 0.3 -S 0 /root/bannermenu
+echo "              server: $MYIP"
+date +"                    %A, %d-%m-%Y" | lolcat
+date +"                            %H:%M:%S %Z" | lolcat
+echo ""
 	echo "------------------------------------------------------------------------------"
 	echo "Apa yang ingin Anda lakukan?"
 	echo -e "\e[031;1m 1\e[0m) Buat Akun SSH/OpenVPN (\e[34;1muser-add\e[0m)"
@@ -60,38 +67,47 @@ do
 	echo ""
 	echo -e "\e[031;1m x\e[0m) Exit"
 	echo ""
-	read -p "Masukkan pilihan anda, kemudian tekan tombol ENTER: " option1
-	case $option1 in
-		1)
-		clear
-		user-add
-		exit
-		;;
-		2)
-		clear
-		user-gen
-		exit
-		;;
-		3)
-		clear
-		user-pass
-		exit
-		;;
-		4)
-		clear
-		user-renew
-		exit
-		;;
-		5)
-		clear
-		user-del
-		exit
-		;;
-		6)
-		clear
-		user-add-pptp
-		exit
-		;;
+	PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User" "Hapus User" "Buat User PPTP VPN" "Monitor User Login" "Aktifkan Kill Multi Login" "Matikan Kill Multi Login" "User Belum Kadaluarsa" "User Sudah Kadaluarsa" "Ganti Password VPS" "Used Data By Users" "bench-network" "Status Ram" "Bersihkan cache ram" "Bersihkan Cache Squid" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Buat User SSH/OVPN")
+	clear
+        user-add
+        break
+            ;;
+	"Buat User SSH/OVPN Trial")
+	clear
+	user-gen
+	break
+	;;
+	"Perbarui User")
+	clear
+	user-renew
+	break
+	;;
+	"Ganti Passwort User SSH/OVPN")
+	clear
+	user-pass
+	break
+	;;
+	"Semua User")
+	clear
+	user-list
+	break
+	;;
+	"Hapus User")
+	clear
+	user-del
+	break
+	;;
+	"Buat User PPTP VPN")
+	clear
+	user-add-pptp
+	break
+	;;
+	
 		7)
 		clear
 		read -p "Isikan Port Dropbear yang akan dimonitor: " PORT
@@ -109,11 +125,7 @@ do
 		user-limit $MULTILOGIN
 		exit
 		;;
-		10)
-		clear
-		user-list
-		exit
-		;;
+		
 		11)
 		clear
 		user-active-list
