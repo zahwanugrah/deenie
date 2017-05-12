@@ -99,11 +99,11 @@ service vnstat restart
 
 # install screenfetch
 cd
-wget $source/debian7/screenfetch-dev
-mv screenfetch-dev /usr/bin/screenfetch
-chmod +x /usr/bin/screenfetch
-echo "clear" >> .profile
-echo "screenfetch" >> .profile
+#wget $source/debian7/screenfetch-dev
+#mv screenfetch-dev /usr/bin/screenfetch
+#chmod +x /usr/bin/screenfetch
+#echo "clear" >> .profile
+#echo "screenfetch" >> .profile
 
 #text gambar
 apt-get install boxes
