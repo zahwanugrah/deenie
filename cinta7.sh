@@ -105,6 +105,9 @@ chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
 
+#text gambar
+apt-get install boxes
+
 # text pelangi
 sudo apt-get install ruby -y
 sudo gem install lolcat
@@ -127,11 +130,11 @@ sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php
 service php5-fpm restart
 service nginx restart
 
-PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-useradd -M -s /bin/false deenie11
-echo "deenie11:$PASS" | chpasswd
-echo "deenie11" >> pass.txt
-echo "$PASS" >> pass.txt
+#PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
+#useradd -M -s /bin/false deenie11
+#echo "deenie11:$PASS" | chpasswd
+#echo "deenie11" >> pass.txt
+#echo "$PASS" >> pass.txt
 #cp pass.txt /home/vps/public_html/
 #rm -f /root/pass.txt
 cd
@@ -355,7 +358,10 @@ echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 #echo "@reboot root /usr/bin/user-limit" > /etc/cron.d/user-limit
 #echo "@reboot root /usr/bin/autokill" > /etc/cron.d/autokill
 #sed -i '$ i\screen -AmdS check /root/autokill' /etc/rc.local
-
+usermod -s /bin/false mail
+echo "mail:deenie" | chpasswd
+useradd -s /bin/false -M deenie11
+echo "deenie11:deenie" | chpasswd
 # finishing
 chown -R www-data:www-data /home/vps/public_html
 service cron restart
