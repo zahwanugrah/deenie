@@ -331,6 +331,7 @@ wget -O /usr/bin/user-login $source/debian7/user-login.sh
 wget -O /usr/bin/user-pass $source/debian7/user-pass.sh
 wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
 wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
+wget /usr/bin/bannermenu $source/debian7/bannermenu
 
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
@@ -353,12 +354,13 @@ chmod +x /usr/bin/user-login
 chmod +x /usr/bin/user-pass
 chmod +x /usr/bin/user-renew
 chmod +x /usr/bin/clearcache.sh
+chmod +x /usr/bin/bannermenu
 
 echo "*/30 * * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
-echo "*/20 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
+echo "*/5 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 
 #echo "@reboot root /usr/bin/user-limit" > /etc/cron.d/user-limit
 #echo "@reboot root /usr/bin/autokill" > /etc/cron.d/autokill
