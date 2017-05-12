@@ -43,7 +43,7 @@ date +"                            %H:%M:%S %Z" | lolcat
 echo ""
 	echo ""
 	PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" 'Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Kill Multi Login Manual" Aktifkan Kill Multi Login "Matikan Kill Multi Login" "User Belum Kadaluarsa" "User Sudah Kadaluarsa" "Ganti Password VPS" "Used Data By Users" "Bersihkan cache ram" "Bersihkan Cache Squid" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" 'Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Kill Multi Login Manual" "Aktifkan Auto Kill Multi Login" "Matikan Auto Kill Multi Login" ganti Password VPS" "Used Data By Users" "Bersihkan cache ram" "Bersihkan Cache Squid" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -95,10 +95,30 @@ do
 	;;
 	"Kill Multi Login Manual")
 	clear
-        read -p "Isikan Maximal Login (1-2): " MULTILOGIN
+        read -p "Isikan Maximal User Login (1-2): " MULTILOGIN
         user-limit $MULTILOGIN
 	break
 	;;
+	"Aktifkan Auto Kill Multi Login")
+	clear 
+	read -p "Isikan Maxsimal User Login (1-2): "MULTILOGIN
+	echo "* * * * * root /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit1
+	echo "* * * * * root sleep 10; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit2
+        echo "* * * * * root sleep 20; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit3
+        echo "* * * * * root sleep 30; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit4
+        echo "* * * * * root sleep 40; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit5
+        echo "* * * * * root sleep 50; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit6
+	  
+	    service cron restart
+	    service ssh restart
+	    service dropbear restart
+	    echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" | lolcat
+	    
+	echo "Dasar pelit!!! user ente marah2 jangan salahkan ane ya boss
+	nanti jangan lupa di matikan boss" | boxes -d boy | lolcat
+	break
+	;;
+	
 	"Daftar User Aktif")
 	clear
 	user-active-list
