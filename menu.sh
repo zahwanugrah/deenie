@@ -36,36 +36,11 @@ do
 	#echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 	#echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
 	#echo -e "\e[032;1mSystem uptime:\e[0m $up"
-	lolcat -F 0.3 -S 0 /root/bannermenu
+	lolcat -F 0.3 -S 0 /usr/bin/bannermenu
 echo "              server: $MYIP"
 date +"                    %A, %d-%m-%Y" | lolcat
 date +"                            %H:%M:%S %Z" | lolcat
 echo ""
-	echo "------------------------------------------------------------------------------"
-	echo "Apa yang ingin Anda lakukan?"
-	echo -e "\e[031;1m 1\e[0m) Buat Akun SSH/OpenVPN (\e[34;1muser-add\e[0m)"
-	echo -e "\e[031;1m 2\e[0m) Generate Akun SSH/OpenVPN (\e[34;1muser-gen\e[0m)"
-	echo -e "\e[031;1m 3\e[0m) Ganti Password Akun SSH/OpenVPN (\e[34;1muser-pass\e[0m)"
-	echo -e "\e[031;1m 4\e[0m) Tambah Masa Aktif Akun SSH/OpenVPN (\e[34;1muser-renew\e[0m)"
-	echo -e "\e[031;1m 5\e[0m) Hapus Akun SSH/OpenVPN (\e[34;1muser-del\e[0m)"
-	echo -e "\e[031;1m 6\e[0m) Buat Akun PPTP VPN (\e[34;1muser-add-pptp\e[0m)"
-	echo -e "\e[031;1m 7\e[0m) Monitoring Dropbear (\e[34;1mdropmon [PORT]\e[0m)"
-	echo -e "\e[031;1m 8\e[0m) Cek Login Dropbear, OpenSSH, PPTP VPN dan OpenVPN (\e[34;1muser-login\e[0m)"
-	echo -e "\e[031;1m 9\e[0m) Kill Multi Login Manual (1-2 Login) (\e[34;1muser-limit [x]\e[0m)"
-	echo -e "\e[031;1m10\e[0m) Daftar Akun dan Expire Date (\e[34;1muser-list\e[0m)"
-	echo -e "\e[031;1m11\e[0m) Daftar Akun Aktif (\e[34;1muser-active-list\e[0m)"
-	echo -e "\e[031;1m12\e[0m) Daftar Akun Expire (\e[34;1muser-expire-list\e[0m)"
-	echo -e "\e[031;1m13\e[0m) Disable Akun Expire (\e[34;1mdisable-user-expire\e[0m)"
-	echo -e "\e[031;1m14\e[0m) Delete Akun Expire (\e[34;1mdelete-user-expire\e[0m)"
-	echo -e "\e[031;1m15\e[0m) Banned Akun (\e[34;1mbanned-user\e[0m)"
-	echo -e "\e[031;1m16\e[0m) Unbanned Akun (\e[34;1munbanned-user\e[0m)"
-	echo -e "\e[031;1m17\e[0m) Restart Dropbear (\e[34;1mservice dropbear restart\e[0m)"
-	echo -e "\e[031;1m18\e[0m) Memory Usage (\e[34;1mps-mem\e[0m)"
-	echo -e "\e[031;1m19\e[0m) Speedtest (\e[34;1mspeedtest --share\e[0m)"
-	echo -e "\e[031;1m20\e[0m) Benchmark (\e[34;1mbenchmark\e[0m)"
-	echo -e "\e[031;1m21\e[0m) Reboot Server (\e[34;1mreboot\e[0m)"
-	echo ""
-	echo -e "\e[031;1m x\e[0m) Exit"
 	echo ""
 	PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
 options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" Monitor User Login" "Kill Multi Login Manual" "Aktifkan Kill Multi Login" "Matikan Kill Multi Login" "User Belum Kadaluarsa" "User Sudah Kadaluarsa" "Ganti Password VPS" "Used Data By Users" "Bersihkan cache ram" "Bersihkan Cache Squid" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
@@ -168,7 +143,13 @@ do
 	benchmark
 	break
 	;;
-
+        
+	"Quit")
+		
+		break
+		;;
+	 
+        *) echo invalid option;
 	esac
 done
 
