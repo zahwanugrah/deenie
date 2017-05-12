@@ -349,7 +349,7 @@ route-method exe
 route-delay 2
 remote $IP $PORT
 ;http-proxy-retry
-;http-proxy $IP 80
+;http-proxy $IP 8080
 cipher AES-128-CBC
 END
 
