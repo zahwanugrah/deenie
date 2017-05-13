@@ -10,7 +10,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 disable-user-expire
 clear
 
-echo "---------------------------- DAFTAR AKUN SSH EXPIRE ----------------------------"
+echo "------------------- DAFTAR AKUN SSH EXPIRE ---------------------"
 
 
 cat /root/expireduser.txt
