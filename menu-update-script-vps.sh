@@ -4,6 +4,7 @@ clear
 flag=0
 
 echo
+source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
 
 function update_script() {
 cd
