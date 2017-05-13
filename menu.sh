@@ -96,7 +96,7 @@ do
 	;;
 	"(ON) Auto Kill Multi Login")
 	clear 
-	read -p "Isikan Maxsimal User Login (1-2): "MULTILOGIN
+	read -p "Isikan Maxsimal User Login (1-2): " MULTILOGIN
 	echo "* * * * * root /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit1
 	echo "* * * * * root sleep 10; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit2
         echo "* * * * * root sleep 20; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit3
