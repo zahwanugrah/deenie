@@ -261,7 +261,6 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	 echo "Squid3 sudah di restart boss!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
-	 ;;
 	 "Ganti Port OpenSSH")	
             echo "Silahkan ganti port Openssh anda lalu klik enter."| boxes -d peek | lolcat
             echo "Port default dan Port 2 tidak boleh sama !!!"| lolcat
