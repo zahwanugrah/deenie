@@ -278,7 +278,21 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	 break
          ;;
 	 "Ganti Port Dropbear")
-	 
+            echo "Silahkan ganti port Dropbear anda lalu klik ENTER!!!
+Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d peek | lolcat
+           echo "Port1: 443 (Default)"
+	    read -p "Port2: " -e -i 80 PORT
+	    service dropbear stop
+	    service ssh stop
+	    service openvpn stop
+            sed -i "s/DROPBEAR_PORT=[0-9]*/DROPBEAR_PORT=$PORT/g" /etc/default/dropbear
+	    #sed -i 's/DROPBEAR_EXTRA_ARGS="-p [0-9]*"/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear	
+            service dropbear start
+	    service ssh start
+	    service openvpn start
+            echo "Dropbear Updated Port2 : $PORT"| lolcat
+	    #echo "Dropbear Updated : Port2 $PORT2" | lolcat
+	    #echo "Dropbear Updated : Port3 $PORT3" | lolcat
 	 break
 	 ;;
 	 "Ganti Port Squid3")
