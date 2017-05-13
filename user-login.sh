@@ -9,9 +9,12 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
-echo "-----------------------------------"
+echo "----------------------------------------------"
 echo "Checking Dropbear login" | lolcat;
-echo "-----------------------------------"
+echo "----------------------------------------------"
+echo "   PID.  USERNAME.       IP" | lolcat
+echo "----------------------------------------------"
+
 for PID in "${data[@]}"
 do
 	#echo "check $PID";
@@ -26,9 +29,9 @@ done
 echo "";
 
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
-echo "-----------------------------------"
+echo "----------------------------------------------"
 echo "Checking OpenSSH login" | lolcat;
-echo "-----------------------------------"
+echo "----------------------------------------------"
 for PID in "${data[@]}"
 do
 	#echo "check $PID";
@@ -49,17 +52,17 @@ done
 
 echo "";
 
-echo "-----------------------------------"
+echo "----------------------------------------------"
 echo "Checking PPTP login" | lolcat;
-echo "-----------------------------------"
+echo "----------------------------------------------"
 last | grep ppp | grep still
 
 echo "";
 
 #Melihat Riwayat Login User
-echo "-----------------------------------"
+echo "----------------------------------------------"
 echo "Checking PPTP Login History" | lolcat;
-echo "-----------------------------------"
+echo "----------------------------------------------"
 last | grep ppp
 
 echo "";
