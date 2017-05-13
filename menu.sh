@@ -257,7 +257,7 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
 	 "Update Script VPS")
-	 /usr/bin/menu-update-script-vps
+	 /usr/bin/menu-update-script-vps.sh
 	 break
 	 ;;
 	"Quit")
