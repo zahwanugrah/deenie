@@ -356,17 +356,21 @@ END
 
 	cp /etc/openvpn/easy-rsa/2.0/keys/ca.crt ~/ovpn-$CLIENT
 	cd ~/ovpn-$CLIENT
+	cp $CLIENT.conf $CLIENT.conf
+	echo "<ca>" >> $CLIENT.conf
+	cat ca.crt >> $CLIENT.conf
+	echo -e "</ca>\n" >> $CLIENT.conf
+	cp $CLIENT.conf /etc/openvpn/$CLIENT.conf
 	cp $CLIENT.conf $CLIENT.ovpn
-	echo "<ca>" >> $CLIENT.ovpn
-	cat ca.crt >> $CLIENT.ovpn
-	echo -e "</ca>\n" >> $CLIENT.ovpn
 	# proto client
 	case $proto in
 		1)
 		sed -i "s|proto tcp|proto tcp|" $CLIENT.ovpn
+		sed -i "s|proto tcp|proto tcp|" /etc/openvpn/$CLIENT.conf
 		;;
 		2)
 		sed -i "s|proto tcp|proto udp|" $CLIENT.ovpn
+		sed -i "s|proto tcp|proto udp|" /etc/openvpn/$CLIENT.conf
 		;;
 	esac
 	cp $CLIENT.ovpn /home/vps/public_html/client.ovpn
