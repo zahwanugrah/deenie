@@ -68,4 +68,6 @@ do
 	break
 	;;
 	
-exit 0
+*) echo invalid option;
+	esac
+done
