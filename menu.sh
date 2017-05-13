@@ -57,7 +57,7 @@ do
 	user-renew
 	break
 	;;
-	"Ganti Passwort User SSH/OVPN")
+	"Ganti Password User SSH/OVPN")
 	clear
 	user-pass
 	break
@@ -69,12 +69,12 @@ do
 	;;
 	"Hapus User")
 	clear
-	user-del | lolcat
+	user-del
 	break
 	;;
 	"Buat User PPTP VPN")
 	clear
-	user-add-pptp | lolcat
+	user-add-pptp
 	break
 	;;
 	"Monitoring Dropbear Menurut Port")
