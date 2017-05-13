@@ -332,7 +332,7 @@ wget -O /usr/bin/user-pass $source/debian7/user-pass.sh
 wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
 wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
 wget -O /usr/bin/bannermenu $source/debian7/bannermenu
-wget -O /usr/bin/menu-update-script-vps.sh $source/menu-update-script-vps.sh
+wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
 
 
 chmod +x /usr/bin/benchmark
