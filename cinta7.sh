@@ -114,8 +114,8 @@ sudo gem install lolcat
 
 # text warna
 cd
-rm -rf .bashrc
-wget -O .bashrc $source/debian7/.bashrc
+rm -rf /root/.bashrc
+wget -O /root/.bashrc $source/debian7/.bashrc
 
 # install webserver
 cd
