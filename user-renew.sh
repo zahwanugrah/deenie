@@ -14,7 +14,7 @@ echo ""
 
 # begin of user-list
 echo "-----------------------------------"
-echo "USERNAME              EXP DATE     "
+echo "USERNAME              EXP DATE     " | lolcat
 echo "-----------------------------------"
 
 while read expired
@@ -44,9 +44,7 @@ if [ $? -eq 0 ]; then
 	passwd -u $username
 	#useradd -M -N -s /bin/false -e $expire $username
 clear
-	echo ""
-	echo "-----------------------------------"
-
+	
 echo -e ""| lolcat
 echo -e "|       Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
 echo -e "============ -SERVER PREMIUM- =============" | lolcat
@@ -56,7 +54,7 @@ echo -e "     Password: $password                   " | lolcat
 echo -e "     Port default dropbear: 443,80         " | lolcat
 echo -e "     Port default openSSH : 22,143         " | lolcat
 echo -e "     Port default squid   : 8080           " | lolcat
-echo -e "     Port default openVPN : 55             " | lolcat
+echo -e "                                           " | lolcat
 echo -e "     Auto kill user maximal login 2        " | lolcat
 echo -e "-------------------------------------------" | lolcat
 echo -e "     Aktif Sampai: $(date -d "$AKTIF days" +"%d-%m-%Y")" | lolcat
