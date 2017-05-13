@@ -5,7 +5,7 @@ flag=0
 
 echo
 source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
-
+cd
 function update_script() {
 cd
 wget -O updatescript.sh $source/updatescript.sh && clear && chmod +x updatescript.sh && ./updatescript.sh
