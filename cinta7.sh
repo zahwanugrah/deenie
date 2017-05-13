@@ -332,6 +332,8 @@ wget -O /usr/bin/user-pass $source/debian7/user-pass.sh
 wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
 wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
 wget -O /usr/bin/bannermenu $source/debian7/bannermenu
+wget -O /usr/bin/menu-update-script-vps.sh $source/menu-update-script-vps.sh
+
 
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
@@ -355,6 +357,7 @@ chmod +x /usr/bin/user-pass
 chmod +x /usr/bin/user-renew
 chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
+chmod +x /usr/bin/menu-update-script-vps.sh
 
 echo "*/30 * * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
