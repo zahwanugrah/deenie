@@ -226,6 +226,40 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
         curl ipinfo.io/$userip
         break
 	;;
+	"Restart Webmin")
+	 service webmin restart
+	 echo "Webmin sudah di restart boss!!!" | boxes -d boy | lolcat
+	 break
+	 ;;
+	 "Restart Server VPS")
+	 reboot
+	 echo "sudah di restart tunggu sebentar ya boss!!!" | boxes -d boy | lolcat
+	 break
+	 ;;
+	 "Restart Dropbear")
+	 service dropbear restart
+	 echo "Dropbear sudah di restart boss!!!" | boxes -d boy | lolcat
+	 break
+	 ;;
+	 "Restart OpenSSH")
+	 service ssh restart
+	 echo "OpenSSH sudah di restart boss!!!" | boxes -d boy | lolcat
+	 break
+	 ;;
+	 "Restart OpenVPN")
+	 service openvpn restart
+	 echo "openvpn sudah di restart boss!!!" | boxes -d boy | lolcat
+	 break
+	 ;;
+	 "Restart Squid3")
+	 service squid3 restart
+	 echo "Squid3 sudah di restart boss!!!" | boxes -d boy | lolcat
+	 break
+	 ;;
+	 "Update Script VPS")
+	 /usr/bin/menu-update-script-vps
+	 break
+	 ;;
 	"Quit")
 	
 	break
