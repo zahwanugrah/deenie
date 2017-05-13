@@ -189,10 +189,15 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	;;
 	"Speedtest")
 	clear
+	echo "SPEEDTEST SERVER" | boxes -d peek | lolcat
+	echo "-----------------------------------------"
 	speedtest --share | lolcat
+	echo "-----------------------------------------"
 	break
 	;;
 	"Benchmark")
+	clear
+	echo "BENCHMARK" | boxes -d peek | lolcat
 	benchmark | lolcat
 	break
 	;;
@@ -220,9 +225,10 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	"Lihat Lokasi User")
 	clear
 	user-login
-	echo "Contoh: 112.123.345.126 lalu Enter"
+	echo "Contoh: 112.123.345.126 lalu Enter" | lolcat
         read -p "Ketik Salah Satu Alamat IP User: " userip
         curl ipinfo.io/$userip
+	echo "-----------------------------------" | lolcat
         break
 	;;
 	"Restart Webmin")
