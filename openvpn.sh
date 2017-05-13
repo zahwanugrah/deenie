@@ -103,10 +103,10 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 	done
 else
 	clear
-	echo "-------------------------- OpenVPN Installer for Debian, Ubuntu, CentOS -------------------------"
+	echo "---------- OpenVPN Installer for Debian, Ubuntu, CentOS ------------"
+	echo ""
 	
-	
-		echo "                    DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS)                     "
+		echo "             DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS)                     "
 	echo ""
 	echo ""
 	# OpenVPN setup and first user creation
@@ -143,9 +143,10 @@ else
 	echo "   7) Yandex"
 	read -p "DNS [1-7]: " -e -i 3 DNS
 	echo ""
-	echo "Terakhir, sebutkan nama untuk cert klien"
-	echo "Tolong, gunakan satu kata saja, tidak ada karakter khusus"
-	read -p "Nama Client: " -e -i client CLIENT
+	#echo "Terakhir, sebutkan nama untuk cert klien"
+	#echo "Tolong, gunakan satu kata saja, tidak ada karakter khusus"
+	#read -p "Nama Client: " -e -i client CLIENT
+	CLIENT="client"
 	echo ""
 	echo "Oke, itu semua saya butuhkan. Kami siap untuk setup OpenVPN server Anda sekarang"
 	read -n1 -r -p "Tekan sembarang tombol untuk melanjutkan..."
