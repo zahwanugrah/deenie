@@ -126,8 +126,7 @@ do
 	service ssh restart
 	service dropbear restart
 	clear
-	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS 
-User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
+	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	break
 	;;
 	"Ganti Password VPS")
@@ -199,8 +198,8 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	;;
         "Edit Banner Login")
 	clear
-	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan Enter)
-2. Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" | boxes -d boy | lolcat
+	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) " | lolcat
+	echo -e "2. Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" | lolcat
 	read -p "Tekan ENTER untuk melanjutkan........................ " | lolcat
 	nano /etc/issue.net
 	service dropbear restart && service ssh restart
