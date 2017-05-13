@@ -60,7 +60,8 @@ do
 	break
 	;;
 	"Kembali Ke MENU")
-	Menu
+	cd
+	menu
 	break
 	;;
 	"Keluar")
