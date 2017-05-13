@@ -9,7 +9,6 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 echo "-------------------------- GENERATE  AKUN SSH ---------------------------"
 
-if [[ $vps = "zvur" ]]; then
 
 	echo "           DEVELOPED BY YUSUF ARDIANSYAH N ELANG OVERDOSIS          "
 
@@ -32,8 +31,8 @@ exp="$(chage -l $uname | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$pass\n$pass\n"|passwd $uname &> /dev/null
 echo -e ""| lolcat
 echo -e "|      Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
-echo -e "============-Yusuf-Ardiansyah-============" | lolcat
-echo -e "     Host: $myip" | lolcat
+echo -e "===========-[[SERVER-PREMIUM]]-============" | lolcat
+echo -e "     Host: $MYIP" | lolcat
 echo -e "     Username: $uname" | lolcat
 echo -e "     Password: $pass                       " | lolcat
 echo -e "     Port default dropbear: 443,80         " | lolcat
@@ -49,9 +48,8 @@ echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
 echo -e "   CARDING-CRIMINAL CYBER.                 "| lolcat
 echo -e "===========================================" | lolcat
 echo -e "   Script by Yusuf Ardiansyah              "| lolcat
-myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 echo -e "   Config OVPN:                            "| lolcat
-echo -e "   http://$myip:81/client.ovpn        " | lolcat
+echo -e "   http://$MYIP:81/client.ovpn        " | lolcat
 echo -e "-------------------------------------------" | lolcat
 echo -e ""
 echo -e ""
