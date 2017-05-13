@@ -317,7 +317,7 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	    service ssh stop
 	    service openvpn stop
             sed -i "s/port [0-9]*/port $PORT/" /etc/openvpn/server.conf
-	    cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
+	    cp /etc/openvpn/client.conf /home/vps/public_html/client.ovpn
             sed -i "s/ipserver ports/$myip $PORT/g" /home/vps/public_html/client.ovpn
 	    sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
 	   service openvpn start
