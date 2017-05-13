@@ -85,7 +85,7 @@ do
 	;;
 	"Monitor User Login")
 	clear
-	user-login |boxes -d peek | lolcat
+	user-login
 	break
 	;;
 	"Manual Kill Multi Login")
