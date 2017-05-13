@@ -139,7 +139,7 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	"Bersihkan Cache Ram Manual")
 	clear
 	echo "Sebelum..." | lolcat
-        ps-mem
+       free -h
 	echo 1 > /proc/sys/vm/drop_caches
 	sleep 1
 	echo 2 > /proc/sys/vm/drop_caches
@@ -148,7 +148,7 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	sleep 1
 	echo ""
 	echo "Sesudah..." | lolcat
-	ps-mem
+	free -h
 	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d boy | lolcat
         break
 	;;
