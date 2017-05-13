@@ -115,14 +115,15 @@ else
 	echo ""
 	echo "Pertama saya perlu tahu IPv4 address dari network interface yang OpenVPN gunakan"
 	read -p "IP address: " -e -i $IP IP
+	#echo ""
+	#echo "Port berapa yang Anda inginkan untuk OpenVPN?"
+	#read -p "Port: " -e -i 1194 PORT
+	PORT="1194";
 	echo ""
-	echo "Port berapa yang Anda inginkan untuk OpenVPN?"
-	read -p "Port: " -e -i 1194 PORT
-	echo ""
-	echo "Apakah Anda ingin OpenVPN akan tersedia di port 53 juga?"
-	echo "Hal ini dapat berguna untuk menghubungkan jaringan yang benar-benar ketat"
-	read -p "Listen port 53 [y/n]: " -e -i n ALTPORT
-	echo ""
+	#echo "Apakah Anda ingin OpenVPN akan tersedia di port 53 juga?"
+	#echo "Hal ini dapat berguna untuk menghubungkan jaringan yang benar-benar ketat"
+	#read -p "Listen port 53 [y/n]: " -e -i n ALTPORT
+	#echo ""
 	echo "TCP atau UDP server?"
 	echo "   1) TCP server"
 	echo "   2) UDP server"
@@ -273,9 +274,9 @@ END
 		;;
 	esac
 	# Listen at port 53 too if user wants that
-	if [[ "$ALTPORT" = 'y' ]]; then
-		sed -i '/port 1194/a port 53' server.conf
-	fi
+	#if [[ "$ALTPORT" = 'y' ]]; then
+		#sed -i '/port 1194/a port 53' server.conf
+	#fi
 	# Enable net.ipv4.ip_forward for the system
 	if [[ "$OS" = 'debian' ]]; then
 		sed -i 's|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|' /etc/sysctl.conf
@@ -368,8 +369,8 @@ END
 		sed -i "s|proto tcp|proto udp|" $CLIENT.ovpn
 		;;
 	esac
-	cp $CLIENT.ovpn /home/vps/public_html/
-	cp $CLIENT.ovpn /root/
+	cp $CLIENT.ovpn /home/vps/public_html/client.ovpn
+	cp $CLIENT.ovpn /root/client.ovpn
 	cd ~/
 	rm -rf ovpn-$CLIENT
 	echo ""
