@@ -369,6 +369,22 @@ echo "*/20 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 #echo "@reboot root /usr/bin/autokill" > /etc/cron.d/autokill
 #sed -i '$ i\screen -AmdS check /root/autokill' /etc/rc.local
 
+cd
+# swap ram
+dd if=/dev/zero of=/swapfile bs=1024 count=1024k
+# buat swap
+mkswap /swapfile
+# jalan swapfile
+swapon /swapfile
+#auto star saat reboot
+wget https://raw.githubusercontent.com/denysiswanto/autoscript2/master/ram/fstab
+mv ./fstab /etc/fstab
+chmod 644 /etc/fstab
+sysctl vm.swappiness=10
+#permission swapfile
+chown root:root /swapfile 
+chmod 0600 /swapfile
+cd
 #ovpn
 wget -O openvpn.sh $source/debian7/openvpn.sh && chmod +x openvpn.sh && ./openvpn.sh
 service openvpn restart
