@@ -7,64 +7,51 @@ fi
 
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 
-echo "------------------------------ GENERATE  AKUN SSH ------------------------------"
+echo "-------------------------- GENERATE  AKUN SSH ---------------------------"
 
 if [[ $vps = "zvur" ]]; then
 
-	echo "            DEVELOPED BY YUSUF ARDIANSYAH N ELANG OVERDOSIS          "
+	echo "           DEVELOPED BY YUSUF ARDIANSYAH N ELANG OVERDOSIS          "
 
 echo ""
 
-read -p "Berapa jumlah akun yang akan dibuat: " JUMLAH
 read -p "Berapa hari akun aktif: " AKTIF
 
-today="$(date +"%Y-%m-%d")"
-expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
+	uname=trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
+	masaaktif="$AKTIF"
+	pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
+	clear
 
-echo ""
-echo "-----------------------------------"
-echo "Data Login:"
-echo "-----------------------------------"
-echo "Host/IP: $MYIP"
-echo "Dropbear Port: 443, 110, 109"
-echo "OpenSSH Port: 22, 143"
-echo "Squid Proxy: 80, 8080, 3128"
-echo "OpenVPN Config: http://$MYIP:81/client.ovpn"
-
-for (( i=1; i <= $JUMLAH; i++ ))
-do
-	username=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-	useradd -M -N -s /bin/false -e $expire $username
-	#password=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-	echo $username:$username | chpasswd
-	
-	echo "$i. Username/Password: $username"
-done
-
-echo "Valid s/d: $(date -d "$AKTIF days" +"%d-%m-%Y")"
-echo "-----------------------------------"
 clear
 echo -e ""| lolcat
-echo -e "|       Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
-echo -e "============ -SERVER PREMIUM- =============" | lolcat
-echo -e "     Host: $MYIP" | lolcat
-echo -e "     Username: $username" | lolcat
-echo -e "     Password: $password                   " | lolcat
+echo -e ""| lolcat
+echo -e ""| lolcat
+echo -e ""| lolcat
+useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $uname
+exp="$(chage -l $uname | grep "Account expires" | awk -F": " '{print $2}')"
+echo -e "$pass\n$pass\n"|passwd $uname &> /dev/null
+echo -e ""| lolcat
+echo -e "|      Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
+echo -e "============-Yusuf-Ardiansyah-============" | lolcat
+echo -e "     Host: $myip" | lolcat
+echo -e "     Username: $uname" | lolcat
+echo -e "     Password: $pass                       " | lolcat
 echo -e "     Port default dropbear: 443,80         " | lolcat
 echo -e "     Port default openSSH : 22,143         " | lolcat
 echo -e "     Port default squid   : 8080           " | lolcat
-echo -e "     Port default openVPN : 55             " | lolcat
+echo -e "                                           " | lolcat
 echo -e "     Auto kill user maximal login 2        " | lolcat
 echo -e "-------------------------------------------" | lolcat
-echo -e "     Aktif Sampai: $(date -d "$AKTIF days" +"%d-%m-%Y")" | lolcat
+echo -e "     Aktif Sampai: $exp                    " | lolcat
 echo -e "===========================================" | lolcat
 echo -e "   DI LARANG:                              "| lolcat
 echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
 echo -e "   CARDING-CRIMINAL CYBER.                 "| lolcat
 echo -e "===========================================" | lolcat
 echo -e "   Script by Yusuf Ardiansyah              "| lolcat
+myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 echo -e "   Config OVPN:                            "| lolcat
-echo -e "   http://$MYIP:81/client.ovpn        " | lolcat
+echo -e "   http://$myip:81/client.ovpn        " | lolcat
 echo -e "-------------------------------------------" | lolcat
 echo -e ""
 echo -e ""
