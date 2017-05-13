@@ -376,6 +376,8 @@ END
 	esac
 	cp $CLIENT.ovpn /home/vps/public_html/client.ovpn
 	cp $CLIENT.ovpn /root/client.ovpn
+	sed -i "s/ipserver ports/$IP 1194/g" /home/vps/public_html/client.ovpn
+	#sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
 	cd ~/
 	rm -rf ovpn-$CLIENT
 	echo ""
