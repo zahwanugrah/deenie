@@ -60,6 +60,8 @@ cd
 #chmod +x /usr/bin/menu-update-script-vps.sh
 
 clear
+echo ""
+echo ""
 echo "selesai bosss...." | lolcat
 sleep 3
 rm /usr/bin/updatescript.sh
