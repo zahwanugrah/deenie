@@ -32,7 +32,7 @@ echo
 	#echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
 	#echo -e "\e[032;1mSystem uptime:\e[0m $up"
 lolcat -F 0.3 -S 0 /usr/bin/bannermenu
-echo "                    server: $MYIP"
+echo "                    server: $myip" | lolcat
 date +"                    %A, %d-%m-%Y" | lolcat
 date +"                            %H:%M:%S %Z" | lolcat
 echo ""
@@ -108,7 +108,8 @@ do
 	service dropbear restart
 	clear
 	echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" | lolcat
-	echo "Dasar pelit!!! user ente marah2 jangan salahkan ane ya boss,nanti jangan lupa di matikan boss"| lolcat
+	echo "Dasar pelit!!! user ente marah2 jangan salahkan ane ya boss,
+nanti jangan lupa di matikan boss"| boxes -d boy | lolcat
 	break
 	;;
 	"Matikan Auto Kill Multi Login")
@@ -152,12 +153,12 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	;;
 	"Daftar User Aktif")
 	clear
-	user-active-list
+	user-active-list | boxes -d dog | lolcat
 	break
 	;;
 	"Daftar User Kadaluarsa")
 	clear
-	user-expire-list
+	user-expire-list | lolcat
 	break
 	;;
 	"Disable User Kadaluarsa")
@@ -182,22 +183,24 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	;;
 	"Penggunaan Ram")
 	clear
-	ps-mem
+	ps-mem | boxes -d dog | lolcat
 	break
 	;;
 	"Speedtest")
 	clear
-	speedtest --share
+	speedtest --share | lolcat
 	break
 	;;
 	"Benchmark")
-	benchmark
+	benchmark | lolcat
 	break
 	;;
         "Edit Banner Login")
 	clear
-	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) " | lolcat
-	echo -e "2. Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" | lolcat
+	echo "-----------------------------------------------------------" | lolcat
+	echo -e "1.) Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) " | lolcat
+	echo -e "2.) Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" | lolcat
+	echo "-----------------------------------------------------------" | lolcat
 	read -p "Tekan ENTER untuk melanjutkan........................ " | lolcat
 	nano /etc/issue.net
 	service dropbear restart && service ssh restart
@@ -205,10 +208,11 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	;;
 	"Edit Banner Menu")
 	clear
+	echo "--------------------------------------------------------" | lolcat
 	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan ENTER)" | lolcat
 	echo -e "2. Membatalkan edit text (CTRL + X,lalu ketik N dan tekan ENTER)" | lolcat
-	echo ""
-	read -p "Tekan ENTER untuk melanjutkan..................."
+	echo "--------------------------------------------------------" | lolcat
+	read -p "Tekan ENTER untuk melanjutkan..................." | lolcat
 	nano /usr/bin/bannermenu
 	break
 	;;
