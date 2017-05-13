@@ -311,7 +311,19 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 			break		
 	 ;;
 	 "Ganti Port OpenVPN")
-	 
+	 echo "Silahkan ganti port OpenVPN anda lalu klik enter?"| boxes -d peek | lolcat
+            read -p "Port: " -e -i 1194 PORT
+	    service dropbear stop
+	    service ssh stop
+	    service openvpn stop
+            sed -i "s/port [0-9]*/port $PORT/" /etc/openvpn/server.conf
+	    cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
+            sed -i "s/ipserver ports/$myip $PORT/g" /home/vps/public_html/client.ovpn
+	    sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
+	   service openvpn start
+	    service dropbear start
+	    service ssh start
+            echo "OpenVPN Updated Port: $PORT"| lolcat
 	 break
 	 ;;
 	 "Update Script VPS")
