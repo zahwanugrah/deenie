@@ -7,7 +7,7 @@ fi
 
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 
-echo "-------------------------- TAMBAH MASA AKTIF AKUN SSH --------------------------"
+echo "----------------- TAMBAH MASA AKTIF AKUN SSH --------------------"
 
 	echo "        DEVELOPED BY YUSUF ARDIANSYAH n ELANG OVERDOSIS           "
 echo ""
@@ -47,7 +47,7 @@ clear
 	
 echo -e ""| lolcat
 echo -e "|       Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
-echo -e "============ -SERVER PREMIUM- =============" | lolcat
+echo -e "===========[[-SERVER PREMIUM-]]============" | lolcat
 echo -e "     Host: $MYIP" | lolcat
 echo -e "     Username: $username" | lolcat
 echo -e "     Password: $password                   " | lolcat
