@@ -232,36 +232,43 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
         break
 	;;
 	"Restart Webmin")
+	clear
 	 service webmin restart
 	 echo "Webmin sudah di restart boss!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
 	 "Restart Server VPS")
+	 clear
 	 reboot
 	 echo "sudah di restart tunggu sebentar ya boss!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
 	 "Restart Dropbear")
+	 clear
 	 service dropbear restart
 	 echo "Dropbear sudah di restart boss!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
 	 "Restart OpenSSH")
+	 clear
 	 service ssh restart
 	 echo "OpenSSH sudah di restart boss!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
 	 "Restart OpenVPN")
+	 clear
 	 service openvpn restart
 	 echo "openvpn sudah di restart boss!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
 	 "Restart Squid3")
+	 clear
 	 service squid3 restart
 	 echo "Squid3 sudah di restart boss!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
-	 "Ganti Port OpenSSH")	
+	 "Ganti Port OpenSSH")
+	 clear
             echo "Silahkan ganti port Openssh anda lalu klik enter."| boxes -d peek | lolcat
             echo "Port default dan Port 2 tidak boleh sama !!!"| lolcat
 	    echo "Port default: 22"| lolcat
@@ -277,6 +284,7 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	 break
          ;;
 	 "Ganti Port Dropbear")
+	 clear
             echo "Silahkan ganti port Dropbear anda lalu klik ENTER!!!
 Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d peek | lolcat
            echo "Port1: 443 (Default)"
@@ -295,6 +303,7 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	 break
 	 ;;
 	 "Ganti Port Squid3")
+	 clear
 	 echo "Silahkan ganti port Squid3 anda lalu klik enter"| boxes -d dog | lolcat
 	    echo "Isi dengan angka tidak boleh huruf !!!"| lolcat
 	    echo -e "Port Squid3 1: 8080"
@@ -306,10 +315,12 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 			break
 			;;
 			"Speedtest")
+			clear
 			python speedtest.py --share | lolcat
 			break		
 	 ;;
 	 "Ganti Port OpenVPN")
+	 clear
 	 echo "Silahkan ganti port OpenVPN anda lalu klik enter?"| boxes -d peek | lolcat
             read -p "Port: " -e -i 1194 PORT
 	    service dropbear stop
@@ -326,6 +337,7 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	 break
 	 ;;
 	 "Update Script VPS")
+	 clear
 	 /usr/bin/menu-update-script-vps.sh
 	 break
 	 ;;
