@@ -296,8 +296,18 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	 break
 	 ;;
 	 "Ganti Port Squid3")
-	 
-	 break
+	 echo "Silahkan ganti port Squid3 anda lalu klik enter"| boxes -d dog | lolcat
+	    echo "Isi dengan angka tidak boleh huruf !!!"| lolcat
+	    read -p "Port Squid3: " -e -i 8080 PORT
+            #sed -i 's/http_port [0-9]*\nhttp_port [0-9]*/http_port $PORT1\nhttp_port $PORT2/g' /etc/squid3/squid.conf
+            sed -i "23s/http_port [0-9]*/http_port $PORT/" /etc/squid3/squid.conf
+	   service squid3 restart
+            echo "Squid3 Updated Port: $PORT"| lolcat
+			break
+			;;
+			"Speedtest")
+			python speedtest.py --share | lolcat
+			break		
 	 ;;
 	 "Ganti Port OpenVPN")
 	 
