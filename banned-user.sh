@@ -8,14 +8,14 @@ fi
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 
-echo "------------------------------- BANNED AKUN SSH --------------------------------"
+echo "------- ---------- BANNED AKUN SSH --------------------"
 
 	echo "         DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS            "
 echo ""
 
 # begin of user-list
 echo "-----------------------------------"
-echo "USERNAME              EXP DATE     "
+echo "USERNAME              EXP DATE     " | lolcat
 echo "-----------------------------------"
 
 while read expired
