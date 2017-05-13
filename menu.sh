@@ -33,13 +33,13 @@ do
 	#echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 	#echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
 	#echo -e "\e[032;1mSystem uptime:\e[0m $up"
-lolcat -F 0.3 -S 0 /usr/bin/bannermenu
-echo "              server: $MYIP"
+#lolcat -F 0.3 -S 0 /usr/bin/bannermenu
+#echo "              server: $MYIP"
 date +"                    %A, %d-%m-%Y" | lolcat
 date +"                            %H:%M:%S %Z" | lolcat
 echo ""
-	echo ""
-	PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
+echo ""
+PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
 options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Kill Multi Login Manual" "Aktifkan Auto Kill Multi Login" "Matikan Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
 select opt in "${options[@]}"
 do
@@ -110,8 +110,7 @@ do
 	service dropbear restart
 	clear
 	echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" | lolcat
-	echo "Dasar pelit!!! user ente marah2 jangan salahkan ane ya boss
-	nanti jangan lupa di matikan boss" | boxes -d boy | lolcat
+	echo "Dasar pelit!!! user ente marah2 jangan salahkan ane ya boss,nanti jangan lupa di matikan boss"| lolcat
 	break
 	;;
 	"Matikan Auto Kill Multi Login")
