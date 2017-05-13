@@ -262,7 +262,7 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
 	 ;;
-	 "Ganti Port Openssh")	
+	 "Ganti Port OpenSSH")	
             echo "Silahkan ganti port Openssh anda lalu klik enter."| boxes -d peek | lolcat
             echo "Port default dan Port 2 tidak boleh sama !!!"| lolcat
 	    echo "Port default: 22"| lolcat
@@ -277,10 +277,23 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
             echo "Openssh Updated Port: $PORT"| lolcat
 	 break
          ;;
+	 "Ganti Port Dropbear")
+	 
+	 break
+	 ;;
+	 "Ganti Port Squid3")
+	 
+	 break
+	 ;;
+	 "Ganti Port OpenVPN")
+	 
+	 break
+	 ;;
 	 "Update Script VPS")
 	 /usr/bin/menu-update-script-vps.sh
 	 break
 	 ;;
+	 
 	"Quit")
 	
 	break
