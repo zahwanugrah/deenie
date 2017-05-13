@@ -1,6 +1,6 @@
 #!/bin/bash
 #echo "Maaf.. Saat ini belum tersedia update script bos......!!!" | boxes -d boy
-#echo "Update webmin tersedia bos, tp versi webmin 1.820_all.deb..gk apa2 ya boss.." | lolcat
+echo "Update webmin tersedia bos, tp versi webmin 1.820_all.deb..gk apa2 ya boss.." | lolcat
 sleep 4
 cd
 wget "http://prdownloads.sourceforge.net/webadmin/webmin_1.820_all.deb"
