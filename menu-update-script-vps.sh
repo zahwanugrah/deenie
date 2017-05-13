@@ -8,7 +8,7 @@ source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
 cd
 function update_script() {
 cd
-wget -O updatescript.sh $source/updatescript.sh && clear && chmod +x updatescript.sh && ./updatescript.sh
+wget -O updatescript.sh $source/debian7/updatescript.sh && clear && chmod +x updatescript.sh && ./updatescript.sh
 }
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1 untuk update script lalu ENTER: '
