@@ -46,5 +46,26 @@ done
 
 echo "-------------------------------------------------------------"| lolcat
 echo -e "==============[ User Monitor Dropbear & OpenSSH]=============" | lolcat
-
+PS3='Silahkan ketik nomor 1-3 lalu ENTER: '
+options=("Tendang User" "Kembali Ke MENU" "Keluar")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Tendang User")
+	read -p "Masukan angka (PID) user yang mau di tendang: " tendangan
+	kill -9 $tendangan
+	echo "Tunggu..." | lolcat
+	sleep 3
+	echo "Ok.. User Sudah Ditendang Boss.. !!" | lolcat
+	break
+	;;
+	"Kembali Ke MENU")
+	Menu
+	break
+	;;
+	"Keluar")
+	exit
+	break
+	;;
+	
 exit 0
