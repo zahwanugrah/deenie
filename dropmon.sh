@@ -7,63 +7,44 @@ fi
 
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 
-if [ $1 ]; then
-	port_dropbear=$1
-	log=/var/log/auth.log
-	loginsukses='Password auth succeeded'
-	echo ' '
-	echo ' '
-	echo "               Dropbear Users Login Monitor                    "
-	echo "---------------------------------------------------------------"
-	echo "    Date-time    |  PID      |  User Name      |  From Host    "
-	echo "---------------------------------------------------------------" 
-	pids=`ps ax |grep dropbear |grep  " $port_dropbear" |awk -F" " '{print $1}'`
-	for pid in $pids
-	do
-		pidlogs=`grep $pid $log |grep "$loginsukses" |awk -F" " '{print $3}'`
-		i=0
-		for pidend in $pidlogs
-		do
-			let i=i+1
-		done
-		
-		if [ $pidend ]; then
-			login=`grep $pid $log |grep "$pidend" |grep "$loginsukses"`
-			PID=$pid
-			user=`echo $login |awk -F" " '{print $10}' | sed -r "s/'/ /g"`
-			waktu=`echo $login |awk -F" " '{print $2,$3}'`
-			while [ ${#waktu} -lt 13 ]
-			do
-				waktu=$waktu" "
-			done
-			
-			while [ ${#user} -lt 16 ]
-			do
-				user=$user" "
-			done
-			
-			while [ ${#PID} -lt 8 ]
-			do
-				PID=$PID" "
-			done
+echo ""| lolcat
+echo "|   Tgl-Jam    | PID   |   User Name  |      Dari IP      |"| boxes -d peek | lolcat
+echo "-------------------------------------------------------------"| lolcat
+data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 
-			fromip=`echo $login |awk -F" " '{print $12}' |awk -F":" '{print $1}'`
-			echo "  $waktu|  $PID | $user|  $fromip "
-		fi
-	done
-	
-	echo "----------------------------------------------------------------"
-	echo " Ingin tendang user? Ketik kill -9 (angka PID)"
-	echo " Misal: kill -9 1234 [enter]"
-	echo "----------------------------------------------------------------"
-	
-	echo "    DEVELOPED BY Yusuf Ardiansyah and Elang overdosis    "
-	echo "----------------------------------------------------------------"
-	echo ""
-else
-	echo "  Gunakan perintah ./dropmon [port]"
-	echo "  Contoh : ./dropmon 443"
-	echo ""
-fi
+echo "=================[ Checking Dropbear login ]================="| lolcat
+echo "-------------------------------------------------------------"| lolcat
+for PID in "${data[@]}"
+do
+	#echo "check $PID";
+	NUM=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | wc -l`;
+	USER=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk -F" " '{print $10}'`;
+	IP=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk -F" " '{print $12}'`;
+	waktu=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk -F" " '{print $1,$2,$3}'`;
+	if [ $NUM -eq 1 ]; then
+		echo "$waktu - $PID - $USER - $IP"| lolcat;
+	fi
+done
+
+
+echo "-------------------------------------------------------------"| lolcat
+data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
+
+echo "==================[ Checking OpenSSH login ]================="| lolcat
+echo "-------------------------------------------------------------"| lolcat
+for PID in "${data[@]}"
+do
+        #echo "check $PID";
+		NUM=`cat /var/log/auth.log | grep -i sshd | grep -i "Accepted password for" | grep "sshd\[$PID\]" | wc -l`;
+		USER=`cat /var/log/auth.log | grep -i sshd | grep -i "Accepted password for" | grep "sshd\[$PID\]" | awk '{print $9}'`;
+		IP=`cat /var/log/auth.log | grep -i sshd | grep -i "Accepted password for" | grep "sshd\[$PID\]" | awk '{print $11}'`;
+		waktu=`cat /var/log/auth.log | grep -i sshd | grep -i "Accepted password for" | grep "sshd\[$PID\]" | awk '{print $1,$2,$3}'`;
+        if [ $NUM -eq 1 ]; then
+                echo "$waktu - $PID - $USER - $IP"| lolcat;
+        fi
+done
+
+echo "-------------------------------------------------------------"| lolcat
+echo -e "==============[ User Monitor Dropbear & OpenSSH]=============" | lolcat
 
 exit 0
