@@ -7,7 +7,7 @@ fi
 
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 
-echo "-------------------------------- HAPUS AKUN SSH --------------------------------"
+echo "---------------------- HAPUS AKUN SSH -----------------------"
 
 	echo "          DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS            "
 echo ""
