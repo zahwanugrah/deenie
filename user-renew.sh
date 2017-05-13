@@ -53,7 +53,7 @@ echo -e "     Username: $username" | lolcat
 echo -e "                                           " | lolcat
 echo -e "     Port default dropbear: 443,80         " | lolcat
 echo -e "     Port default openSSH : 22,143         " | lolcat
-echo -e "     Port default squid   : 8080           " | lolcat
+echo -e "     Port default squid   : 8080,3128      " | lolcat
 echo -e "                                           " | lolcat
 echo -e "     Auto kill user maximal login 2        " | lolcat
 echo -e "-------------------------------------------" | lolcat
