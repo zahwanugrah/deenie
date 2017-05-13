@@ -50,7 +50,7 @@ echo -e "|       Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
 echo -e "===========[[-SERVER PREMIUM-]]============" | lolcat
 echo -e "     Host: $MYIP" | lolcat
 echo -e "     Username: $username" | lolcat
-echo -e "     Password: $password                   " | lolcat
+echo -e "                                           " | lolcat
 echo -e "     Port default dropbear: 443,80         " | lolcat
 echo -e "     Port default openSSH : 22,143         " | lolcat
 echo -e "     Port default squid   : 8080           " | lolcat
