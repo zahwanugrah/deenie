@@ -347,7 +347,7 @@ script-security 2
 route 0.0.0.0 0.0.0.0
 route-method exe
 route-delay 2
-remote $IP $PORT
+remote ipserver ports
 ;http-proxy-retry
 ;http-proxy $IP 8080
 cipher AES-128-CBC
