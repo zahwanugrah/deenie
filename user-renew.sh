@@ -43,20 +43,34 @@ if [ $? -eq 0 ]; then
 	chage -E "$expire" $username
 	passwd -u $username
 	#useradd -M -N -s /bin/false -e $expire $username
-
+clear
 	echo ""
 	echo "-----------------------------------"
-	echo "Data Login:"
-	echo "-----------------------------------"
-	echo "Host/IP: $MYIP"
-	echo "Dropbear Port: 443, 110, 109"
-	echo "OpenSSH Port: 22, 143"
-	echo "Squid Proxy: 80, 8080, 3128"
-	echo "OpenVPN Config: http://$MYIP:81/client.ovpn"
-	echo "Username: $username"
-	#echo "Password: $password"
-	echo "Valid s/d: $(date -d "$today + $AKTIF days" +"%d-%m-%Y")"
-	echo "-----------------------------------"
+
+echo -e ""| lolcat
+echo -e "|       Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
+echo -e "============ -SERVER PREMIUM- =============" | lolcat
+echo -e "     Host: $MYIP" | lolcat
+echo -e "     Username: $username" | lolcat
+echo -e "     Password: $password                   " | lolcat
+echo -e "     Port default dropbear: 443,80         " | lolcat
+echo -e "     Port default openSSH : 22,143         " | lolcat
+echo -e "     Port default squid   : 8080           " | lolcat
+echo -e "     Port default openVPN : 55             " | lolcat
+echo -e "     Auto kill user maximal login 2        " | lolcat
+echo -e "-------------------------------------------" | lolcat
+echo -e "     Aktif Sampai: $(date -d "$AKTIF days" +"%d-%m-%Y")" | lolcat
+echo -e "===========================================" | lolcat
+echo -e "   DI LARANG:                              "| lolcat
+echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
+echo -e "   CARDING-CRIMINAL CYBER.                 "| lolcat
+echo -e "===========================================" | lolcat
+echo -e "   Script by Yusuf Ardiansyah              "| lolcat
+echo -e "   Config OVPN:                            "| lolcat
+echo -e "   http://$MYIP:81/client.ovpn        " | lolcat
+echo -e "-------------------------------------------" | lolcat
+echo -e ""
+echo -e ""
 else
 	echo "Username [$username] belum terdaftar!"
 	exit 1
