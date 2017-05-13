@@ -31,8 +31,8 @@ echo
 	#echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 	#echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
 	#echo -e "\e[032;1mSystem uptime:\e[0m $up"
-#lolcat -F 0.3 -S 0 /usr/bin/bannermenu
-#echo "              server: $MYIP"
+lolcat -F 0.3 -S 0 /usr/bin/bannermenu
+echo "                    server: $MYIP"
 date +"                    %A, %d-%m-%Y" | lolcat
 date +"                            %H:%M:%S %Z" | lolcat
 echo ""
@@ -44,17 +44,17 @@ do
     case $opt in
         "Buat User SSH/OVPN")
 	clear
-        user-add
+        user-add | lolcat
         break
             ;;
 	"Buat User SSH/OVPN Trial")
 	clear
-	user-gen
+	user-gen | lolcat
 	break
 	;;
 	"Perbarui User")
 	clear
-	user-renew
+	user-renew | lolcat
 	break
 	;;
 	"Ganti Passwort User SSH/OVPN")
@@ -64,17 +64,17 @@ do
 	;;
 	"Semua User Dan Tanggal Kadaluarsa")
 	clear
-	user-list
+	user-list | lolcat
 	break
 	;;
 	"Hapus User")
 	clear
-	user-del
+	user-del | lolcat
 	break
 	;;
 	"Buat User PPTP VPN")
 	clear
-	user-add-pptp
+	user-add-pptp | lolcat
 	break
 	;;
 	"Monitoring Dropbear Menurut Port")
@@ -85,7 +85,7 @@ do
 	;;
 	"Monitor User Login")
 	clear
-	user-login
+	user-login |boxes -d peek | lolcat
 	break
 	;;
 	"Kill Multi Login Manual")
@@ -123,7 +123,8 @@ do
 	service ssh restart
 	service dropbear restart
 	clear
-	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS User Sudah Bisa Multi Login Lagi!!!" | lolcat
+	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS 
+User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	break
 	;;
 	"Ganti Password VPS")
