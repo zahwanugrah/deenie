@@ -38,7 +38,7 @@ date +"                            %H:%M:%S %Z" | lolcat
 echo ""
 echo ""
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Kill Multi Login Manual" "ON Auto Kill Multi Login" "OFF Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring Dropbear Menurut Port" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Update Script VPS" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -88,13 +88,13 @@ do
 	user-login |boxes -d peek | lolcat
 	break
 	;;
-	"Kill Multi Login Manual")
+	"Manual Kill Multi Login")
 	clear
         read -p "Isikan Maximal User Login (1-2): " MULTILOGIN
         user-limit $MULTILOGIN
 	break
 	;;
-	"Aktifkan Auto Kill Multi Login")
+	"(ON) Auto Kill Multi Login")
 	clear 
 	read -p "Isikan Maxsimal User Login (1-2): "MULTILOGIN
 	echo "* * * * * root /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit1
@@ -112,7 +112,7 @@ do
 nanti jangan lupa di matikan boss"| boxes -d boy | lolcat
 	break
 	;;
-	"Matikan Auto Kill Multi Login")
+	"(OFF) Auto Kill Multi Login")
 	clear
 	rm -rf /etc/cron.d/userlimit1
 	rm -rf /etc/cron.d/userlimit2
