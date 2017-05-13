@@ -8,10 +8,10 @@ fi
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 
-echo "------------------------ MEMBUAT AKUN SSH ------------------------"
+echo "------------------------ MEMBUAT AKUN SSH ------------------------"| lolcat
 
 
-	echo "           DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS           "
+	echo "           DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS           " | lolcat
 echo ""
 
 read -p "Isikan username: " username
@@ -34,7 +34,7 @@ echo -e ""
 echo -e ""
 echo -e ""| lolcat
 echo -e "|       Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
-echo -e "============ -SERVER PREMIUM- =============" | lolcat
+echo -e "============[[-SERVER-PREMIUM-]]===========" | lolcat
 echo -e "     Host: $MYIP" | lolcat
 echo -e "     Username: $username" | lolcat
 echo -e "     Password: $password                   " | lolcat
