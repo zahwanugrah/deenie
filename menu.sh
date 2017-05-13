@@ -96,13 +96,14 @@ do
 	;;
 	"(ON) Auto Kill Multi Login")
 	clear 
-	read -p "Isikan Maximal User Login (1-2): " MULTILOGIN
-	echo "* * * * * root /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit1
-	echo "* * * * * root sleep 10; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit2
-        echo "* * * * * root sleep 20; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit3
-        echo "* * * * * root sleep 30; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit4
-        echo "* * * * * root sleep 40; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit5
-        echo "* * * * * root sleep 50; /usr/bin/user-limit $MULTILOGIN" > /etc/cron.d/userlimit6
+	read -p "Isikan Maximal User Login (1-2): " MULTILOGIN2
+	
+	echo "* * * * * root /usr/bin/user-limit $MULTILOGIN2" > /etc/cron.d/userlimit1
+	echo "* * * * * root sleep 10; /usr/bin/user-limit $MULTILOGIN2" > /etc/cron.d/userlimit2
+        echo "* * * * * root sleep 20; /usr/bin/user-limit $MULTILOGIN2" > /etc/cron.d/userlimit3
+        echo "* * * * * root sleep 30; /usr/bin/user-limit $MULTILOGIN2" > /etc/cron.d/userlimit4
+        echo "* * * * * root sleep 40; /usr/bin/user-limit $MULTILOGIN2" > /etc/cron.d/userlimit5
+        echo "* * * * * root sleep 50; /usr/bin/user-limit $MULTILOGIN2" > /etc/cron.d/userlimit6
 	service cron restart
 	service ssh restart
 	service dropbear restart
