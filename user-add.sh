@@ -29,6 +29,9 @@ else
 	useradd -M -N -s /bin/false -e $expire $username
 	echo $username:$password | chpasswd
 clear
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""| lolcat
 echo -e "|       Informasi Akun Baru SSH      |" | boxes -d dog | lolcat
 echo -e "============ -SERVER PREMIUM- =============" | lolcat
@@ -37,8 +40,8 @@ echo -e "     Username: $username" | lolcat
 echo -e "     Password: $password                   " | lolcat
 echo -e "     Port default dropbear: 443,80         " | lolcat
 echo -e "     Port default openSSH : 22,143         " | lolcat
-echo -e "     Port default squid   : 8080           " | lolcat
-echo -e "     Port default openVPN : 55             " | lolcat
+echo -e "     Port default squid   : 8080,3128      " | lolcat
+echo -e "                                           " | lolcat
 echo -e "     Auto kill user maximal login 2        " | lolcat
 echo -e "-------------------------------------------" | lolcat
 echo -e "     Aktif Sampai: $(date -d "$AKTIF days" +"%d-%m-%Y")" | lolcat
