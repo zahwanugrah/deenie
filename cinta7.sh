@@ -368,6 +368,11 @@ echo "*/20 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 #echo "@reboot root /usr/bin/user-limit" > /etc/cron.d/user-limit
 #echo "@reboot root /usr/bin/autokill" > /etc/cron.d/autokill
 #sed -i '$ i\screen -AmdS check /root/autokill' /etc/rc.local
+
+#ovpn
+wget -O openvpn.sh $source/debian7/openvpn.sh && chmod +x openvpn.sh && ./openvpn.sh
+service openvpn restart
+
 usermod -s /bin/false mail
 echo "mail:deenie" | chpasswd
 useradd -s /bin/false -M deenie11
