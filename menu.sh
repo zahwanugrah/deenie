@@ -261,6 +261,22 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	 echo "Squid3 sudah di restart boss!!!" | boxes -d boy | lolcat
 	 break
 	 ;;
+	 ;;
+	 "Ganti Port Openssh")	
+            echo "Silahkan ganti port Openssh anda lalu klik enter."| boxes -d peek | lolcat
+            echo "Port default dan Port 2 tidak boleh sama !!!"| lolcat
+	    echo "Port default: 22"| lolcat
+	    read -p "Port 2: " -e -i 143 PORT
+	    service dropbear stop
+	    service ssh stop
+	    service openvpn stop
+	    sed -i "6s/Port [0-9]*/Port $PORT/" /etc/ssh/sshd_config
+           service ssh start 
+	   service dropbear start
+	   service openvpn start
+            echo "Openssh Updated Port: $PORT"| lolcat
+	 break
+         ;;
 	 "Update Script VPS")
 	 /usr/bin/menu-update-script-vps.sh
 	 break
