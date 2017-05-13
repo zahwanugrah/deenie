@@ -10,7 +10,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo "-----------------------------------"
-echo "Checking Dropbear login";
+echo "Checking Dropbear login" | lolcat;
 echo "-----------------------------------"
 for PID in "${data[@]}"
 do
@@ -27,7 +27,7 @@ echo "";
 
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
 echo "-----------------------------------"
-echo "Checking OpenSSH login";
+echo "Checking OpenSSH login" | lolcat;
 echo "-----------------------------------"
 for PID in "${data[@]}"
 do
@@ -43,14 +43,14 @@ done
 echo "";
 
 echo "-----------------------------------"
-echo "Checking OpenVPN login";
+echo "Checking OpenVPN login" | lolcat;
 echo "-----------------------------------"
 tail -f /etc/openvpn/server-vpn.log
 
 echo "";
 
 echo "-----------------------------------"
-echo "Checking PPTP login";
+echo "Checking PPTP login" | lolcat;
 echo "-----------------------------------"
 last | grep ppp | grep still
 
@@ -58,18 +58,18 @@ echo "";
 
 #Melihat Riwayat Login User
 echo "-----------------------------------"
-echo "Checking PPTP Login History";
+echo "Checking PPTP Login History" | lolcat;
 echo "-----------------------------------"
 last | grep ppp
 
 echo "";
 echo "----------------------------------------------------------------"
-echo " Kalau ada Multi Login Kill Aja "
-echo " Tetap Multi Login Ganti Passnya baru Kill Lagi "
-echo " Caranya pake Kill nomor PID "
+echo " Kalau ada Multi Login Kill Aja " | lolcat
+echo " Tetap Multi Login Ganti Passnya baru Kill Lagi " | lolcat
+echo " Caranya pake Kill nomor PID " | lolcat
 echo "----------------------------------------------------------------"
 
-	echo " DEVELOPED BY YUSUF ARDIANSYAH n ELANG OVERDOSIS "
+	echo " DEVELOPED BY YUSUF ARDIANSYAH n ELANG OVERDOSIS "| lolcat
 echo "----------------------------------------------------------------"
 echo ""
 
