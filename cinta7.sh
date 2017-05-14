@@ -359,6 +359,7 @@ cd
 wget $source/debian7/shc-3.8.7.tgz"
 tar xvfz shc-3.8.7.tgz
 clear
+cd
 echo "=========================================================="
 echo "-------------------Tanggal Kadaluarsa MENU----------------"
 echo "##########################################################"
@@ -418,7 +419,7 @@ mv /usr/bin/user-pass.x /usr/bin/user-pass
 mv /usr/bin/user-renew.x /usr/bin/user-renew
 mv /usr/bin/menu-update-script-vps.sh.x /usr/bin/menu-update-script-vps.sh
 
-
+cd
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
 chmod +x /usr/bin/ps-mem
