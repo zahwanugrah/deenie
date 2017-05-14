@@ -198,6 +198,12 @@ echo "/usr/sbin/nologin" >> /etc/shells
 sed -i 's/DROPBEAR_BANNER=""/DROPBEAR_BANNER="bannerssh"/g' /etc/default/dropbear
 service ssh restart
 service dropbear restart
+# bannerssh
+wget $source/bannerssh
+mv ./bannerssh /bannerssh
+chmod 0644 /bannerssh
+service dropbear restart
+service ssh restart
 
 # upgrade dropbear 2014
 apt-get install zlib1g-dev
@@ -314,8 +320,6 @@ cd
 wget -O /usr/bin/benchmark $source/debian7/benchmark.sh
 wget -O /usr/bin/speedtest $source/debian7/speedtest_cli.py
 wget -O /usr/bin/ps-mem $source/debian7/ps_mem.py
-wget -O /root/bannerssh $source/debian7/bannerssh
-#wget -O /usr/bin/autokill $source/Debian7/autokill.sh
 wget -O /usr/bin/dropmon $source/debian7/dropmon.sh
 wget -O /usr/bin/menu $source/debian7/menu.sh
 wget -O /usr/bin/user-active-list $source/debian7/user-active-list.sh
