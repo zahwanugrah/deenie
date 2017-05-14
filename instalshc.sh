@@ -19,7 +19,6 @@ echo -e "Angka semua ya boss!" | lolcat
 echo ""
 read -p "Silahkan Ketikan Tanggal Kadaluarsa MENU: " deeniemenu
 cd shc-3.8.7
-make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/benchmark
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/speedtest
