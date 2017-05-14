@@ -410,7 +410,6 @@ make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-list
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-login
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-pass
-./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/clearcache.sh
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu-update-script-vps.sh
 
 
@@ -418,9 +417,28 @@ clear
 #./shc -e $deeniemenu -f /usr/local/bin/menu
 #./shc -f /usr/local/bin/menu
 cd
-mv /usr/local/bin/menu.x /usr/local/bin/menu
-chmod +x /usr/local/bin/menu
-mv /usr/local/bin/menu-update-script-vps.sh.x /usr/local/bin/menu-update-script-vps.sh
+mv /usr/bin/menu.x /usr/bin/menu
+mv /usr/bin/benchmark.x /usr/bin/benchmark
+mv /usr/bin/speedtest.x /usr/bin/speedtest
+mv /usr/bin/ps-mem.x /usr/bin/ps-mem
+mv /usr/bin/dropmon.x /usr/bin/dropmon
+mv /usr/bin/user-active-list.x /usr/bin/user-active-list
+mv /usr/bin/user-add.x /usr/bin/user-add
+mv /usr/bin/user-add-pptp.x /usr/bin/user-add-pptp
+mv /usr/bin/user-del.x /usr/bin/user-del
+mv /usr/bin/disable-user-expire.x /usr/bin/disable-user-expire
+mv /usr/bin/delete-user-expire.x /usr/bin/delete-user-expire
+mv /usr/bin/banned-user.x /usr/bin/banned-user
+mv /usr/bin/user-expire-list.x /usr/bin/user-expire-list
+mv /usr/bin/user-gen.x /usr/bin/user-gen
+mv /usr/bin/user-limit.x /usr/bin/user-limit
+mv /usr/bin/user-list.x /usr/bin/user-list
+mv /usr/bin/user-login.x /usr/bin/user-login
+mv /usr/bin/user-pass.x /usr/bin/user-pass
+mv /usr/bin/menu-update-script-vps.sh.x /usr/bin/menu-update-script-vps.sh
+
+
+
 cd
 
 
