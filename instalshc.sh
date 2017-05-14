@@ -1,14 +1,13 @@
 #!/bin/bash
 #shc
 # pendukung shc
-cd
+
 apt-get install yum
 yum -y install automake autoconf gcc gcc++
 
 cd
 wget https://raw.githubusercontent.com/elangoverdosis/deeniedoank/debian7/shc-3.8.7.tgz"
 tar xvfz shc-3.8.7.tgz
-clear
 cd
 echo "=========================================================="
 echo "-------------------Tanggal Kadaluarsa MENU----------------"
@@ -42,8 +41,6 @@ make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-pass
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu-update-script-vps.sh
 
-
-clear
 cd
 mv /usr/bin/menu.x /usr/bin/menu
 mv /usr/bin/benchmark.x /usr/bin/benchmark
@@ -67,7 +64,6 @@ mv /usr/bin/user-pass.x /usr/bin/user-pass
 mv /usr/bin/user-renew.x /usr/bin/user-renew
 mv /usr/bin/menu-update-script-vps.sh.x /usr/bin/menu-update-script-vps.sh
 
-cd
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
 chmod +x /usr/bin/ps-mem
@@ -92,7 +88,7 @@ chmod +x /usr/bin/user-renew
 chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
-cd
+
 rm /usr/bin/benchmark.x.c
 rm /usr/bin/speedtest.x.c
 rm /usr/bin/ps-mem.x.c
