@@ -38,3 +38,51 @@ echo ""
 
 
 clear
+cd
+mv /usr/bin/menu.x /usr/bin/menu
+#mv /usr/bin/benchmark.x /usr/bin/benchmark
+#mv /usr/bin/speedtest.x /usr/bin/speedtest
+#mv /usr/bin/ps-mem.x /usr/bin/ps-mem
+#mv /usr/bin/dropmon.x /usr/bin/dropmon
+#mv /usr/bin/user-active-list.x /usr/bin/user-active-list
+#mv /usr/bin/user-add.x /usr/bin/user-add
+#mv /usr/bin/user-add-pptp.x /usr/bin/user-add-pptp
+#mv /usr/bin/user-del.x /usr/bin/user-del
+#mv /usr/bin/disable-user-expire.x /usr/bin/disable-user-expire
+#mv /usr/bin/delete-user-expire.x /usr/bin/delete-user-expire
+#mv /usr/bin/banned-user.x /usr/bin/banned-user
+#mv /usr/bin/user-expire-list.x /usr/bin/user-expire-list
+#mv /usr/bin/user-gen.x /usr/bin/user-gen
+#mv /usr/bin/userlimit.sh.x /usr/bin/userlimit.sh
+#mv /usr/bin/userlimitssh.sh.x /usr/bin/userlimitssh.sh
+#mv /usr/bin/user-list.x /usr/bin/user-list
+#mv /usr/bin/user-login.x /usr/bin/user-login
+#mv /usr/bin/user-pass.x /usr/bin/user-pass
+#mv /usr/bin/user-renew.x /usr/bin/user-renew
+#mv /usr/bin/menu-update-script-vps.sh.x /usr/bin/menu-update-script-vps.sh
+
+cd
+chmod +x /usr/bin/benchmark
+chmod +x /usr/bin/speedtest
+chmod +x /usr/bin/ps-mem
+#chmod +x /usr/bin/autokill
+chmod +x /usr/bin/dropmon
+chmod +x /usr/bin/menu
+chmod +x /usr/bin/user-active-list
+chmod +x /usr/bin/user-add
+chmod +x /usr/bin/user-add-pptp
+chmod +x /usr/bin/user-del
+chmod +x /usr/bin/disable-user-expire
+chmod +x /usr/bin/delete-user-expire
+chmod +x /usr/bin/banned-user
+chmod +x /usr/bin/user-expire-list
+chmod +x /usr/bin/user-gen
+chmod +x /usr/bin/userlimit.sh
+chmod +x /usr/bin/userlimitssh.sh
+chmod +x /usr/bin/user-list
+chmod +x /usr/bin/user-login
+chmod +x /usr/bin/user-pass
+chmod +x /usr/bin/user-renew
+chmod +x /usr/bin/clearcache.sh
+chmod +x /usr/bin/bannermenu
+chmod +x /usr/bin/menu-update-script-vps.sh
