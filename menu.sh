@@ -96,7 +96,8 @@ do
 	"Manual Kill Multi Login")
 	clear
         read -p "Isikan Maximal User Login (1-2): " MULTILOGIN
-        user-limit $MULTILOGIN
+        userlimit.sh $MULTILOGIN
+	userlimitssh.sh $MULTILOGIN
 	break
 	;;
 	"(ON) Auto Kill Multi Login")
@@ -104,18 +105,18 @@ do
 	read -p "Isikan Maximal User Login (1-2): " MULTILOGIN2
 	
 	echo "* * * * * root ./userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit1
-	   echo "* * * * * root sleep 10; ./userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit2
-           echo "* * * * * root sleep 20; ./userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit3
-           echo "* * * * * root sleep 30; ./userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit4
-           echo "* * * * * root sleep 40; ./userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit5
-           echo "* * * * * root sleep 50; ./userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit6
+	   echo "* * * * * root sleep 10; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit2
+           echo "* * * * * root sleep 20; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit3
+           echo "* * * * * root sleep 30; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit4
+           echo "* * * * * root sleep 40; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit5
+           echo "* * * * * root sleep 50; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit6
 	   e#cho "@reboot root /root/userlimitssh.sh" >> /etc/cron.d/userlimitreboot
 	   echo "* * * * * root ./userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit1
-	   echo "* * * * * root sleep 11; ./userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit2
-           echo "* * * * * root sleep 21; ./userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit3
-           echo "* * * * * root sleep 31; ./userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit4
-           echo "* * * * * root sleep 41; ./userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit5
-           echo "* * * * * root sleep 51; ./userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit6
+	   echo "* * * * * root sleep 11; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit2
+           echo "* * * * * root sleep 21; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit3
+           echo "* * * * * root sleep 31; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit4
+           echo "* * * * * root sleep 41; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit5
+           echo "* * * * * root sleep 51; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit6
 	    service cron restart
 	    service ssh restart
 	    service dropbear restart
