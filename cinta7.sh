@@ -470,7 +470,7 @@ mkswap /swapfile
 # jalan swapfile
 swapon /swapfile
 #auto star saat reboot
-wget https://raw.githubusercontent.com/denysiswanto/autoscript2/master/ram/fstab
+wget $source/debian7/fstab
 mv ./fstab /etc/fstab
 chmod 644 /etc/fstab
 sysctl vm.swappiness=10
