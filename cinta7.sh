@@ -517,7 +517,7 @@ echo "Service :" | tee -a log-install.txt
 echo "---------" | tee -a log-install.txt
 echo "OpenSSH  : 22, 143" | tee -a log-install.txt
 echo "Dropbear : 443, 80" | tee -a log-install.txt
-echo "Squid3   : 8080 (limit to IP $MYIP)" | tee -a log-install.txt
+echo "Squid3   : 8080 limit to IP $MYIP" | tee -a log-install.txt
 #echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)" | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300" | tee -a log-install.txt
 echo "PPTP VPN : TCP 1723" | tee -a log-install.txt
@@ -529,35 +529,14 @@ echo "axel, bmon, htop, iftop, mtr, rkhunter, nethogs: nethogs $ether" | tee -a 
 echo "" | tee -a log-install.txt
 echo "Script :" | tee -a log-install.txt
 echo "--------" | tee -a log-install.txt
-echo "screenfetch" | tee -a log-install.txt
-echo "menu (Menu Script VPS via Putty) :" | tee -a log-install.txt
-echo "  - Buat Akun SSH/OpenVPN (user-add)" | tee -a log-install.txt
-echo "  - Generate Akun SSH/OpenVPN (user-gen)" | tee -a log-install.txt
-echo "  - Ganti Password Akun SSH/OpenVPN (user-pass)" | tee -a log-install.txt
-echo "  - Tambah Masa Aktif Akun SSH/OpenVPN (user-renew)" | tee -a log-install.txt
-echo "  - Hapus Akun SSH/OpenVPN (user-del)" | tee -a log-install.txt
-echo "  - Buat Akun PPTP VPN (user-add-pptp)" | tee -a log-install.txt
-echo "  - Monitoring Dropbear (dropmon [PORT])" | tee -a log-install.txt
-echo "  - Cek Login Dropbear, OpenSSH, PPTP VPN dan OpenVPN (user-login)" | tee -a log-install.txt
-echo "  - Kill Multi Login Manual (1-2 Login) (user-limit [x])" | tee -a log-install.txt
-echo "  - Daftar Akun dan Expire Date (user-list)" | tee -a log-install.txt
-echo "  - Daftar Akun Aktif (user-active-list)" | tee -a log-install.txt
-echo "  - Daftar Akun Expire (user-expire-list)" | tee -a log-install.txt
-echo "  - Disable Akun Expire (disable-user-expire)" | tee -a log-install.txt
-echo "  - Delete Akun Expire (delete-user-expire)" | tee -a log-install.txt
-echo "  - Banned Akun (banned-user)" | tee -a log-install.txt
-echo "  - Restart Dropbear (service dropbear restart)" | tee -a log-install.txt
-echo "  - Memory Usage (ps-mem)" | tee -a log-install.txt
-echo "  - Speedtest (speedtest --share)" | tee -a log-install.txt
-echo "  - Benchmark (benchmark)" | tee -a log-install.txt
-echo "  - Reboot Server (reboot)" | tee -a log-install.txt
+echo "MENU"
 echo "" | tee -a log-install.txt
 echo "Fitur lain :" | tee -a log-install.txt
 echo "------------" | tee -a log-install.txt
 echo "Webmin         : http://$MYIP:10000/" | tee -a log-install.txt
 echo "vnstat         : http://$MYIP:81/vnstat/ (Cek Bandwith)" | tee -a log-install.txt
 echo "MRTG           : http://$MYIP:81/mrtg/" | tee -a log-install.txt
-echo "Timezone       : Asia/Jakarta (GMT +7)" | tee -a log-install.txt
+echo "Timezone       : Asia/Jakarta " | tee -a log-install.txt
 echo "Fail2Ban       : [on]" | tee -a log-install.txt
 echo "(D)DoS Deflate : [on]" | tee -a log-install.txt
 echo "Block Torrent  : [off]" | tee -a log-install.txt
