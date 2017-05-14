@@ -174,7 +174,7 @@ cd
 #sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
-sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
+sed -i '$ i\Banner bannerssh' /etc/ssh/sshd_config
 service ssh restart
 
 # install dropbear
@@ -194,7 +194,7 @@ sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=80/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 443"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-sed -i 's/DROPBEAR_BANNER=""/DROPBEAR_BANNER="/etc/issue.net"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_BANNER=""/DROPBEAR_BANNER="bannerssh"/g' /etc/default/dropbear
 service ssh restart
 service dropbear restart
 
@@ -313,7 +313,7 @@ cd
 wget -O /usr/bin/benchmark $source/debian7/benchmark.sh
 wget -O /usr/bin/speedtest $source/debian7/speedtest_cli.py
 wget -O /usr/bin/ps-mem $source/debian7/ps_mem.py
-wget -O /etc/issue.net $source/debian7/bannerssh
+wget -O /root/bannerssh $source/debian7/bannerssh
 #wget -O /usr/bin/autokill $source/Debian7/autokill.sh
 wget -O /usr/bin/dropmon $source/debian7/dropmon.sh
 wget -O /usr/bin/menu $source/debian7/menu.sh
