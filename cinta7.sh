@@ -411,6 +411,7 @@ mv /usr/bin/user-limit.x /usr/bin/user-limit
 mv /usr/bin/user-list.x /usr/bin/user-list
 mv /usr/bin/user-login.x /usr/bin/user-login
 mv /usr/bin/user-pass.x /usr/bin/user-pass
+mv /usr/bin/user-renew.x /usr/bin/user-renew
 mv /usr/bin/menu-update-script-vps.sh.x /usr/bin/menu-update-script-vps.sh
 
 
@@ -438,9 +439,25 @@ chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
 cd
-
-
+rm /usr/bin/benchmark.x.c
+rm /usr/bin/speedtest.x.c
+rm /usr/bin/ps-mem.x.c
+rm usr/bin/dropmon.x.c
 rm /usr/bin/menu.x.c
+rm /usr/bin/user-active-list.x.c
+rm /usr/bin/user-add.x.c
+rm /usr/bin/user-add-pptp.x.c
+rm /usr/bin/user-del.x.c
+rm /usr/bin/disable-user-expire.x.c
+rm /usr/bin/delete-user-expire.x.c
+rm /usr/bin/banned-user.x.c
+rm /usr/bin/user-expire-list.x.c
+rm /usr/bin/user-gen.x.c
+rm /usr/bin/user-limit.x.c
+rm /usr/bin/user-list.x.c
+rm /usr/bin/user-login.x.c
+rm /usr/bin/user-pass.x.c
+rm /usr/bin/user-renew.x.c
 rm /usr/bin/menu-update-script-vps.sh.x.c
 # hapus installan shc
 rm -rf /root/shc-3.8.7
