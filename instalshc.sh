@@ -39,7 +39,6 @@ make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-list
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-login
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-pass
-./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu-update-script-vps
 
 cd
 mv /usr/bin/menu.x /usr/bin/menu
@@ -62,7 +61,6 @@ mv /usr/bin/user-list.x /usr/bin/user-list
 mv /usr/bin/user-login.x /usr/bin/user-login
 mv /usr/bin/user-pass.x /usr/bin/user-pass
 mv /usr/bin/user-renew.x /usr/bin/user-renew
-mv /usr/bin/menu-update-script-vps.sh.x /usr/bin/menu-update-script-vps
 
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
@@ -87,7 +85,6 @@ chmod +x /usr/bin/user-pass
 chmod +x /usr/bin/user-renew
 chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
-chmod +x /usr/bin/menu-update-script-vps.sh
 
 rm /usr/bin/benchmark.x.c
 rm /usr/bin/speedtest.x.c
@@ -109,7 +106,6 @@ rm /usr/bin/user-list.x.c
 rm /usr/bin/user-login.x.c
 rm /usr/bin/user-pass.x.c
 rm /usr/bin/user-renew.x.c
-rm /usr/bin/menu-update-script-vps.sh.x.c
 
 # hapus installan shc
 rm -rf /root/shc-3.8.7
