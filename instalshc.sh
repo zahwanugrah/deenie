@@ -6,7 +6,7 @@ apt-get install yum
 yum -y install make automake autoconf gcc gcc++
 
 cd
-wget $source/debian7/shc-3.8.7.tgz"
+wget https://raw.githubusercontent.com/elangoverdosis/deeniedoank/debian7/shc-3.8.7.tgz"
 tar xvfz shc-3.8.7.tgz
 clear
 cd
