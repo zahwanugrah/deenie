@@ -412,7 +412,9 @@ service squid3 restart
 service webmin restart
 cd
 wget $source/debian7/instalshc.sh
-chmod +x ./instalshc.sh && ./instalshc.sh
+chmod +x ./instalshc.sh
+./instalshc.sh
+
 rm ./instalshc.sh
 cd
 rm -f /root/.bash_history && history -c
