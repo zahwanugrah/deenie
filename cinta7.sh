@@ -31,11 +31,11 @@ cd
 wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-	if [[ $vps = "zvur" ]]; then
+	#if [[ $vps = "zvur" ]]; then
+		#echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+	#else
 		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
-	else
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
-	fi
+	#fi
 	rm -f /root/IP
 	exit
 fi
