@@ -325,7 +325,8 @@ wget -O /usr/bin/delete-user-expire $source/debian7/delete-user-expire.sh
 wget -O /usr/bin/banned-user $source/debian7/banned-user.sh
 wget -O /usr/bin/user-expire-list $source/debian7/user-expire-list.sh
 wget -O /usr/bin/user-gen $source/debian7/user-gen.sh
-wget -O /usr/bin/user-limit $source/debian7/user-limit.sh
+wget -O /usr/bin/userlimit.sh $source/debian7/userlimit.sh
+wget -O /usr/bin/userlimitssh.sh $source/debian7/userlimitssh.sh
 wget -O /usr/bin/user-list $source/debian7/user-list.sh
 wget -O /usr/bin/user-login $source/debian7/user-login.sh
 wget -O /usr/bin/user-pass $source/debian7/user-pass.sh
@@ -382,7 +383,8 @@ make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/banned-user
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-expire-list
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-gen
-./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-limit
+./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/userlimit.sh
+./shc -e $deeniemenu -m "maaf boss MENU ente sudah kadaluaraa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/userlimitssh.sh
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-list
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-login
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-pass
@@ -407,7 +409,8 @@ mv /usr/bin/delete-user-expire.x /usr/bin/delete-user-expire
 mv /usr/bin/banned-user.x /usr/bin/banned-user
 mv /usr/bin/user-expire-list.x /usr/bin/user-expire-list
 mv /usr/bin/user-gen.x /usr/bin/user-gen
-mv /usr/bin/user-limit.x /usr/bin/user-limit
+mv /usr/bin/userlimit.sh.x /usr/bin/userlimit.sh
+mv /usr/bin/userlimitssh.sh.x /usr/bin/userlimitssh.sh
 mv /usr/bin/user-list.x /usr/bin/user-list
 mv /usr/bin/user-login.x /usr/bin/user-login
 mv /usr/bin/user-pass.x /usr/bin/user-pass
@@ -430,7 +433,8 @@ chmod +x /usr/bin/delete-user-expire
 chmod +x /usr/bin/banned-user
 chmod +x /usr/bin/user-expire-list
 chmod +x /usr/bin/user-gen
-chmod +x /usr/bin/user-limit
+chmod +x /usr/bin/userlimit.sh
+chmod +x /usr/bin/userlimitssh.sh
 chmod +x /usr/bin/user-list
 chmod +x /usr/bin/user-login
 chmod +x /usr/bin/user-pass
@@ -453,7 +457,8 @@ rm /usr/bin/delete-user-expire.x.c
 rm /usr/bin/banned-user.x.c
 rm /usr/bin/user-expire-list.x.c
 rm /usr/bin/user-gen.x.c
-rm /usr/bin/user-limit.x.c
+rm /usr/bin/userlimit.sh.x.c
+rm /usr/bin/userlimitssh.sh.x.c
 rm /usr/bin/user-list.x.c
 rm /usr/bin/user-login.x.c
 rm /usr/bin/user-pass.x.c
