@@ -69,7 +69,7 @@ fi
 if [[ -e /etc/openvpn/server.conf ]]; then
 	while :
 	do
-	clear
+	#clear
 		echo "Sepertinya OpenVPN sudah diinstal"
 		echo "Apa yang ingin Anda lakukan?"
 		echo ""
