@@ -313,7 +313,7 @@ cd
 wget -O /usr/bin/benchmark $source/debian7/benchmark.sh
 wget -O /usr/bin/speedtest $source/debian7/speedtest_cli.py
 wget -O /usr/bin/ps-mem $source/debian7/ps_mem.py
-wget -O /etc/issue.net $source/debian7/bannerA
+wget -O /etc/issue.net $source/debian7/bannerssh
 #wget -O /usr/bin/autokill $source/Debian7/autokill.sh
 wget -O /usr/bin/dropmon $source/debian7/dropmon.sh
 wget -O /usr/bin/menu $source/debian7/menu.sh
