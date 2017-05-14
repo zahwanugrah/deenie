@@ -13,48 +13,48 @@ echo "=========================================================="
 echo "-------------------Tanggal Kadaluarsa MENU----------------"
 echo "##########################################################"
 echo -e "Wajib di isi bos yusuf ardiansyah" | lolcat
-
-echo -e "Contoh Format Tanggal: 30/07/2018"
-echo -e "Angka semua ya boss!" | lolcat
+echo -e "Angka semua ya boss!!!" | lolcat
+echo -e "Contoh Format Tanggal: 30/07/2018" | lolcat
 echo ""
 read -p "Silahkan Ketikan Tanggal Kadaluarsa MENU: " deeniemenu
+make
 cd shc-3.8.7
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/benchmark
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/speedtest
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/ps-mem
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/dropmon
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-active-list
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-add
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-add-pptp
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-del
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/disable-user-expire
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/delete-user-expire
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/banned-user
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-expire-list
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-gen
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/userlimit.sh
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "maaf boss MENU ente sudah kadaluaraa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/userlimitssh.sh
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-list
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-login
-cd shc-3.8.7
+
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-pass
 
 cd
