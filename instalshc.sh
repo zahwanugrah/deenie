@@ -5,14 +5,14 @@
 apt-get install yum
 apt-get -y install automake autoconf gcc gcc++
 
-cd
+
 wget https://raw.githubusercontent.com/elangoverdosis/deeniedoank/debian7/shc-3.8.7.tgz
 tar xvfz shc-3.8.7.tgz
-cd
+
 echo "=========================================================="
 echo "-------------------Tanggal Kadaluarsa MENU----------------"
 echo "##########################################################"
-echo -e "Wajib di isi bos yusuf ardiansyah" | boxes -d peek | lolcat
+echo -e "Wajib di isi bos yusuf ardiansyah" | lolcat
 
 echo -e "Contoh Format Tanggal: 30/07/2018"
 echo -e "Angka semua ya boss!" | lolcat
