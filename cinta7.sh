@@ -376,7 +376,7 @@ chmod +x /usr/bin/menu-update-script-vps.sh
 cd
 wget $source/debian7/instalshc.sh
 chmod +x ./instalshc.sh
-./instalshc.sh
+/root/instalshc.sh
 cd
 # swap ram
 dd if=/dev/zero of=/swapfile bs=1024 count=1024k
