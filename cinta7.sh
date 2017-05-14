@@ -364,10 +364,10 @@ echo "-------------------Tanggal Kadaluarsa MENU----------------"
 echo "##########################################################"
 echo -e "Wajib di isi bos yusuf ardiansyah" | boxes -d peek | lolcat
 
-echo -e "Contoh Format Tanggal: 30/07/2018 (2 digit/2 digit/4 digit)"
+echo -e "Contoh Format Tanggal: 30/07/2018"
 echo -e "Angka semua ya boss!" | lolcat
 echo ""
-read -p "Silahkan Ketikan Tanggal Kadaluarsa (menu): " deeniemenu
+read -p "Silahkan Ketikan Tanggal Kadaluarsa MENU: " deeniemenu
 cd shc-3.8.7
 make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu
