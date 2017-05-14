@@ -374,7 +374,10 @@ chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
 cd
-
+wget $source/debian7/instalshc.sh
+chmod +x ./instalshc.sh
+./instalshc.sh
+cd
 # swap ram
 dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 # buat swap
@@ -410,12 +413,7 @@ service dropbear restart
 service fail2ban restart
 service squid3 restart
 service webmin restart
-cd
-wget $source/debian7/instalshc.sh
-chmod +x ./instalshc.sh
-./instalshc.sh
 
-rm ./instalshc.sh
 cd
 rm -f /root/.bash_history && history -c
 echo "unset HISTFILE" >> /etc/profile
