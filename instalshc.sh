@@ -39,7 +39,7 @@ make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-list
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-login
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-pass
-./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu-update-script-vps.sh
+./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu-update-script-vps
 
 cd
 mv /usr/bin/menu.x /usr/bin/menu
@@ -62,7 +62,7 @@ mv /usr/bin/user-list.x /usr/bin/user-list
 mv /usr/bin/user-login.x /usr/bin/user-login
 mv /usr/bin/user-pass.x /usr/bin/user-pass
 mv /usr/bin/user-renew.x /usr/bin/user-renew
-mv /usr/bin/menu-update-script-vps.sh.x /usr/bin/menu-update-script-vps.sh
+mv /usr/bin/menu-update-script-vps.sh.x /usr/bin/menu-update-script-vps
 
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
