@@ -329,6 +329,7 @@ wget -O /usr/bin/user-del $source/debian7/user-del.sh
 wget -O /usr/bin/disable-user-expire $source/debian7/disable-user-expire.sh
 wget -O /usr/bin/delete-user-expire $source/debian7/delete-user-expire.sh
 wget -O /usr/bin/banned-user $source/debian7/banned-user.sh
+wget -O /usr/bin/unbanned-user $source/debian7/unbanned-user.sh
 wget -O /usr/bin/user-expire-list $source/debian7/user-expire-list.sh
 wget -O /usr/bin/user-gen $source/debian7/user-gen.sh
 wget -O /usr/bin/userlimit.sh $source/debian7/userlimit.sh
@@ -362,6 +363,7 @@ chmod +x /usr/bin/user-del
 chmod +x /usr/bin/disable-user-expire
 chmod +x /usr/bin/delete-user-expire
 chmod +x /usr/bin/banned-user
+chmod +x /usr/bin/unbanned-user
 chmod +x /usr/bin/user-expire-list
 chmod +x /usr/bin/user-gen
 chmod +x /usr/bin/userlimit.sh
