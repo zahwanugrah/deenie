@@ -60,7 +60,7 @@ do
 	break
 	;;
 	"Kembali Ke MENU")
-	cd
+	cd /root
 	menu
 	break
 	;;
