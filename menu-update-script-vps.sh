@@ -19,7 +19,7 @@ echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
 	exit
 	fi
 	cd
-	PS3='Silahkan pilih (1-3):'
+	PS3='Silahkan pilih (1-4):'
 options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Quit")
 select opt in "${options[@]}"
 do
