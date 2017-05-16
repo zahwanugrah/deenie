@@ -42,8 +42,9 @@ fi
 echo "####################################
 # Uniscan project                  #
 # http://uniscan.sourceforge.net/  #
+# edited elang overdosis           #
 ####################################
-V. 6.3
+
 
 
 OPTIONS:
@@ -65,8 +66,8 @@ contoh:
  -u http://www.example.com/ -qweds
  -f sites.txt -bqweds
  -i uniscan
- -i "ip:xxx.xxx.xxx.xxx"
- -o "inurl:test"
+ -i ip:xxx.xxx.xxx.xxx
+ -o dork_yg_mau_dicari
  -u https://www.example.com/ -r"
  
 # web vuln
