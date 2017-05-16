@@ -41,7 +41,7 @@ if ! grep -w -q $MYIP IP; then
 	rm -f /root/IPcarding
 	exit
 fi
-rm -f /root/IP
+rm /root/IP
 clear
 #echo "Maaf.. Saat ini belum tersedia update script bos......!!!" | boxes -d boy
 #echo "Update webmin tersedia bos, tp versi webmin 1.820_all.deb..gk apa2 ya boss.." | lolcat
@@ -113,6 +113,9 @@ echo ""
 echo ""
 echo ""
 echo "selesai bosss...." | lolcat
+
 sleep 3
+rm /root/IP
+rm /root/IPcarding
 clear
 menu
