@@ -19,7 +19,7 @@ echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
 	exit
 	fi
 	cd
-	PS3='Silahkan Pilih (1-2): '
+	PS3='Silahkan Pilih (1-3): '
 	options=("web VULN" "Hacked" "Quit")
 	select opt in " ${options[@]}"
 	do
@@ -31,6 +31,10 @@ echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
 	     "Hacked")
 	     carding.sh
 	     break
+	    ;;
+	    "Quit")
+	    exit
+	    break
 	    ;;
 	    
 	    *) echo invalid option;
