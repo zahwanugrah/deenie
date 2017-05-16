@@ -20,7 +20,7 @@ echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
 	fi
 	cd
 	PS3='Silahkan pilih (1-3):'
-options=("Cari Web Vuln" "Hacked" "Quit")
+options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -28,6 +28,11 @@ do
 	 web-vuln.sh
 	 break
 	     ;;
+	  "Hasil Pencarian Web Vuln")
+	  clear
+	  less /root/uniscan6.2/sites.txt
+	  break
+	  ;;
 	     "Hacked")
 	     carding.sh
 	     break
