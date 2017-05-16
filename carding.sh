@@ -46,18 +46,15 @@ cd sqlmap
 read -p "Masukkan Link atau Web Yang Error (VULN): " cardinger
 ./sqlmap.py -u $cardinger --dbs
                 echo ""
-		echo "1) Lanjut"
-		echo "2) Keluar (Jika GAGAL)"
-		echo ""
 		PS3='Silahkan pilih (1-2):'
-options=("Lanjut" "Quit")
+options=("Lanjut" "Keluar (Jika GAGAL)")
 select opt in "${options[@]}"
 do
     case $opt in
         "Lanjut")
 	break
 	;;
-	"Quit")
+	"Keluar (Jika GAGAL)")
 	exit
 	break
 	;;
