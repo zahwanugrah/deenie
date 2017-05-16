@@ -86,9 +86,8 @@ contoh pencarian untuk di ketik:
  
 # web vuln
 cd /root
-cd uniscan6.2
-clear
 read -p "Masukkan OPTION seperti contoh (CARI WEB VULN): " webscaner
 clear
+cd uniscan6.2
 ./uniscan.pl $webscaner
 echo ""
