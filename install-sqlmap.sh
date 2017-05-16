@@ -62,6 +62,9 @@ wget $source/debian7/uniscan6.2.tar.gz
 tar xf uniscan6.2.tar.gz
 rm uniscan6.2.tar.gz
 cd
+rm -f /root/IP
+rm -f /root/IPcarding
 sudo apt-get install libmoose-perl
 clear
 cd /root
+
