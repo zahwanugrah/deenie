@@ -29,6 +29,11 @@ do
 	"Carding")
 	echo " Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!
 	read -p "Klik ENTER..."
+	if [[ ! -e /root/sqlmap ]]; then
+	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p"
+	exit
+	fi
+	cd
 	carding.sh
 	break
 	;;
