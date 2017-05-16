@@ -38,6 +38,7 @@ if ! grep -w -q $MYIP IP; then
 		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
 	fi
 	rm -f /root/IP
+	rm -f /root/IPcarding
 	exit
 fi
 clear
