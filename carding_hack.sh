@@ -28,7 +28,9 @@ do
 	    ;;
 	    "Hacked Manual Sqlmap")
 	    cd sqlmap && ./sqlmap.py -h
-	    echo "Contoh: cd sqlmap ./sqlmap.py -u http://www.siteTARGET.com --dbs" | lolcat
+	    echo "Contoh: 
+	    1. Ketik: cd sqlmap (Enter)
+	    2. Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" | lolcat
 	   
 	    break
 	    ;;
