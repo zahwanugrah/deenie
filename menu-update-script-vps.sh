@@ -13,7 +13,7 @@ wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chm
 function carding_hack() {
 clear
 echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
-	read -p "Klik ENTER untuk lanjut..." | lolcat
+	read -p "Klik ENTER untuk lanjut..."
 	if [[ ! -e /root/sqlmap ]]; then
 	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
 	exit
