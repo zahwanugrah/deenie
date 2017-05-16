@@ -78,7 +78,7 @@ wget -O /usr/bin/unbanned-user https://raw.githubusercontent.com/elangoverdosis/
 #wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
 #wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
 #wget -O /usr/bin/bannermenu $source/debian7/bannermenu
-#wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
+wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
 
 
 #chmod +x /usr/bin/benchmark
@@ -104,7 +104,7 @@ clear
 #chmod +x /usr/bin/user-renew
 #chmod +x /usr/bin/clearcache.sh
 #chmod +x /usr/bin/bannermenu
-#chmod +x /usr/bin/menu-update-script-vps.sh
+chmod +x /usr/bin/menu-update-script-vps.sh
 rm /usr/bin/updatescript.sh
 clear
 echo ""
