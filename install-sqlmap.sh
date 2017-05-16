@@ -42,6 +42,7 @@ fi
 cd
 apt-get install git
 git clone https://github.com/elangoverdosis/sqlmap.git
+clear
 cd sqlmap
 chmod 755 sqlmap.py
 cd /root
