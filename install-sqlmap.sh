@@ -28,15 +28,15 @@ vps="aneka";
 cd
 
 # check registered ip
-wget -q -O IP $source/debian7/IP.txt
-if ! grep -w -q $MYIP IP; then
-	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
+wget -q -O IPcarding $source/debian7/IPcarding.txt
+if ! grep -w -q $MYIP IPcarding; then
+	echo "Maaf, hanya MEMBER terdaftar yang bisa menggunakan fitur ini!"
 	if [[ $vps = "zvur" ]]; then
 		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
 	else
 		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
 	fi
-	rm -f /root/IP
+	rm -f /root/IPcarding
 	exit
 fi
 cd
@@ -45,11 +45,18 @@ git clone https://github.com/elangoverdosis/sqlmap.git
 clear
 cd sqlmap
 chmod 755 sqlmap.py
+
 cd /root
 wget -O /usr/bin/carding.sh $source/debian7/carding.sh
 chmod +x /usr/bin/carding.sh
 clear
 cd /root
+
+wget -O /usr/bin/web-vuln.sh $source/debian7/web-vuln.sh
+chmod +x /usr/bin/web-vuln.sh
+clear
+cd /root
+
 wget $source/debian7/uniscan6.2.tar.gz
 tar xf uniscan6.2.tar.gz
 rm uniscan6.2.tar.gz
