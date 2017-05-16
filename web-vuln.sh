@@ -87,7 +87,7 @@ contoh penulisan: -u http://www.example.com/ -qweds
  
 # web vuln
 cd /root
-read -p "Masukkan OPTION seperti contoh: " webscaner
+read -p "Masukkan OPTION seperti (contoh penulisan): " webscaner
 cd uniscan6.2
 ./uniscan.pl $webscaner
 echo ""
