@@ -8,7 +8,7 @@ source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
 cd
 function update_script() {
 cd
-wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chmod +x /usr/bin/updatescript.sh && /usr/bin/updatescript.sh
+wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chmod +x /usr/bin/updatescript.sh && /usr/bin/updatescript.sh && rm -f /root/IP && rm -f /root/IPcarding
 }
 function carding_hack() {
 clear
