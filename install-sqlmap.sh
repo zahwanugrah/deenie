@@ -46,4 +46,8 @@ clear
 cd sqlmap
 chmod 755 sqlmap.py
 cd /root
+wget -O /usr/bin/carding.sh $source/debian7/carding.sh
+chmod +x /usr/bin/carding.sh
+clear
+cd /root
 
