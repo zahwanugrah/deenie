@@ -1,8 +1,10 @@
 #!/bin/bash
 echo "Maaf.. Saat ini belum tersedia update script bos......!!!" | boxes -d boy
 #echo "Update webmin tersedia bos, tp versi webmin 1.820_all.deb..gk apa2 ya boss.." | lolcat
+echo "Perbaikan MENU unbanned user"
 sleep 4
 cd
+
 #wget "http://prdownloads.sourceforge.net/webadmin/webmin_1.820_all.deb"
 #dpkg --install webmin_1.820_all.deb
 #apt-get -y -f install
@@ -24,6 +26,7 @@ cd
 #wget -O /usr/bin/disable-user-expire $source/debian7/disable-user-expire.sh
 #wget -O /usr/bin/delete-user-expire $source/debian7/delete-user-expire.sh
 #wget -O /usr/bin/banned-user $source/debian7/banned-user.sh
+wget -O /usr/bin/unbanned-user https://raw.githubusercontent.com/elangoverdosis/deeniedoank/debian7/unbanned-user.sh
 #wget -O /usr/bin/user-expire-list $source/debian7/user-expire-list.sh
 #wget -O /usr/bin/user-gen $source/debian7/user-gen.sh
 #wget -O /usr/bin/user-limit $source/debian7/user-limit.sh
@@ -48,6 +51,7 @@ cd
 #chmod +x /usr/bin/disable-user-expire
 #chmod +x /usr/bin/delete-user-expire
 #chmod +x /usr/bin/banned-user
+chmod +x /usr/bin/unbanned-user
 #chmod +x /usr/bin/user-expire-list
 #chmod +x /usr/bin/user-gen
 #chmod +x /usr/bin/user-limit
@@ -58,12 +62,11 @@ cd
 #chmod +x /usr/bin/clearcache.sh
 #chmod +x /usr/bin/bannermenu
 #chmod +x /usr/bin/menu-update-script-vps.sh
-
+rm /usr/bin/updatescript.sh
 clear
 echo ""
 echo ""
 echo "selesai bosss...." | lolcat
 sleep 3
-rm /usr/bin/updatescript.sh
 clear
 menu
