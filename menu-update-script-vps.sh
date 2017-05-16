@@ -24,7 +24,7 @@ echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
 	select opt in " ${options[@]}"
 	do
 	   case $opt in
-	     "web VULN")
+	   "web VULN")
 	     web-vuln.sh
 	     break
 	     ;;
