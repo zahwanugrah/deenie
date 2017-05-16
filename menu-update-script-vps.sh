@@ -19,8 +19,20 @@ echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
 	exit
 	fi
 	cd
-	carding.sh
-	}
+	PS3='Silahkan Pilih (1-2): '
+	options=("web VULN" "Hacked" "Quit")
+	select opt in " ${options[@]}"
+	do
+	   case $opt in
+	     "web VULN")
+	     web-vuln.sh
+	     break
+	     ;;
+	     "Hacked")
+	     carding.sh
+	     break
+	    ;;
+	    }
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1 untuk update script lalu ENTER: '
