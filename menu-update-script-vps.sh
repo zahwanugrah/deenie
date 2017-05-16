@@ -33,6 +33,9 @@ echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
 	     break
 	    ;;
 	    }
+	    *) echo invalid option;
+	    esac
+	    done
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1 untuk update script lalu ENTER: '
