@@ -67,4 +67,8 @@ rm -f /root/IPcarding
 sudo apt-get install libmoose-perl
 clear
 cd /root
+wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
+chmod +x /usr/bin/carding_hack
+clear
+cd /root
 
