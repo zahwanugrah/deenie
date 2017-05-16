@@ -62,13 +62,27 @@ OPTIONS:
         -g      Web fingerprint
         -j      Server fingerprint
 
-contoh:
- -u http://www.example.com/ -qweds
- -f sites.txt -bqweds
- -i uniscan
- -i ip:xxx.xxx.xxx.xxx
- -o dork_yg_mau_dicari
- -u https://www.example.com/ -r"
+contoh dork: 
+              inurl:shop.php?do=part&id= 
+              inurl:shop_category.php?id= 
+              inurl:shopping.php?id= 
+              inurl:shopping.php?id= 
+              inurl:view_product.php?id= 
+              inurl:view_product.php?id= 
+              irbeautina/product_detail.asp?product_id= 
+              irbeautina/product_detail.php?product_id= 
+              item.asp?eid= 
+              item.asp?id= 
+              item.asp?iid= 
+              item.asp?item_id= 
+	      
+contoh pencarian untuk di ketik:
+                                 -u http://www.example.com/ -qweds
+                                 -f sites.txt -bqweds
+                                 -i uniscan
+                                 -i ip:xxx.xxx.xxx.xxx
+                                 -o dork_yg_mau_dicari
+                                 -u https://www.example.com/ -r"
  
 # web vuln
 cd /root
