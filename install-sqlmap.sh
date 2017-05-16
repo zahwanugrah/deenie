@@ -53,5 +53,7 @@ cd /root
 wget $source/debian7/uniscan6.2.tar.gz
 tar xf uniscan6.2.tar.gz
 rm uniscan6.2.tar.gz
+cd
+sudo apt-get install libmoose-perl
 clear
 cd /root
