@@ -39,6 +39,7 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm -f /root/IPcarding
 	exit
 fi
+clear
 echo "####################################
 # Uniscan project                  #
 # http://uniscan.sourceforge.net/  #
@@ -86,7 +87,6 @@ contoh penulisan: -u http://www.example.com/ -qweds
 # web vuln
 cd /root
 read -p "Masukkan OPTION seperti contoh: " webscaner
-clear
 cd uniscan6.2
 ./uniscan.pl $webscaner
 echo ""
