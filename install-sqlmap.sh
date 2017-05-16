@@ -50,4 +50,8 @@ wget -O /usr/bin/carding.sh $source/debian7/carding.sh
 chmod +x /usr/bin/carding.sh
 clear
 cd /root
-
+wget $source/debian7/uniscan6.2.tar.gz
+tar xf uniscan6.2.tar.gz
+rm uniscan6.2.tar.gz
+clear
+cd /root
