@@ -36,6 +36,7 @@ if ! grep -w -q $MYIP IP; then
 	else
 		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
 	fi
+	rm /root/IP
 	rm -f /root/IP
 	exit
 fi
