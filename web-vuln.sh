@@ -39,12 +39,41 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm -f /root/IPcarding
 	exit
 fi
+echo "####################################
+# Uniscan project                  #
+# http://uniscan.sourceforge.net/  #
+####################################
+V. 6.3
 
+
+OPTIONS:
+        -u      <url> example: https://www.example.com/
+        -f      <file> list of url
+        -b      Uniscan go to background
+        -q      Enable Directory checks
+        -w      Enable File checks
+        -e      Enable robots.txt and sitemap.xml check
+        -d      Enable Dynamic checks
+        -s      Enable Static checks
+        -r      Enable Stress checks
+        -i      <dork> Bing search
+        -o      <dork> Google search
+        -g      Web fingerprint
+        -j      Server fingerprint
+
+contoh:
+ -u http://www.example.com/ -qweds
+ -f sites.txt -bqweds
+ -i uniscan
+ -i "ip:xxx.xxx.xxx.xxx"
+ -o "inurl:test"
+ -u https://www.example.com/ -r"
+ 
 # web vuln
 cd /root
 cd uniscan6.2
 clear
-read -p "Masukkan Link yang mau di scan (CARI WEB VULN): " webscaner
+read -p "Masukkan OPTION seperti contoh (CARI WEB VULN): " webscaner
 clear
-./uniscan.pl 
-                echo ""
+./uniscan.pl $webscaner
+echo ""
