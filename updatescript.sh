@@ -52,6 +52,7 @@ wget -O /usr/bin/unbanned-user https://raw.githubusercontent.com/elangoverdosis/
 #chmod +x /usr/bin/delete-user-expire
 #chmod +x /usr/bin/banned-user
 chmod +x /usr/bin/unbanned-user
+clear
 #chmod +x /usr/bin/user-expire-list
 #chmod +x /usr/bin/user-gen
 #chmod +x /usr/bin/user-limit
@@ -64,6 +65,7 @@ chmod +x /usr/bin/unbanned-user
 #chmod +x /usr/bin/menu-update-script-vps.sh
 rm /usr/bin/updatescript.sh
 clear
+echo ""
 echo ""
 echo ""
 echo "selesai bosss...." | lolcat
