@@ -27,10 +27,9 @@ do
 	     break
 	    ;;
 	    "Hacked Manual Sqlmap")
-	    cd sqlmap
-	    ./sqlmap.py -h
+	    cd sqlmap && ./sqlmap.py -h
 	    echo "Contoh: cd sqlmap ./sqlmap.py -u http://www.siteTARGET.com --dbs" | lolcat
-	    cd /root
+	   
 	    break
 	    ;;
 	    "Quit")
