@@ -12,7 +12,7 @@ wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chm
 }
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1 untuk update script lalu ENTER: '
-options=("Update Script VPS" "Install SQLmap" "Quit")
+options=("Update Script VPS" "Install SQLmap" "Carding" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -24,6 +24,12 @@ do
 	"Install SQLmap")
 	wget -O /usr/bin/install-sqlmap.sh $source/debian7/install-sqlmap.sh && clear && chmod +x /usr/bin/install-sqlmap.sh && /usr/bin/install-sqlmap.sh
 	clear
+	break
+	;;
+	"Carding")
+	echo " Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!
+	read -p "Klik ENTER..."
+	carding.sh
 	break
 	;;
         "Quit")
