@@ -61,6 +61,7 @@ cd /root
 wget $source/debian7/uniscan6.2.tar.gz
 tar xf uniscan6.2.tar.gz
 sed -i 's/$func->CheckUpdate();/#$func->CheckUpdate();/g' /root/uniscan6.2/uniscan.pl
+
 rm uniscan6.2.tar.gz
 cd
 rm -f /root/IP
