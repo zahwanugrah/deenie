@@ -48,19 +48,19 @@ echo "####################################
 
 
 OPTIONS:
-        -u      <url> example: https://www.example.com/
-        -f      <file> list of url
-        -b      Uniscan go to background
-        -q      Enable Directory checks
-        -w      Enable File checks
-        -e      Enable robots.txt and sitemap.xml check
-        -d      Enable Dynamic checks
-        -s      Enable Static checks
-        -r      Enable Stress checks
-        -i      <dork> Bing search
-        -o      <dork> Google search
-        -g      Web fingerprint
-        -j      Server fingerprint
+        -u    =  <url> example: https://www.example.com/
+        -f    =  <file> list of url
+        -b    =  Uniscan go to background
+        -q    =  Enable Directory checks
+        -w    =  Enable File checks
+        -e    =  Enable robots.txt and sitemap.xml check
+        -d    =  Enable Dynamic checks
+        -s    =  Enable Static checks
+        -r    =  Enable Stress checks
+        -i    =  <dork> Bing search
+        -o    =  <dork> Google search
+        -g    =  Web fingerprint
+        -j    =  Server fingerprint
 
 contoh dork: 
               inurl:shop.php?do=part&id= 
@@ -76,17 +76,16 @@ contoh dork:
               item.asp?iid= 
               item.asp?item_id= 
 	      
-contoh pencarian untuk di ketik:
-                                 -u http://www.example.com/ -qweds
-                                 -f sites.txt -bqweds
-                                 -i uniscan
-                                 -i ip:xxx.xxx.xxx.xxx
-                                 -o dork_yg_mau_dicari
-                                 -u https://www.example.com/ -r"
+contoh penulisan: -u http://www.example.com/ -qweds
+                  -f sites.txt -bqweds
+                  -i uniscan
+                  -i "ip:xxx.xxx.xxx.xxx"
+                  -o "dork_yg_mau_dicari"
+                  -u https://www.example.com/ -r"
  
 # web vuln
 cd /root
-read -p "Masukkan OPTION seperti contoh (CARI WEB VULN): " webscaner
+read -p "Masukkan OPTION seperti contoh: " webscaner
 clear
 cd uniscan6.2
 ./uniscan.pl $webscaner
