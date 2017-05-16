@@ -9,7 +9,7 @@ echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
 	fi
 	cd
 	PS3='Silahkan pilih (1-4):'
-options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Quit")
+options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Hacked Manual Sqlmap" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -25,6 +25,10 @@ do
 	     "Hacked")
 	     carding.sh
 	     break
+	    ;;
+	    "Hacked Manual Sqlmap")
+	    cd sqlmap && ./sqlmap.py -h && cd sqlmap
+	    break
 	    ;;
 	    "Quit")
 	    exit
