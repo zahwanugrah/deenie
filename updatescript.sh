@@ -42,10 +42,9 @@ if ! grep -w -q $MYIP IP; then
 	exit
 fi
 rm /root/IP
-clear
 #echo "Maaf.. Saat ini belum tersedia update script bos......!!!" | boxes -d boy
 #echo "Update webmin tersedia bos, tp versi webmin 1.820_all.deb..gk apa2 ya boss.." | lolcat
-echo "Perbaikan MENU unbanned user" | boxes -d boy | lolcat
+echo "Perbaikan MENU update script" | boxes -d boy | lolcat
 sleep 4
 cd
 
@@ -70,7 +69,7 @@ cd
 #wget -O /usr/bin/disable-user-expire $source/debian7/disable-user-expire.sh
 #wget -O /usr/bin/delete-user-expire $source/debian7/delete-user-expire.sh
 #wget -O /usr/bin/banned-user $source/debian7/banned-user.sh
-wget -O /usr/bin/unbanned-user https://raw.githubusercontent.com/elangoverdosis/deeniedoank/debian7/unbanned-user.sh
+#wget -O /usr/bin/unbanned-user https://raw.githubusercontent.com/elangoverdosis/deeniedoank/debian7/unbanned-user.sh
 #wget -O /usr/bin/user-expire-list $source/debian7/user-expire-list.sh
 #wget -O /usr/bin/user-gen $source/debian7/user-gen.sh
 #wget -O /usr/bin/user-limit $source/debian7/user-limit.sh
