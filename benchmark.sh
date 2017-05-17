@@ -9,4 +9,4 @@ source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
 # go to root
 cd
 
-wget $source/Debian7/bench.sh -O - -o /dev/null|bash
+wget $source/debian7/bench.sh -O - -o /dev/null|bash
