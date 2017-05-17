@@ -20,7 +20,7 @@ do
     case $opt in
         "Update Script VPS")
         update_script
-	clear
+	
         break
         ;;
 	"Install SQLmap")
