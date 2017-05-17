@@ -1,6 +1,6 @@
 Lang1 = Pergi ke latar belakang dengan pid 
 lang2 = SEARCH ENGINE 
-lang3 = Daftar situs tersimpan di file sites.txt 
+lang3 = Daftar situs tersimpan di file /root/uniscan6.2/sites.txt 
 lang4 = Tanggal pindai 
 lang5 = TARGET 
 lang6 = Domain 
