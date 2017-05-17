@@ -369,6 +369,7 @@ cd
 #service openvpn restart
 
 # install openvpn
+myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 apt-get install openvpn -y
 wget -O /etc/openvpn/openvpn.tar $source/debian7/openvpn-debian.tar
 cd /etc/openvpn/
@@ -380,9 +381,8 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 wget -O /etc/iptables.conf $source/debian7/iptables.conf
 sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
 
-os=`uname -m`;
-MYIP=$(wget -qO- ipv4.icanhazip.com)
-sed -i 's/ipserver/$MYIP/g' /etc/iptables.conf
+
+sed -i 's/ipserver/$myip/g' /etc/iptables.conf
 
 iptables-restore < /etc/iptables.conf
 service openvpn restart
