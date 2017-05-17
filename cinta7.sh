@@ -156,6 +156,7 @@ fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
+cd
 
 # install mrtg
 #apt-get update;apt-get -y install snmpd;
@@ -227,7 +228,7 @@ service dropbear restart
 # install vnstat gui
 cd /home/vps/public_html/
 wget $source/debian7/vnstat_php_frontend-1.5.1.tar.gz
-tar xf vnstat_php_frontend-1.5.1.tar.gz
+tar xvfz vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
 cd vnstat
@@ -383,7 +384,9 @@ cd /etc/openvpn/
 tar xf openvpn.tar
 wget -O /etc/openvpn/1194.conf $source/debian7/1194.conf
 service openvpn restart
+cd
 sysctl -w net.ipv4.ip_forward=1
+cd
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 wget -O /etc/iptables.conf $source/debian7/iptables.conf
 sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
@@ -395,9 +398,9 @@ iptables-restore < /etc/iptables.conf
 service openvpn restart
 
 # configure openvpn client config
-cd /etc/openvpn/
+cd
 wget -O /etc/openvpn/client.ovpn $source/debian7/1194-client.conf
-
+cd
 cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
 sed -i 's/ipserver/$MYIP/g' /home/vps/public_html/client.ovpn
 sed -i 's/ports/55/' /home/vps/public_html/client.ovpn
