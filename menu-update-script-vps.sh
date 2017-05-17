@@ -30,6 +30,7 @@ do
 	clear
 	/usr/bin/install-sqlmap.sh
 	rm -f /root/IPcarding
+	rm /usr/bin/install-sqlmap.sh
 
 	break
 	;;
