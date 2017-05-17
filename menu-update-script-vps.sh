@@ -24,6 +24,7 @@ do
         break
         ;;
 	"Install SQLmap")
+	cd /root
 	wget -O /usr/bin/install-sqlmap.sh $source/debian7/install-sqlmap.sh
 	chmod +x /usr/bin/install-sqlmap.sh
 	/usr/bin/install-sqlmap.sh
