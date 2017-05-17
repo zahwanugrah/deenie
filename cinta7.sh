@@ -405,11 +405,11 @@ wget -O /etc/openvpn/1194.conf $source/debian7/1194.conf
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-wget -O /etc/iptables.conf $source/debian7/iptables.conf"
+wget -O /etc/iptables.conf $source/debian7/iptables.conf
 sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
 
 
-sed -i 's/ipserver/$MYIP/g' /etc/iptables.conf;
+sed -i 's/ipserver/$MYIP/g' /etc/iptables.conf
 
 iptables-restore < /etc/iptables.conf
 service openvpn restart
@@ -420,7 +420,7 @@ wget -O /etc/openvpn/client.ovpn $source/debian7/1194-client.conf
 
 cp /etc/openvpn/1194-client.ovpn /home/vps/public_html/
 sed -i 's/ipserver/$MYIP/g' /home/vps/public_html/1194-client.ovpn
-sed -i "s/ports/55/" /home/vps/public_html/1194-client.ovpn
+sed -i 's/ports/55/' /home/vps/public_html/1194-client.ovpn
 
 usermod -s /bin/false mail
 echo "mail:deenie" | chpasswd
