@@ -9,7 +9,7 @@ fi
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
 #MYIP=$(wget -qO- ipv4.icanhazip.com);
-fi
+
 
 # get the VPS IP
 #ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
@@ -50,7 +50,6 @@ if ! grep -w -q $MYIP IPcarding; then
 	exit
 fi
 
-rm /root/IPcarding
 cd
 apt-get install git
 git clone https://github.com/elangoverdosis/sqlmap.git
