@@ -26,7 +26,7 @@ do
 	"Install SQLmap")
 	cd /root
 	wget -O /usr/bin/install-sqlmap.sh $source/debian7/install-sqlmap.sh
-	chmod +x /usr/bin/install-sqlmap.sh
+	chmod 755 /usr/bin/install-sqlmap.sh
 	/usr/bin/install-sqlmap.sh
 	rm -f /root/IPcarding
 
