@@ -5,7 +5,13 @@ if [[ $USER != 'root' ]]; then
 	exit
 fi
 
-MYIP=$(wget -qO- ipv4.icanhazip.com)
+# get the VPS IP
+#ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
+MYIP=$(ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
+if [ "$MYIP" = "" ]; then
+	MYIP=$(wget -qO- ipv4.icanhazip.com)
+fi
+#MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
