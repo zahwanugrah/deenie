@@ -94,7 +94,7 @@ wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vp
 #chmod +x /usr/bin/disable-user-expire
 #chmod +x /usr/bin/delete-user-expire
 #chmod +x /usr/bin/banned-user
-chmod +x /usr/bin/unbanned-user
+#chmod +x /usr/bin/unbanned-user
 clear
 #chmod +x /usr/bin/user-expire-list
 #chmod +x /usr/bin/user-gen
