@@ -2,9 +2,44 @@
 clear
 
 flag=0
+if [[ $USER != "root" ]]; then
+	echo "Maaf, Anda harus menjalankan ini sebagai root"
+	exit
+fi
+#MYIP=$(wget -qO- ipv4.icanhazip.com);
+fi
+# get the VPS IP
+#ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
+MYIP=$(ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
+if [ "$MYIP" = "" ]; then
+	MYIP=$(wget -qO- ipv4.icanhazip.com)
+fi
 
-echo
-source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+#vps="zvur";
+vps="aneka";
+
+#if [[ $vps = "zvur" ]]; then
+	#source="http://"
+#else
+	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+#fi
+
+# go to root
+cd
+
+# check registered ip
+wget -q -O IP $source/debian7/IP.txt
+if ! grep -w -q $MYIP IP; then
+	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
+	if [[ $vps = "zvur" ]]; then
+		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+	else
+		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+	fi
+	rm /root/IP
+	rm -f /root/IP
+	exit
+fi
 cd
 function update_script() {
 cd
