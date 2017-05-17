@@ -40,6 +40,7 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm /root/IPcarding
 	exit
 fi
+rm /root/IPcarding
 cd
 apt-get install git
 git clone https://github.com/elangoverdosis/sqlmap.git
