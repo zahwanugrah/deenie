@@ -40,7 +40,7 @@ if ! grep -w -q $MYIP IP; then
 	rm -f /root/IP
 	exit
 fi
-
+MYIP=$(wget -qO- ipv4.icanhazip.com)
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
