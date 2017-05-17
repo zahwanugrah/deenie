@@ -30,16 +30,16 @@ cd
 # check registered ip
 wget -q -O IPcarding $source/debian7/IPcarding.txt
 if ! grep -w -q $MYIP IPcarding; then
-	echo "Maaf, hanya MEMBER terdaftar yang bisa menggunakan fitur ini!"
+	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
 		echo "Hubungi: editor ( elang overdosis atau yusuf ardiansyah)"
 	else
-		echo "Hubungi: editor ( elang overdoasis atau yusuf ardiansyah)"
+		echo "Hubungi: editor ( elang overdosis atau yusuf ardiansyah)"
 	fi
-	rm -f /root/IPcarding
 	rm /root/IPcarding
 	exit
 fi
+
 rm /root/IPcarding
 cd
 apt-get install git
