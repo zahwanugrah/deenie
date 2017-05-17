@@ -380,7 +380,8 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 wget -O /etc/iptables.conf $source/debian7/iptables.conf
 sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
 
-
+os=`uname -m`;
+MYIP=$(wget -qO- ipv4.icanhazip.com)
 sed -i 's/ipserver/$MYIP/g' /etc/iptables.conf
 
 iptables-restore < /etc/iptables.conf
