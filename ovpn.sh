@@ -75,3 +75,4 @@ wget -O /etc/openvpn/client.ovpn $source/debian7/1194-client.conf
 cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
 sed -i 's/ipserver/$MYIP/g' /home/vps/public_html/client.ovpn
 sed -i 's/ports/55/' /home/vps/public_html/client.ovpn
+rm /root/ovpn.sh
