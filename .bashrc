@@ -130,7 +130,7 @@ echo "        #           Pin-BBM      : yu-suf                   #"| lolcat
 echo "        #                                                   #"| lolcat
 echo "        #   Silahkan ketik menu lalu ENTER untuk pilihan    #"| lolcat
 echo "        #                                                   #"| lolcat
-echo "        #        Copyright © yusuf-ardiansyah™  2017        #"| lolcat
+echo "        #        Copyright # yusuf-ardiansyah™  2017        #"| lolcat
 echo "        ====================================================="| lolcat
 date +"                    %A, %d-%m-%Y" | lolcat
 date +"                            %H:%M:%S %Z" | lolcat
