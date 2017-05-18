@@ -4,8 +4,8 @@ if [[ $USER != 'root' ]]; then
 	echo "Maaf, Anda harus menjalankan ini sebagai root"
 	exit
 fi
-
-MYIP=$(wget -qO- ipv4.icanhazip.com)
+MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+#MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 #vps="zvur";
 vps="aneka";
