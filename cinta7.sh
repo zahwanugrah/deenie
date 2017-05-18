@@ -163,8 +163,8 @@ cd
 # install mrtg
 #apt-get update;apt-get -y install snmpd;
 wget -O /etc/snmp/snmpd.conf $source/debian7/snmpd.conf
-wget -O /root/mrtg-mem $source/debian7/mrtg-mem.sh
-chmod +x /root/mrtg-mem
+wget -O /root/mrtg-mem.sh $source/debian7/mrtg-mem.sh
+chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
 service snmpd restart
