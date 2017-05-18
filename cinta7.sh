@@ -120,7 +120,7 @@ cd
 apt-get install boxes
 
 # text pelangi
-sudo apt-get install ruby -y
+sudo apt-get install ruby y
 sudo gem install lolcat
 
 # text warna
