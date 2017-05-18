@@ -50,7 +50,7 @@ wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chm
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1 untuk update script lalu ENTER: '
-options=("Update Script VPS" "Install (anti ddos) DDOS deflate"Install SQLmap" "Carding" "Quit")
+options=("Update Script VPS" "Install DDOS deflate"Install SQLmap" "Carding" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -59,7 +59,7 @@ do
 	
         break
         ;;
-	"Install (anti ddos) DDOS deflate")
+	"Install DDOS deflate")
 	# Instal (D)DoS Deflate
 if [ -d '/usr/local/ddos' ]; then
 echo; echo; echo "Please un-install the previous version first"
