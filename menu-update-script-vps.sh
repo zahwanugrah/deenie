@@ -32,7 +32,7 @@ cd
 # check registered ip
 wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
-	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!" | lolcat
+	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
 		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
 	else
@@ -48,7 +48,7 @@ wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chm
 }
 function anti_ddos() {
 if [ -d '/usr/local/ddos' ]; then
-echo; echo; echo "Gagal boss...Anti ddos sudah terinstal silahkan uninstall terlebih dulu.." | lolcat
+echo; echo; echo "Gagal boss...Anti ddos sudah terinstal silahkan uninstall terlebih dulu.."
 exit 0
 else
 mkdir /usr/local/ddos
