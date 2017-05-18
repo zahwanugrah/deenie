@@ -48,7 +48,7 @@ if ! grep -w -q $MYIP IP; then
 	exit
   fi
 
-
+apt-get -y --purge remove openvpn*;
 # install openvpn
 #myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 apt-get install openvpn -y
