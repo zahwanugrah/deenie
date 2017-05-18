@@ -46,21 +46,7 @@ function update_script() {
 cd
 wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chmod +x /usr/bin/updatescript.sh && /usr/bin/updatescript.sh && rm -f /root/IP && rm -f /root/IPcarding
 }
-
-clear
-echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
-PS3='Silahkan ketik angka 1 untuk update script lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate"Install SQLmap" "Carding" "Quit")
-select opt in "${options[@]}"
-do
-    case $opt in
-        "Update Script VPS")
-        update_script
-	
-        break
-        ;;
-	"Install DDOS deflate")
-	
+function anti_ddos() {
 if [ -d '/usr/local/ddos' ]; then
 echo; echo; echo "Please un-install the previous version first"
 exit 0
@@ -88,8 +74,23 @@ echo "Config file is at /usr/local/ddos/ddos.conf"
 echo "Please send in your comments and/or suggestions to zaf@vsnl.com"
 sleep 3
 q
-break
-;;
+}
+clear
+echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
+PS3='Silahkan ketik angka 1 untuk update script lalu ENTER: '
+options=("Update Script VPS" "Install DDOS deflate"Install SQLmap" "Carding" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Update Script VPS")
+        update_script
+	
+        break
+        ;;
+	"Install DDOS deflate")
+	anti_ddos
+	break
+	;;
 	"Install SQLmap")
 	cd /root
 	wget -O /usr/bin/install-sqlmap.sh $source/debian7/install-sqlmap.sh
