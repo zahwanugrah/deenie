@@ -61,7 +61,7 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
 # install wget and curl
 apt-get update;apt-get -y install wget curl;
-
+apt-get install gem
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
@@ -120,7 +120,7 @@ cd
 apt-get install boxes
 
 # text pelangi
-sudo apt-get install ruby y
+sudo apt-get install ruby
 sudo gem install lolcat
 
 # text warna
