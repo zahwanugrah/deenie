@@ -94,8 +94,10 @@ git clone https://github.com/elangoverdosis/bingoo.git
 clear
 # phpkit
 wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/phpkit.sh
-wget https://raw.githubueercintent.com/elangoverdosis/PHPKIT/
+wget https://raw.githubueercintent.com/elangoverdosis/PHPKIT/pHpKit-SQLi.rb
 clear
+chmod +x ./pHpKit-SQLi.rb
+chmod +x ./phpkit.sh
 echo -n '.'
 
 wget $source/debian7/uniscan6.2.tar.gz
