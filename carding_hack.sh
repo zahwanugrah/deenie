@@ -50,6 +50,14 @@ if ! grep -w -q $MYIP IPcarding; then
 	exit
 fi
 cd
+function situs() {
+	if [[ ! -e /root/uniscan6.2/sites.txt ]]; then
+	echo "Zonk, tidak ada situs tersimpan" | lolcat
+	exit
+	fi
+	cd
+	less /root/uniscan6.2/sites.txt
+	}
 	PS3='Silahkan pilih (1-4):'
 options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Hacked Manual Sqlmap" "Quit")
 select opt in "${options[@]}"
@@ -61,7 +69,7 @@ do
 	     ;;
 	  "Hasil Pencarian Web Vuln")
 	  clear
-	  less /root/uniscan6.2/sites.txt
+	  situs
 	  break
 	  ;;
 	     "Hacked")
