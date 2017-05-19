@@ -38,7 +38,11 @@ fi
 
 # go to root
 cd
-
+echo; echo -n 'Loading...'
+echo -n '.'
+echo -n '.'
+echo -n '.'
+cd
 # check registered ip
 wget -q -O IPcarding $source/debian7/IPcarding.txt
 if ! grep -w -q $MYIP IPcarding; then
