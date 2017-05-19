@@ -63,6 +63,7 @@ echo -n '.'
 cd
 apt-get install git
 git clone https://github.com/elangoverdosis/sqlmap.git
+clear
 
 cd sqlmap
 chmod 755 sqlmap.py
@@ -72,7 +73,7 @@ echo -n '.'
 cd /root
 wget -O /usr/bin/carding.sh $source/debian7/carding.sh
 chmod +x /usr/bin/carding.sh
-
+clear
 cd /root
 
 echo -n '.'
@@ -90,10 +91,14 @@ echo -n '.'
 apt-get install lynx
 apt-get install curl
 git clone https://github.com/elangoverdosis/bingoo.git
-
+clear
+# phpkit
+git clone https://github.com/elangoverdosis/PHPKIT.git
+clear
 echo -n '.'
 
 wget $source/debian7/uniscan6.2.tar.gz
+clear
 tar xf uniscan6.2.tar.gz
 sed -i 's/$func->CheckUpdate();/#$func->CheckUpdate();/g' /root/uniscan6.2/uniscan.pl
 wget -O /root/uniscan6.2/Languages/en.lang $source/debian7/en.lang
@@ -101,12 +106,14 @@ chmod 644 /root/uniscan6.2/Languages/en.lang
 rm uniscan6.2.tar.gz
 cd
 echo -n '.'
-
+clear
 sudo apt-get install libmoose-perl
 echo -n '.'
+clear
 cd /root
 wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
 chmod +x /usr/bin/carding_hack
+clear
 cd /root
 echo -n '.'
 rm /usr/bin/install_sqlmap
