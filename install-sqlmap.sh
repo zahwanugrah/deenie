@@ -94,7 +94,7 @@ git clone https://github.com/elangoverdosis/bingoo.git
 clear
 # phpkit
 wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/phpkit.sh
-wget https://raw.githubueercintent.com/elangoverdosis/PHPKIT/pHpKit-SQLi.rb
+wget https://raw.githubueercontent.com/elangoverdosis/PHPKIT/pHpKit-SQLi.rb
 clear
 chmod +x ./pHpKit-SQLi.rb
 chmod +x ./phpkit.sh
