@@ -78,6 +78,12 @@ cd /root
 #chmod +x /usr/bin/carding_hack
 #clear
 #cd
+# bingoo
+apt-get install lynx
+apt-get install curl
+git clone https://github.com/elangoverdosis/bingoo.git
+
+clear
 
 wget $source/debian7/uniscan6.2.tar.gz
 tar xf uniscan6.2.tar.gz
