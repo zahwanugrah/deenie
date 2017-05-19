@@ -48,7 +48,7 @@ wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chm
 }
 function anti_ddos() {
 if [ -d '/usr/local/ddos' ]; then
-echo; echo; echo "Gagal boss...Anti ddos sudah terinstal silahkan uninstall terlebih dulu.."
+echo; echo; echo "Gagal boss,Anti ddos sudah terinstal silahkan uninstall terlebih dulu."
 exit 0
 else
 mkdir /usr/local/ddos
