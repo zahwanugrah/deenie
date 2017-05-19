@@ -57,6 +57,7 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm -f /root/IPcarding
 	exit
 fi
+echo ""
 echo; echo -n 'Loading source files...'
 echo -n '.'
 cd
