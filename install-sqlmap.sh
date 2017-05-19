@@ -40,7 +40,9 @@ fi
 cd
 echo; echo -n 'Loading...'
 echo -n '.'
+sleep 1
 echo -n '.'
+sleep 1
 echo -n '.'
 cd
 # check registered ip
@@ -55,25 +57,30 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm -f /root/IPcarding
 	exit
 fi
-
+echo; echo -n 'Loading source files...'
+echo -n '.'
 cd
 apt-get install git
 git clone https://github.com/elangoverdosis/sqlmap.git
-clear
+
 cd sqlmap
 chmod 755 sqlmap.py
+
+echo -n '.'
 
 cd /root
 wget -O /usr/bin/carding.sh $source/debian7/carding.sh
 chmod +x /usr/bin/carding.sh
-clear
+
 cd /root
+
+echo -n '.'
 
 wget -O /usr/bin/web-vuln.sh $source/debian7/web-vuln.sh
 chmod +x /usr/bin/web-vuln.sh
 clear
 cd /root
-
+echo -n '.'
 #wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
 #chmod +x /usr/bin/carding_hack
 #clear
@@ -83,7 +90,7 @@ apt-get install lynx
 apt-get install curl
 git clone https://github.com/elangoverdosis/bingoo.git
 
-clear
+echo -n '.'
 
 wget $source/debian7/uniscan6.2.tar.gz
 tar xf uniscan6.2.tar.gz
@@ -92,11 +99,14 @@ wget -O /root/uniscan6.2/Languages/en.lang $source/debian7/en.lang
 chmod 644 /root/uniscan6.2/Languages/en.lang
 rm uniscan6.2.tar.gz
 cd
+echo -n '.'
+
 sudo apt-get install libmoose-perl
-clear
+echo -n '.'
 cd /root
 wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
 chmod +x /usr/bin/carding_hack
-clear
 cd /root
+echo -n '.'
+echo "OK, sukses boss!!!"
 
