@@ -93,6 +93,8 @@ apt-get install curl
 git clone https://github.com/elangoverdosis/bingoo.git
 clear
 # phpkit
+rm ./pHpKit-SQLi.rb
+rm ./phpkit.sh
 wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/master/pHpKit-SQLi.rb
 wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/master/phpkit.sh
 clear
