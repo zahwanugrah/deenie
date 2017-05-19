@@ -12,9 +12,13 @@ sleep 1
 echo -n '.'
 sleep 1
 echo -n '.'
+sleep 1
 echo -n '.'
+sleep 1
 echo -n '.'
+sleep 1
 echo -n '.'
+clear
 	if [[ ! -e /root/sqlmap ]]; then
 	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
 	exit
