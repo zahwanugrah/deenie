@@ -14,9 +14,7 @@ sleep 1
 echo -n '.'
 sleep 1
 echo -n '.'
-sleep 1
 echo -n '.'
-sleep 1
 echo -n '.'
 clear
 	if [[ ! -e /root/sqlmap ]]; then
