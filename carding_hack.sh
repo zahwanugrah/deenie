@@ -2,7 +2,16 @@
 
 clear
 echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
-	read -p "Klik ENTER untuk lanjut..."
+	sleep 2
+	clear
+	echo; echo -n 'Loading source files...'
+echo -n '.'
+echo -n '.'
+echo -n '.'
+echo -n '.'
+echo -n '.'
+echo -n '.'
+echo -n '.'
 	if [[ ! -e /root/sqlmap ]]; then
 	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
 	exit
