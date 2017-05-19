@@ -2,12 +2,15 @@
 
 clear
 echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
-	sleep 2
+	sleep 1
 	clear
 	echo; echo -n 'Loading source files...'
 echo -n '.'
+sleep 1
 echo -n '.'
+sleep 1
 echo -n '.'
+sleep 1
 echo -n '.'
 echo -n '.'
 echo -n '.'
@@ -67,6 +70,7 @@ function situs() {
 	cd
 	less /root/uniscan6.2/sites.txt
 	}
+	echo ""
 	PS3='Silahkan pilih (1-4):'
 options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Hacked Manual Sqlmap" "Quit")
 select opt in "${options[@]}"
