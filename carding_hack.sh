@@ -74,7 +74,7 @@ function situs() {
 	}
 	echo ""
 	PS3='Silahkan pilih (1-4):'
-options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Hacked Manual Sqlmap" "Quit")
+options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Hacked Manual Sqlmap" "Full Toll Carding" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -97,6 +97,12 @@ do
 	    1. Ketik: cd sqlmap (Enter)
 	    2. Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" | lolcat
 	   
+	    break
+	    ;;
+	    "Full Toll Carding")
+	    clear
+	    cd BinGoo
+	    ./bingoo
 	    break
 	    ;;
 	    "Quit")
