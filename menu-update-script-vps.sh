@@ -103,6 +103,11 @@ do
 	break
 	;;
 	"Carding")
+		if [[ ! -e /root/sqlmap ]]; then
+	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
+	exit
+	fi
+	cd
 	carding_hack
 	break
 	;;
