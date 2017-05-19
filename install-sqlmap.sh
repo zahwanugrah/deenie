@@ -70,10 +70,10 @@ chmod +x /usr/bin/web-vuln.sh
 clear
 cd /root
 
-wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
-chmod +x /usr/bin/carding_hack
-clear
-cd
+#wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
+#chmod +x /usr/bin/carding_hack
+#clear
+#cd
 
 wget $source/debian7/uniscan6.2.tar.gz
 tar xf uniscan6.2.tar.gz
