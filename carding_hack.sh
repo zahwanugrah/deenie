@@ -71,6 +71,7 @@ function situs() {
 	fi
 	cd
 	less /root/uniscan6.2/sites.txt
+	}
 function tool_carding() {
          if [[ ! -e /root/bingoo/bingoo ]]; then
 	echo "Maaf boss tool belum di install, Silahkan install dulu :p" | lolcat
