@@ -115,7 +115,8 @@ do
 	    ;;
 	    "PHPKIT")
 	    clear
-	    cd PHPKIT && ./phpkit.sh
+	    cd
+	    ./phpkit.sh
 	    break
 	    ;;
 	    "Quit")
