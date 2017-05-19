@@ -101,7 +101,8 @@ do
 	    ;;
 	    "Full Toll Carding")
 	    clear
-	    cd BinGoo
+	    
+	    cd bingoo
 	    ./bingoo
 	    break
 	    ;;
