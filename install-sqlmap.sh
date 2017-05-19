@@ -93,13 +93,13 @@ apt-get install curl
 git clone https://github.com/elangoverdosis/bingoo.git
 clear
 # phpkit
-rm ./pHpKit-SQLi.rb
-rm ./phpkit.sh
-wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/master/pHpKit-SQLi.rb
-wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/master/phpkit.sh
+#rm ./pHpKit-SQLi.rb
+#rm ./phpkit.sh
+#wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/master/pHpKit-SQLi.rb
+#wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/master/phpkit.sh
 clear
-chmod +x ./pHpKit-SQLi.rb
-chmod +x ./phpkit.sh
+#chmod +x ./pHpKit-SQLi.rb
+#chmod +x ./phpkit.sh
 echo -n '.'
 
 wget $source/debian7/uniscan6.2.tar.gz
