@@ -83,7 +83,7 @@ function tool_carding() {
 	}
 	echo ""
 	PS3='Silahkan pilih (1-4):'
-options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Hacked Manual Sqlmap" "Full Tool Carding" "Quit")
+options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Hacked Manual Sqlmap" "Full Tool Carding" "PHPKIT" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -113,6 +113,9 @@ do
 	    tool_carding
 	    break
 	    ;;
+	    "PHPKIT")
+	    clear
+	    cd PHPKIT && ./phpkit.sh
 	    "Quit")
 	    exit
 	    break
