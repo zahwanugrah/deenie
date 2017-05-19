@@ -93,7 +93,8 @@ apt-get install curl
 git clone https://github.com/elangoverdosis/bingoo.git
 clear
 # phpkit
-git clone https://github.com/elangoverdosis/PHPKIT.git
+wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/phpkit.sh
+wget https://raw.githubueercintent.com/elangoverdosis/PHPKIT/
 clear
 echo -n '.'
 
