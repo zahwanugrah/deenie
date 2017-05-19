@@ -109,5 +109,7 @@ wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
 chmod +x /usr/bin/carding_hack
 cd /root
 echo -n '.'
+rm /usr/bin/install_sqlmap
+clear
 echo "OK, sukses boss!!!"
 
