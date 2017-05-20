@@ -360,8 +360,8 @@ chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
 cd
 wget $source/debian7/instalshc.sh
-chmod +x ./instalshc.sh
-./instalshc
+chmod +x /root/instalshc.sh
+/root/instalshc.sh
 rm /root/instalshc.sh
 
 # swap ram
