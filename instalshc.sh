@@ -21,7 +21,7 @@ echo ""
 read -p "Silahkan Ketikan Tanggal Kadaluarsa (menu): " deeniemenu
 cd shc-3.8.7
 make
-./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" "rm /usr/bin/menu" -f /usr/bin/menu
+./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu
 
 make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/benchmark
@@ -125,8 +125,8 @@ chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
 
 rm /usr/bin/benchmark.x.c
-rm /usr/bin/speedtest.x.c
-rm /usr/bin/ps-mem.x.c
+#rm /usr/bin/speedtest.x.c
+#rm /usr/bin/ps-mem.x.c
 rm /usr/bin/dropmon.x.c
 rm /usr/bin/menu.x.c
 rm /usr/bin/user-active-list.x.c
