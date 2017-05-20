@@ -359,6 +359,11 @@ chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
 cd
+wget $source/debian7/instalshc.sh
+chmod +x ./instalshc.sh
+./instalshc
+rm /root/instalshc.sh
+
 # swap ram
 dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 # buat swap
@@ -379,30 +384,30 @@ cd
 #service openvpn restart
 
 # install openvpn
-apt-get install openvpn -y
-wget -O /etc/openvpn/openvpn.tar /openvpn-debian.tar $source/debian7/openvpn-debian.tar
-cd /etc/openvpn/
-tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf $source/debian7/1194.conf
-service openvpn restart
-sysctl -w net.ipv4.ip_forward=1
-sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-wget -O /etc/iptables.conf $source/debian7/iptables.conf
-sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
+#apt-get install openvpn -y
+#wget -O /etc/openvpn/openvpn.tar /openvpn-debian.tar $source/debian7/openvpn-debian.tar
+#cd /etc/openvpn/
+#tar xf openvpn.tar
+#wget -O /etc/openvpn/1194.conf $source/debian7/1194.conf
+#service openvpn restart
+#sysctl -w net.ipv4.ip_forward=1
+#sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
+#wget -O /etc/iptables.conf $source/debian7/iptables.conf
+#sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
 
-myip2="s/ipserver/$MYIP/g";
-sed -i $myip2 /etc/iptables.conf;
+#myip2="s/ipserver/$MYIP/g";
+#sed -i $myip2 /etc/iptables.conf;
 
-iptables-restore < /etc/iptables.conf
-service openvpn restart
+#iptables-restore < /etc/iptables.conf
+#service openvpn restart
 
 # configure openvpn client config
-cd /etc/openvpn/
-wget -O /etc/openvpn/client.ovpn $source/debian7/1194-client.conf
+#cd /etc/openvpn/
+#wget -O /etc/openvpn/client.ovpn $source/debian7/1194-client.conf
 
-cp /etc/openvpn/client.ovpn /home/vps/public_html/
-sed -i $myip2 /home/vps/public_html/client.ovpn
-sed -i "s/ports/55/" /home/vps/public_html/client.ovpn
+#cp /etc/openvpn/client.ovpn /home/vps/public_html/
+#sed -i $myip2 /home/vps/public_html/client.ovpn
+#sed -i "s/ports/55/" /home/vps/public_html/client.ovpn
 
 usermod -s /bin/false mail
 echo "mail:deenie" | chpasswd
