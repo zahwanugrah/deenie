@@ -86,7 +86,7 @@ function card() {
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1-5 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install SQLmap" "Carding" "Quit")
+options=("Update Script VPS" "Install DDOS deflate" "Install OpenVPN" "Install SQLmap" "Carding" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -97,6 +97,14 @@ do
         ;;
 	"Install DDOS deflate")
 	anti_ddos
+	break
+	;;
+	"Install OpenVPN")
+	clear
+	wget $source/debian7/openvpn.sh
+	chmod +x /root/openvpn.sh
+	/root/openvpn.sh
+	
 	break
 	;;
 	"Install SQLmap")
