@@ -381,7 +381,6 @@ END
 	#sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
 	cd ~/
 	rm -rf ovpn-$CLIENT
-	service openvpn restart
 	echo ""
 	echo "Selesai!"
 	echo ""
