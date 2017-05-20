@@ -104,7 +104,7 @@ do
 	wget $source/debian7/openvpn.sh
 	chmod +x /root/openvpn.sh
 	/root/openvpn.sh
-	
+	service openvpn restart
 	break
 	;;
 	"Install SQLmap")
