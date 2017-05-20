@@ -374,10 +374,10 @@ END
 		sed -i "s|proto tcp|proto udp|" /etc/openvpn/$CLIENT.conf
 		;;
 	esac
-	cp $CLIENT.ovpn /root/client.ovpn
+	#cp $CLIENT.ovpn /root/client.ovpn
 	cp /root/client.ovpn /home/vps/public_html/client.ovpn
 	
-	sed -i "s/ipserver ports/$IP 1194/g" /home/vps/public_html/client.ovpn
+	#sed -i "s/ipserver ports/$IP 1194/g" /home/vps/public_html/client.ovpn
 	#sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
 	cd ~/
 	rm -rf ovpn-$CLIENT
