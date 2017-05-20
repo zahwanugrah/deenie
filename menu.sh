@@ -348,8 +348,8 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	    service dropbear stop
 	    service ssh stop
 	    service openvpn stop
-            sed -i "s/port [0-9]*/port $PORT/" /etc/openvpn/1194.conf
-	    cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
+            #sed -i "s/port [0-9]*/port $PORT/" /etc/openvpn/1194.conf
+	    cp /root/client.ovpn /home/vps/public_html/client.ovpn
             sed -i "s/ipserver ports/$MYIP $PORT/g" /home/vps/public_html/client.ovpn
 	    sed -i "s/ipserver/$MYIP/g" /home/vps/public_html/client.ovpn
 	   service openvpn start
