@@ -90,6 +90,7 @@ do
     case $opt in
 	"Cari Web Vuln")
 	 web-vuln.sh
+	 carding_hack
 	 break
 	     ;;
 	  "Hasil Pencarian Web Vuln")
