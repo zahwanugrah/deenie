@@ -106,8 +106,8 @@ wget $source/debian7/uniscan6.2.tar.gz
 clear
 tar xf uniscan6.2.tar.gz
 sed -i 's/$func->CheckUpdate();/#$func->CheckUpdate();/g' /root/uniscan6.2/uniscan.pl
-wget -O /root/uniscan6.2/Languages/en.lang $source/debian7/en.lang
-chmod 644 /root/uniscan6.2/Languages/en.lang
+#wget -O /root/uniscan6.2/Languages/en.lang $source/debian7/en.lang
+#chmod 644 /root/uniscan6.2/Languages/en.lang
 rm uniscan6.2.tar.gz
 cd
 echo -n '.'
