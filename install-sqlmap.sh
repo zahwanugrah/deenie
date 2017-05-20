@@ -90,7 +90,7 @@ echo -n '.'
 # bingoo
 apt-get install lynx
 apt-get install curl
-git clone https://github.com/elangoverdosis/bingoo.git
+git clone https://github.com/elangoverdosis/BinGoo.git
 clear
 # phpkit
 #rm ./pHpKit-SQLi.rb
