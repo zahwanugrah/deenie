@@ -73,12 +73,12 @@ function situs() {
 	less /root/uniscan6.2/sites.txt
 	}
 function tool_carding() {
-         if [[ ! -e /root/bingoo/bingoo ]]; then
+         if [[ ! -e /root/BinGoo/bingoo ]]; then
 	echo "Maaf boss tool belum di install, Silahkan install dulu :p" | lolcat
 	exit
 	fi
 	cd
-	cd bingoo
+	cd BinGoo
 	./bingoo
 	}
 	echo ""
