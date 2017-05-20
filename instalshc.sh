@@ -127,7 +127,7 @@ chmod +x /usr/bin/bannermenu
 rm /usr/bin/benchmark.x.c
 rm /usr/bin/speedtest.x.c
 rm /usr/bin/ps-mem.x.c
-rm usr/bin/dropmon.x.c
+rm /usr/bin/dropmon.x.c
 rm /usr/bin/menu.x.c
 rm /usr/bin/user-active-list.x.c
 rm /usr/bin/user-add.x.c
