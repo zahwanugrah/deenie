@@ -1,20 +1,9 @@
 #!/bin/bash
 
-clear
-echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
-	sleep 1
 	clear
 	echo; echo -n 'Loading source files...'
 echo -n '.'
 sleep 1
-echo -n '.'
-sleep 1
-echo -n '.'
-sleep 1
-echo -n '.'
-sleep 1
-echo -n '.'
-echo -n '.'
 echo -n '.'
 clear
 	if [[ ! -e /root/sqlmap ]]; then
