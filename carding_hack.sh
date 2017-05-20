@@ -71,6 +71,7 @@ function situs() {
 	fi
 	cd
 	less /root/uniscan6.2/sites.txt
+
 	}
 function tool_carding() {
          if [[ ! -e /root/BinGoo/bingoo ]]; then
@@ -94,23 +95,28 @@ do
 	  "Hasil Pencarian Web Vuln")
 	  clear
 	  situs
+	  carding_hack
 	  break
 	  ;;
 	     "Hacked")
 	     carding.sh
+	     carding_hack
 	     break
 	    ;;
 	    "Hacked Manual Sqlmap")
 	    cd sqlmap && ./sqlmap.py -h
 	    echo "Contoh: 
-	    1. Ketik: cd sqlmap (Enter)
-	    2. Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" | lolcat
+	    
+	    Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" | lolcat
+	   cd sqlmap
 	   
+	
 	    break
 	    ;;
 	    "Full Tool Carding")
 	    clear
 	    tool_carding
+	  
 	    break
 	    ;;
 	    #"PHPKIT")
