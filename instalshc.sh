@@ -6,7 +6,7 @@ apt-get install yum
 yum -y install make automake autoconf gcc gcc++
 apt-get -y install build-essential
 aptitude -y install build-essential
-
+apt-get install tar
 wget https://raw.githubusercontent.com/elangoverdosis/deeniedoank/debian7/shc-3.8.7.tgz
 tar xvfz shc-3.8.7.tgz
 
@@ -22,47 +22,64 @@ read -p "Silahkan Ketikan Tanggal Kadaluarsa (menu): " deeniemenu
 cd shc-3.8.7
 make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/menu
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/benchmark
-
-./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/speedtest
+cd shc-3.8.7
+make
+#./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/speedtest
 
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/ps-mem
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/dropmon
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-active-list
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-add
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-add-pptp
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-del
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/disable-user-expire
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/delete-user-expire
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/banned-user
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-expire-list
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-gen
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/userlimit.sh
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "maaf boss MENU ente sudah kadaluaraa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/userlimitssh.sh
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-list
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-login
-
+cd shc-3.8.7
+make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/user-pass
 
 cd
 mv /usr/bin/menu.x /usr/bin/menu
 mv /usr/bin/benchmark.x /usr/bin/benchmark
-mv /usr/bin/speedtest.x /usr/bin/speedtest
+#mv /usr/bin/speedtest.x /usr/bin/speedtest
 mv /usr/bin/ps-mem.x /usr/bin/ps-mem
 mv /usr/bin/dropmon.x /usr/bin/dropmon
 mv /usr/bin/user-active-list.x /usr/bin/user-active-list
@@ -82,7 +99,7 @@ mv /usr/bin/user-pass.x /usr/bin/user-pass
 mv /usr/bin/user-renew.x /usr/bin/user-renew
 
 chmod +x /usr/bin/benchmark
-chmod +x /usr/bin/speedtest
+#chmod +x /usr/bin/speedtest
 chmod +x /usr/bin/ps-mem
 #chmod +x /usr/bin/autokill
 chmod +x /usr/bin/dropmon
