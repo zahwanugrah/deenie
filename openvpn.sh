@@ -115,15 +115,15 @@ else
 	echo ""
 	echo "Pertama saya perlu tahu IPv4 address dari network interface yang OpenVPN gunakan"
 	read -p "IP address: " -e -i $IP IP
-	#echo ""
-	#echo "Port berapa yang Anda inginkan untuk OpenVPN?"
-	#read -p "Port: " -e -i 1194 PORT
-	PORT="1194";
 	echo ""
-	#echo "Apakah Anda ingin OpenVPN akan tersedia di port 53 juga?"
-	#echo "Hal ini dapat berguna untuk menghubungkan jaringan yang benar-benar ketat"
-	#read -p "Listen port 53 [y/n]: " -e -i n ALTPORT
-	#echo ""
+	echo "Port berapa yang Anda inginkan untuk OpenVPN?"
+	read -p "Port: " -e -i 1194 PORT
+	#PORT="1194";
+	echo ""
+	echo "Apakah Anda ingin OpenVPN akan tersedia di port 53 juga?"
+	echo "Hal ini dapat berguna untuk menghubungkan jaringan yang benar-benar ketat"
+	read -p "Listen port 53 [y/n]: " -e -i n ALTPORT
+	echo ""
 	echo "TCP atau UDP server?"
 	echo "   1) TCP server"
 	echo "   2) UDP server"
@@ -143,10 +143,10 @@ else
 	echo "   7) Yandex"
 	read -p "DNS [1-7]: " -e -i 3 DNS
 	echo ""
-	#echo "Terakhir, sebutkan nama untuk cert klien"
-	#echo "Tolong, gunakan satu kata saja, tidak ada karakter khusus"
-	#read -p "Nama Client: " -e -i client CLIENT
-	CLIENT="client"
+	echo "Terakhir, sebutkan nama untuk cert klien"
+	echo "Tolong, gunakan satu kata saja, tidak ada karakter khusus"
+	read -p "Nama Client: " -e -i client CLIENT
+	#CLIENT="client"
 	echo ""
 	echo "Oke, itu semua saya butuhkan. Kami siap untuk setup OpenVPN server Anda sekarang"
 	read -n1 -r -p "Tekan sembarang tombol untuk melanjutkan..."
@@ -374,8 +374,9 @@ END
 		sed -i "s|proto tcp|proto udp|" /etc/openvpn/$CLIENT.conf
 		;;
 	esac
-	cp $CLIENT.ovpn /home/vps/public_html/client.ovpn
 	cp $CLIENT.ovpn /root/client.ovpn
+	cp /root/client.ovpn /home/vps/public_html/client.ovpn
+	
 	sed -i "s/ipserver ports/$IP 1194/g" /home/vps/public_html/client.ovpn
 	#sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
 	cd ~/
