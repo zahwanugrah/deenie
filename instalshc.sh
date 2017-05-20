@@ -29,7 +29,7 @@ make
 make
 #./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/speedtest
 
-./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/ps-mem
+#./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/ps-mem
 
 make
 ./shc -e $deeniemenu -m "Maaf boss MENU ente sudah kadaluarsa silahkan hubungi admin Deny siswanto atau Yusuf ardiansyah" -f /usr/bin/dropmon
@@ -82,7 +82,7 @@ cd
 mv /usr/bin/menu.x /usr/bin/menu
 mv /usr/bin/benchmark.x /usr/bin/benchmark
 #mv /usr/bin/speedtest.x /usr/bin/speedtest
-mv /usr/bin/ps-mem.x /usr/bin/ps-mem
+#mv /usr/bin/ps-mem.x /usr/bin/ps-mem
 mv /usr/bin/dropmon.x /usr/bin/dropmon
 mv /usr/bin/user-active-list.x /usr/bin/user-active-list
 mv /usr/bin/user-add.x /usr/bin/user-add
@@ -102,7 +102,7 @@ mv /usr/bin/user-renew.x /usr/bin/user-renew
 
 chmod +x /usr/bin/benchmark
 #chmod +x /usr/bin/speedtest
-chmod +x /usr/bin/ps-mem
+#chmod +x /usr/bin/ps-mem
 #chmod +x /usr/bin/autokill
 chmod +x /usr/bin/dropmon
 chmod +x /usr/bin/menu
