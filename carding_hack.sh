@@ -90,18 +90,16 @@ do
     case $opt in
 	"Cari Web Vuln")
 	 web-vuln.sh
-	 /usr/bin/carding_hack
 	 break
 	     ;;
 	  "Hasil Pencarian Web Vuln")
 	  clear
 	  situs
-	  /usr/bin/carding_hack
 	  break
 	  ;;
 	     "Hacked")
 	     carding.sh
-	     carding_hack
+	 
 	     break
 	    ;;
 	    "Hacked Manual Sqlmap")
