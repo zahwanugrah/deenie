@@ -93,7 +93,7 @@ apt-get install curl
 git clone https://github.com/elangoverdosis/BinGoo.git
 clear
 git clone https://github.com/elangoverdosis/sqli-scanner.git
-
+chmod +x /root/sqli-scanner/sqli-scanner.py
 # phpkit
 #rm ./pHpKit-SQLi.rb
 #rm ./phpkit.sh
