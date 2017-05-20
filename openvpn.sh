@@ -357,7 +357,7 @@ END
 
 	cp /etc/openvpn/easy-rsa/2.0/keys/ca.crt ~/ovpn-$CLIENT
 	cd ~/ovpn-$CLIENT
-	cp $CLIENT.conf $CLIENT.conf
+	cp $CLIENT.ovpn $CLIENT.conf
 	echo "<ca>" >> $CLIENT.conf
 	cat ca.crt >> $CLIENT.conf
 	echo -e "</ca>\n" >> $CLIENT.conf
