@@ -70,6 +70,22 @@ echo -n '.'
 cd
 git clone https://github.com/elangoverdosis/fimap.git
 cd fimap
+chmod 755 autoawesome.py
+chmod 755 baseClass.py
+chmod 755 baseTools.py
+chmod 755 bingScan.py
+chmod 755 codeinjector.py
+chmod 755 config.py
+chmod 755 crawler.py
+chmod 755 fimap.py
+chmod 755 googleScan.py
+chmod 755 language.py
+chmod 755 massScan.py
+chmod 755 plugininterface.py
+chmod 755 report.py
+chmod 755 singleScan.py
+chmod 755 ssh.py
+chmod 755 targetScanner.py
 
 clear
 cd /root
