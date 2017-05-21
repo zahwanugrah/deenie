@@ -42,8 +42,6 @@ echo; echo -n 'Loading...'
 echo -n '.'
 sleep 1
 echo -n '.'
-sleep 1
-echo -n '.'
 cd
 # check registered ip
 wget -q -O IPcarding $source/debian7/IPcarding.txt
@@ -69,7 +67,11 @@ cd sqlmap
 chmod 755 sqlmap.py
 
 echo -n '.'
+cd
+git clone https://github.com/elangoverdosis/fimap.git
+cd fimap
 
+clear
 cd /root
 wget -O /usr/bin/carding.sh $source/debian7/carding.sh
 chmod +x /usr/bin/carding.sh
