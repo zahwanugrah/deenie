@@ -73,20 +73,11 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 }
-
-function card() {
-	if [[ ! -e /root/sqlmap ]]; then
-	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
-	exit
-	fi
-	cd
-	carding_hack
-	}
 	
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1-5 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install SQLmap" "Carding" "Quit")
+options=("Update Script VPS" "Install DDOS deflate" "Install SQLmap" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -109,10 +100,6 @@ do
 	rm -f /root/IPcarding
 	rm /usr/bin/install-sqlmap.sh
 
-	break
-	;;
-	"Carding")
-	card
 	break
 	;;
         "Quit")
