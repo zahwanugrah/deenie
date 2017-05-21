@@ -18,7 +18,14 @@ echo
 	#if [ "$MYIP" = "" ]; then
 		#MYIP=$(wget -qO- ipv4.icanhazip.com)
 	#fi
-
+function card() {
+	if [[ ! -e /root/sqlmap ]]; then
+	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
+	exit
+	fi
+	cd
+	carding_hack
+	}
 	clear
 
 	#echo "--------------- Selamat datang di Server - IP: $MYIP ---------------"
@@ -51,7 +58,7 @@ date +"                            %H:%M:%S %Z" | lolcat
 echo ""
 echo ""
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring User Dan Tendang" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Ganti Port OpenSSH" "Ganti Port Dropbear" "Ganti Port Squid3" "Ganti Port OpenVPN" "Update Script VPS" "Quit")
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring User Dan Tendang" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Ganti Port OpenSSH" "Ganti Port Dropbear" "Ganti Port Squid3" "Ganti Port OpenVPN" "Update Script VPS" "Carding" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -362,7 +369,11 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	 /usr/bin/menu-update-script-vps.sh
 	 break
 	 ;;
-	 
+	 "Carding")
+	 clear
+	 card
+	 break
+	 ;;
 	"Quit")
 	
 	break
