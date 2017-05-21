@@ -67,9 +67,10 @@ cd sqlmap
 chmod 755 sqlmap.py
 
 echo -n '.'
-cd
+cd /root
 git clone https://github.com/elangoverdosis/fimap.git
 cd fimap
+cd src
 chmod 755 autoawesome.py
 chmod 755 baseClass.py
 chmod 755 baseTools.py
