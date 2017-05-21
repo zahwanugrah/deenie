@@ -69,7 +69,7 @@ function sqli_scanner() {
 
 function tool_carding() {
          if [[ ! -e /root/BinGoo/bingoo ]]; then
-	echo "Maaf boss tool belum di install, Silahkan install dulu :p" | lolcat
+	echo "Maaf boss tool belum di install, Silahkan install dulu di menu update script" | lolcat
 	exit
 	fi
 	cd
