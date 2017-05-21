@@ -71,11 +71,7 @@ service openvpn restart
 # configure openvpn client config
 cd /etc/openvpn/
 wget -O /etc/openvpn/client.ovpn $source/debian7/1194-client.conf
-usermod -s /bin/false mail
-echo "mail:deenie" | chpasswd
-useradd -s /bin/false -M deenie11
-echo "deenie11:deenie" | chpasswd
-#tar cf client.tar 1194-client.ovpn
+
 cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
 sed -i $myip2 /home/vps/public_html/client.ovpn
 sed -i "s/ports/55/" /home/vps/public_html/client.ovpn
