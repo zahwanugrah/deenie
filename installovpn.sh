@@ -47,8 +47,10 @@ if ! grep -w -q $MYIP IP; then
 	rm -f /root/IP
 	exit
 fi
+
+
+
 # install openvpn
-#myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 apt-get install openvpn -y
 wget -O /etc/openvpn/openvpn.tar $source/debian7/openvpn-debian.tar
 cd /etc/openvpn/
@@ -60,8 +62,8 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 wget -O /etc/iptables.conf $source/debian7/iptables.conf
 sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
 
-
-sed -i 's/ipserver/$MYIP/g' /etc/iptables.conf
+myip2="s/ipserver/$MYIP/g";
+sed -i $myip2 /etc/iptables.conf;
 
 iptables-restore < /etc/iptables.conf
 service openvpn restart
@@ -69,7 +71,11 @@ service openvpn restart
 # configure openvpn client config
 cd /etc/openvpn/
 wget -O /etc/openvpn/client.ovpn $source/debian7/1194-client.conf
-
+usermod -s /bin/false mail
+echo "mail:deenie" | chpasswd
+useradd -s /bin/false -M deenie11
+echo "deenie11:deenie" | chpasswd
+#tar cf client.tar 1194-client.ovpn
 cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
-sed -i 's/ipserver/$MYIP/g' /home/vps/public_html/client.ovpn
-sed -i 's/ports/55/' /home/vps/public_html/client.ovpn
+sed -i $myip2 /home/vps/public_html/client.ovpn
+sed -i "s/ports/55/" /home/vps/public_html/client.ovpn
