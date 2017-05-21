@@ -379,35 +379,12 @@ sysctl vm.swappiness=10
 chown root:root /swapfile 
 chmod 0600 /swapfile
 cd
+
 #ovpn
-#wget -O openvpn.sh $source/debian7/openvpn.sh && #chmod +x openvpn.sh && ./openvpn.sh
-#service openvpn restart
-
-# install openvpn
-apt-get install openvpn -y
-wget -O /etc/openvpn/openvpn.tar /openvpn-debian.tar $source/debian7/openvpn-debian.tar
-cd /etc/openvpn/
-tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf $source/debian7/1194.conf
-service openvpn restart
-sysctl -w net.ipv4.ip_forward=1
-sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-wget -O /etc/iptables.conf $source/debian7/iptables.conf
-sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
-
-myip2="s/ipserver/$MYIP/g";
-sed -i $myip2 /etc/iptables.conf;
-
-iptables-restore < /etc/iptables.conf
-service openvpn restart
-
-# configure openvpn client config
-cd /etc/openvpn/
-wget -O /etc/openvpn/client.ovpn $source/debian7/1194-client.conf
-
-cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
-sed -i $myip2 /home/vps/public_html/client.ovpn
-sed -i "s/ports/55/" /home/vps/public_html/client.ovpn
+wget -O ovpn.sh $source/debian7/installovpn.sh
+chmod +x ovpn.sh
+./ovpn.sh
+rm ./ovpn.sh
 
 usermod -s /bin/false mail
 echo "mail:deenie" | chpasswd
