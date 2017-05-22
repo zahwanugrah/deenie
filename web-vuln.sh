@@ -91,7 +91,8 @@ contoh penulisan: -u http://www.example.com/ -qweds
                   -i "ip:xxx.xxx.xxx.xxx"
                   -o "dork_yg_mau_dicari"
                   -u https://www.example.com/ -r"
- 
+		  echo ""
+ echo " KELUAR tekan ctrl + z "
 # web vuln
 cd /root
 read -p "Masukkan OPTION seperti (contoh penulisan): " webscaner
