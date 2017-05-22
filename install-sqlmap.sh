@@ -46,13 +46,36 @@ cd
 # check registered ip
 wget -q -O IPcarding $source/debian7/IPcarding.txt
 if ! grep -w -q $MYIP IPcarding; then
-	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor ( elang overdosis atau yusuf ardiansyah)"
-	else
-		echo "Hubungi: editor ( elang overdosis atau yusuf ardiansyah)"
-	fi
+echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
+        echo "     
+                       
+               =============== OS-32 & 64-bit ================
+               ♦                                             ♦
+               ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
+	       ♦                     &                       ♦
+	       ♦               DENY SISWANTO                 ♦
+               ♦       -----------About Us------------       ♦ 
+               ♦            Tel : +6283843700098             ♦
+               ♦         { Sms/whatsapp/telegram }           ♦ 
+               ♦       http://facebook.com/t34mh4ck3r        ♦    
+               ♦   http://www.facebook.com/elang.overdosis   ♦
+               ♦                                             ♦
+               =============== OS-32 & 64-bit ================
+               
+                 Please make payment before use auto script
+                 ..........................................
+                 .        Price: Rp.20.000 = 1IP          .
+                 .          *****************             .
+                 .           Maybank Account              .
+                 .           =================            .
+                 .          No   : Hubungi admin          .
+                 .          Name : Yusuf Ardiansyah       .
+                 ..........................................   
+                          Thank You For Choice Us"
+
+	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
 	rm -f /root/IPcarding
+	rm -f /etc/bin/install-sqlmap.sh
 	exit
 fi
 echo ""
