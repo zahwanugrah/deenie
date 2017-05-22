@@ -21,7 +21,7 @@ fi
 vps="aneka";
 
 
-	source="http://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
 
 
 # go to root
