@@ -58,7 +58,7 @@ if ! grep -w -q $MYIP IP; then
                
                  Please make payment before use auto script
                  ..........................................
-                 .           Price: Rp.20.000 = 1IP            .
+                 .        Price: Rp.20.000 = 1IP          .
                  .          *****************             .
                  .           Maybank Account              .
                  .           =================            .
