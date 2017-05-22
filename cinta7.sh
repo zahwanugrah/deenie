@@ -70,6 +70,7 @@ if ! grep -w -q $MYIP IP; then
 	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
 	
 	rm /root/IP
+	rm cinta7.sh
 	rm -f /root/IP
 	exit
 fi
