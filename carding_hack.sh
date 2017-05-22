@@ -96,7 +96,7 @@ function tool_carding() {
 	echo ""
 	echo "Gunakan dengan bijak !!!"
 	echo ""
-	PS3='Silahkan pilih (1-4):'
+	PS3='Silahkan pilih (1-7):'
 options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Sqli Scanner" "Hacked" "Hacked Manual Sqlmap" "Full Tool Carding" "Quit")
 select opt in "${options[@]}"
 do
