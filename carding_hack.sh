@@ -80,8 +80,22 @@ function situs() {
 
 	}
 function sqli_scanner() {
-         cd sqli-scanner
-	 ./sqli-scanner.py
+clear
+echo "optional arguments:
+  -h,            --help       show this help message and exit
+  -f FILE,       --file FILE  Target file with URLs
+  -o OUTPUT,     --output     OUTPUT
+                              Output file to save vulnerable websites to
+  -p PROCESSCOUNT,--processcount PROCESSCOUNT
+                              Number of processes to generate
+  -v,            --verbose    Enable Verbose mode"
+  echo ""
+echo "contoh: [-h] [-f FILE] [-o OUTPUT] [-p PROCESSCOUNT] [-v]"
+        echo ""
+	read -p "Isikan perintah seperti di atas: " sqliscanner
+	cd sqli-scanner
+	 ./sqli-scanner.py $sqliscanner
+	 
 	 }
 
 function tool_carding() {
