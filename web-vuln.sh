@@ -86,10 +86,11 @@ contoh penulisan: -u http://www.example.com/ -qweds
                   -u https://www.example.com/ -r"
 		  echo ""
  echo "           KELUAR tekan ctrl + z "
- echo "." | lolcat -a -d 3500
+ echo ""
 # web vuln
 cd /root
 read -p "Masukkan OPTION seperti (contoh penulisan): " webscaner
+echo "." | lolcat -a -d 3500
 cd uniscan6.2
 ./uniscan.pl $webscaner
 echo ""
