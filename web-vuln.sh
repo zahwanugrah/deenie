@@ -98,4 +98,6 @@ read -p "Masukkan OPTION seperti (contoh penulisan): " webscaner
 cd uniscan6.2
 ./uniscan.pl $webscaner
 echo ""
+cd
+web-vuln.sh
 cd /root
