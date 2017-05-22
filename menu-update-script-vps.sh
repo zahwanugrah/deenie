@@ -98,7 +98,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 	
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
-PS3='Silahkan ketik angka 1-5 lalu ENTER: '
+PS3='Silahkan ketik angka 1-4 lalu ENTER: '
 options=("Update Script VPS" "Install DDOS deflate" "Install SQLmap" "Quit")
 select opt in "${options[@]}"
 do
