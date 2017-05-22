@@ -68,9 +68,9 @@ if ! grep -w -q $MYIP IP; then
                  ..........................................   
                           Thank You For Choice Us"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+		echo "Hubungi: editor ( elang overdosis atau deeniedoank)"
 	else
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+		echo "Hubungi: editor ( elang overdosis atau deeniedoank)"
 	fi
 	rm /root/IP
 	rm -f /root/IP
