@@ -1,10 +1,5 @@
 #!/bin/bash
 
-	clear
-	echo; echo -n 'Loading source files...'
-echo -n '.'
-sleep 1
-echo -n '.'
 clear
 	if [[ ! -e /root/sqlmap ]]; then
 	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
@@ -98,6 +93,8 @@ function tool_carding() {
 	cd BinGoo
 	./bingoo
 	}
+	echo ""
+	echo "Gunakan dengan bijak !!!"
 	echo ""
 	PS3='Silahkan pilih (1-4):'
 options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Sqli Scanner" "Hacked" "Hacked Manual Sqlmap" "Full Tool Carding" "Quit")
