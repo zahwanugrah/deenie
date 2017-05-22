@@ -5,13 +5,16 @@ if [[ $USER != "root" ]]; then
 	exit
 fi
 
+# initialisasi var
+export DEBIAN_FRONTEND=noninteractive
+OS=`uname -m`;
 #MYIP=$(wget -qO- ipv4.icanhazip.com);
 
 # get the VPS IP
 #ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
 
-MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
-#MYIP=$(ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
+#MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+MYIP=$(ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
@@ -37,15 +40,39 @@ cd
 wget -q -O IPcarding $source/debian7/IPcarding.txt
 if ! grep -w -q $MYIP IPcarding; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
-	else
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
-	fi
-	rm /root/IPcarding
+        echo "     
+                       
+               =============== OS-32 & 64-bit ================
+               ♦                                             ♦
+               ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
+	       ♦                     &                       ♦
+	       ♦               DENY SISWANTO                 ♦
+               ♦       -----------About Us------------       ♦ 
+               ♦            Tel : +6283843700098             ♦
+               ♦         { Sms/whatsapp/telegram }           ♦ 
+               ♦       http://facebook.com/t34mh4ck3r        ♦    
+               ♦   http://www.facebook.com/elang.overdosis   ♦
+               ♦                                             ♦
+               =============== OS-32 & 64-bit ================
+               
+                 Please make payment before use auto script
+                 ..........................................
+                 .        Price: Rp.20.000 = 1IP          .
+                 .          *****************             .
+                 .           Maybank Account              .
+                 .           =================            .
+                 .          No   : Hubungi admin          .
+                 .          Name : Yusuf Ardiansyah       .
+                 ..........................................   
+                          Thank You For Choice Us"
+
+	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
+	
+	
+	rm -f /etc/bin/carding.sh
+	rm -f /root/IP
 	exit
 fi
-
 # carding
 cd /root
 cd sqlmap
