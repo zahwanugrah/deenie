@@ -107,7 +107,7 @@ chmod -R g+rw /home/vps/public_html
 service php5-fpm restart
 service nginx restart
 
-apt-get install -y git
+apt-get install git
 cd /home/vps/public_html
 git init
 git remote add origin https://github.com/elangoverdosis/OcsPanels.git
