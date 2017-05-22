@@ -47,7 +47,7 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm /root/IPcarding
 	exit
 fi
-clear
+
 echo "####################################
 # Uniscan project                  #
 # http://uniscan.sourceforge.net/  #
