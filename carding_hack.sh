@@ -81,7 +81,7 @@ function situs() {
 	}
 function sqli_scanner() {
          cd sqli-scanner
-	 
+	 ./sqli-scanner.py
 	 }
 
 function tool_carding() {
