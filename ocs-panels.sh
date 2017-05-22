@@ -94,8 +94,8 @@ apt-get install -y nginx php5 php5-fpm php5-cli php5-mysql php5-mcrypt
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.old
-curl $source/debian7/nginx.conf > /etc/nginx/nginx.conf
-curl $source/debian7/vps.conf > /etc/nginx/conf.d/vps.conf
+curl $source/debian7/ocspanels/nginx.conf > /etc/nginx/nginx.conf
+curl $source/debian7/ocspanels/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php5/fpm/php.ini
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 
@@ -110,7 +110,7 @@ service nginx restart
 apt-get install -y git
 cd /home/vps/public_html
 git init
-git remote add origin https://github.com/elangoverdosis/OCSPanels.git
+git remote add origin https://github.com/elangoverdosis/OcsPanels.git
 git pull origin master
 
 #mysql -u root -p
