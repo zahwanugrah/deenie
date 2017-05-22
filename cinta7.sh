@@ -40,7 +40,6 @@ cd
 wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-	echo ""
         echo "     
 
                        
@@ -67,11 +66,9 @@ if ! grep -w -q $MYIP IP; then
                  .          Name : Yusuf Ardiansyah       .
                  ..........................................   
                           Thank You For Choice Us"
-	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor ( elang overdosis atau deeniedoank)"
-	else
-		echo "Hubungi: editor ( elang overdosis atau deeniedoank)"
-	fi
+
+	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
+	
 	rm /root/IP
 	rm -f /root/IP
 	exit
