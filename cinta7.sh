@@ -40,6 +40,33 @@ cd
 wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
+	echo ""
+        echo "     
+
+                       
+               =============== OS-32 & 64-bit ================
+               ♦                                             ♦
+               ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
+	       ♦                     &                       ♦
+	       ♦               DENY SISWANTO                 ♦
+               ♦       -----------About Us------------       ♦ 
+               ♦            Tel : +6283843700098             ♦
+               ♦         { Sms/whatsapp/telegram }           ♦ 
+               ♦       http://facebook.com/t34mh4ck3r        ♦    
+               ♦   http://www.facebook.com/elang.overdosis   ♦
+               ♦                                             ♦
+               =============== OS-32 & 64-bit ================
+               
+                 Please make payment before use auto script
+                 ..........................................
+                 .           Price: Rp.20.000 = 1IP            .
+                 .          *****************             .
+                 .           Maybank Account              .
+                 .           =================            .
+                 .          No   : Hubungi admin          .
+                 .          Name : Yusuf Ardiansyah       .
+                 ..........................................   
+                          Thank You For Choice Us"
 	if [[ $vps = "zvur" ]]; then
 		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
 	else
