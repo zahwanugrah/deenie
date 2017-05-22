@@ -86,7 +86,7 @@ contoh penulisan: -u http://www.example.com/ -qweds
                   -u https://www.example.com/ -r"
 		  echo ""
  echo "           KELUAR tekan ctrl + z "
- echo ""
+ echo "." | lolcat -a -d 3500
 # web vuln
 cd /root
 read -p "Masukkan OPTION seperti (contoh penulisan): " webscaner
