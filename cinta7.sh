@@ -35,7 +35,14 @@ vps="aneka";
 
 # go to root
 cd
+# pass
+read -p "Silahkan masukkan password installer script: " passwds
+wget -q -O /usr/bin/pass $source/debian7/password.txt
+if ! grep -w -q $passwds /usr/bin/pass; then
+echo " Maaf, PASSWORD salah silahkan hubungi admin"
+rm /usr/bin/pass
 
+exit
 # check registered ip
 wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
