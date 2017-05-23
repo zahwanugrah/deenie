@@ -135,6 +135,9 @@ chmod 777 /home/vps/public_html/config/config.ini
 chmod 777 /home/vps/public_html/config/route.ini
 
 clear
+echo ""
+echo "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_"
+echo ""
 echo "Buka Browser, akses alamat http://$MYIP:81/ dan lengkapi data2 seperti dibawah ini!"
 echo "Database:"
 echo "- Database Host: localhost"
