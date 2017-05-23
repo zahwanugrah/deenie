@@ -79,24 +79,6 @@ function situs() {
 	less /root/uniscan6.2/sites.txt
 
 	}
-function sqli_scanner() {
-clear
-echo "optional arguments:
-  -h,            --help       show this help message and exit
-  -f FILE,       --file FILE  Target file with URLs
-  -o OUTPUT,     --output     OUTPUT
-                              Output file to save vulnerable websites to
-  -p PROCESSCOUNT,--processcount PROCESSCOUNT
-                              Number of processes to generate
-  -v,            --verbose    Enable Verbose mode"
-  echo ""
-echo "contoh: [-h] [-f FILE] [-o OUTPUT] [-p PROCESSCOUNT] [-v]"
-        echo ""
-	read -p "Isikan perintah seperti di atas: " sqliscanner
-	cd sqli-scanner
-	 ./sqli-scanner.py $sqliscanner
-	 
-	 }
 
 function tool_carding() {
          if [[ ! -e /root/BinGoo/bingoo ]]; then
@@ -111,7 +93,7 @@ function tool_carding() {
 	echo "Gunakan dengan bijak !!!"
 	echo ""
 	PS3='Silahkan pilih (1-7):'
-options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Sqli Scanner" "Hacked" "Hacked Manual Sqlmap" "Full Tool Carding" "Quit")
+options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Sqlmap" "Manual Sqlmap" "Full Tool Carding" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -122,11 +104,6 @@ do
 	  "Hasil Pencarian Web Vuln")
 	  clear
 	  situs
-	  break
-	  ;;
-	  "Sqli Scanner")
-	  clear
-	  sqli_scanner
 	  break
 	  ;;
 	     "Hacked")
