@@ -1,4 +1,6 @@
-#!/bin/bashif [[ $USER != "root" ]]; then
+#!/bin/bash
+
+if [[ $USER != "root" ]]; then
 	echo "Maaf, Anda harus menjalankan ini sebagai root"
 	exit
 fi
