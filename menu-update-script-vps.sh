@@ -99,7 +99,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1-4 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install SQLmap" "Quit")
+options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Install SQLmap" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -110,6 +110,14 @@ do
         ;;
 	"Install DDOS deflate")
 	anti_ddos
+	break
+	;;
+	"Install OCS Panel"
+	wget -O /usr/bin/ocs-panels $source/debian7/ocs-panels
+	
+	chmod +x /usr/bin/ocs-panels
+	/usr/bin/ocs-panels
+	rm /usr/bin/ocs-panels
 	break
 	;;
 	
