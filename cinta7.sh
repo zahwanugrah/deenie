@@ -367,7 +367,7 @@ echo "0 */6 * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches" > /etc/cron.d/clearcacheram3swap
-echo "0 */3 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache0
+echo "0 */4 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache0
 
 cd
 chmod +x /usr/bin/benchmark
