@@ -363,11 +363,11 @@ wget -O /usr/bin/bannermenu $source/debian7/bannermenu
 wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
 cd
 
-echo "*/30 * * * * root service dropbear restart" > /etc/cron.d/dropbear
+echo "0 */1 * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
-echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
-echo "*/35 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
+echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches" > /etc/cron.d/clearcacheram3swap
+echo "0 */3 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache0
 
 cd
 chmod +x /usr/bin/benchmark
