@@ -167,7 +167,9 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	;;
 	"Bersihkan Cache Ram Manual")
 	clear
+	echo "---------------------------------------------"
 	echo "Sebelum..." | lolcat
+	echo "---------------------------------------------"
        free -h
 	echo 1 > /proc/sys/vm/drop_caches
 	sleep 1
@@ -175,11 +177,14 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	sleep 1
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 	sleep 1
-	echo ""
+	echo "---------------------------------------------"
 	echo "Sesudah..." | lolcat
+	echo "---------------------------------------------"
 	free -h
+	echo "---------------------------------------------"
 	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d boy | lolcat
-        break
+        echo ""
+	break
 	;;
 	"Daftar User Aktif")
 	clear
