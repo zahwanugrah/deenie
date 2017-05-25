@@ -106,12 +106,12 @@ do
 	  situs
 	  break
 	  ;;
-	     "Hacked")
+	     "Sqlmap")
 	     carding.sh
 	 
 	     break
 	    ;;
-	    "Hacked Manual Sqlmap")
+	    "Manual Sqlmap")
 	    cd sqlmap && ./sqlmap.py -h
 	    echo "Contoh: 
 	    
