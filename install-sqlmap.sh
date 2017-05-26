@@ -140,8 +140,7 @@ clear
 cd
 git clone https://github.com/elangoverdosis/ptf.git
 cd ptf
-./ptf
-use modules/exploitation/tplmap
+./ptf use modules/exploitation/tplmap
 install
 use modules/exploitation/fimap
 install
