@@ -140,7 +140,9 @@ clear
 cd
 git clone https://github.com/elangoverdosis/ptf.git
 cd ptf
-./ptf && use modules/exploitation/install_update_all,modules/post-exploitation/install_update_all,modules/vulnerability-analysis/install_update_all
+./ptf
+use modules/exploitation/install_update_all,modules/post-exploitation/install_update_all,modules/vulnerability-analysis/install_update_all
+install
 use
 
 cd
