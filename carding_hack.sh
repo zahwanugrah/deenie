@@ -104,13 +104,14 @@ setoolkit
 --------------------
 Program vulnerability-analysis
 --------------------
-droopescan
-medusa
-nikto
-nmap
-whatweb
-wpscan
-zmap
+cmsmap.py
+droopescan.py
+ike-scan.py
+install_update_all.py
+whatweb.py
+whatweb.py
+wpscan.py
+zmap.py
 --------------------
 Program Post-exploitation
 --------------------
