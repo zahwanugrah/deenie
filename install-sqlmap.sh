@@ -162,9 +162,16 @@ install
 use modules/vulnerability-analysis/whatweb
 install
 use modules/vulnerability-analysis/wpscan
-ibstall
+install
 use modules/vulnerability-analysis/zmap
 install
+use modules/post-exploitation/powersploit
+install
+use modules/post-exploitation/pth-toolkit
+install
+use modules/post-exploitation/unicorn
+install
+cd root
 
 
 cd
