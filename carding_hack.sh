@@ -92,42 +92,9 @@ function tool_carding() {
 	echo ""
 	echo "Gunakan dengan bijak !!!"
 	echo ""
-echo "Program lain, keluar quit dr menu ketik di console:
---------------------
-Program exploitation
---------------------
+	echo ""
 
-beef.py
-tplmap.py
-fimap.py
-commix.py
-metasploit.py
-setoolkit.py
-sqlmap.py
---------------------
-Program vulnerability-analysis
---------------------
-cmsmap.py
-droopescan.py
-ike-scan.py
-install_update_all.py
-whatweb.py
-whatweb.py
-wpscan.py
-zmap.py
---------------------
-Program Post-exploitation
---------------------
-gpp-decrypt.py
-poshc2.py
-unicorn.py
-powersploit.py
-pth-toolkit.py
-----------------------------------------------------------
-untuk keterangan: tambahkan -h di belakang program di atas"
-echo ""
-
-	PS3='Silahkan pilih (1-7):'
+	PS3='Silahkan pilih (1-6) lalu ENTER:'
 options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Sqlmap" "Manual Sqlmap" "Full Tool Carding" "Quit")
 select opt in "${options[@]}"
 do
