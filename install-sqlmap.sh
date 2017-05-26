@@ -171,7 +171,8 @@ use modules/post-exploitation/pth-toolkit
 install
 use modules/post-exploitation/unicorn
 install
-cd root
+use
+cd
 
 
 cd
