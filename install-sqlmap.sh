@@ -134,8 +134,7 @@ apt-get install lynx
 apt-get install curl
 git clone https://github.com/elangoverdosis/BinGoo.git
 clear
-git clone https://github.com/elangoverdosis/sqli-scanner.git
-chmod +x /root/sqli-scanner/sqli-scanner.py
+
 clear
 
 cd
