@@ -141,7 +141,7 @@ cd
 git clone https://github.com/elangoverdosis/ptf.git
 cd ptf
 /ptf
-use modules/exploitation/install_update_all
+use modules/exploitation/tplmap
 
 cd
 echo -n '.'
