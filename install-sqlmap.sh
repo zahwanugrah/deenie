@@ -137,13 +137,6 @@ clear
 git clone https://github.com/elangoverdosis/sqli-scanner.git
 chmod +x /root/sqli-scanner/sqli-scanner.py
 clear
-cd
-git clone https://github.com/elangoverdosis/ptf.git
-cd ptf
-./ptf -y
-use modules/exploitation/install_update_all,modules/post-exploitation/install_update_all,modules/vulnerability-analysis/install_update_all
-install
-use
 
 cd
 echo -n '.'
