@@ -104,7 +104,9 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 }
-	
+
+echo "0 */6 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1	
+
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1-4 lalu ENTER: '
