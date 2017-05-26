@@ -136,14 +136,14 @@ git clone https://github.com/elangoverdosis/BinGoo.git
 clear
 git clone https://github.com/elangoverdosis/sqli-scanner.git
 chmod +x /root/sqli-scanner/sqli-scanner.py
-# phpkit
-#rm ./pHpKit-SQLi.rb
-#rm ./phpkit.sh
-#wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/master/pHpKit-SQLi.rb
-#wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/master/phpkit.sh
 clear
-#chmod +x ./pHpKit-SQLi.rb
-#chmod +x ./phpkit.sh
+cd
+git clone https://github.com/elangoverdosis/ptf.git
+cd ptf
+/ptf
+use modules/exploitation/install_update_all
+
+cd
 echo -n '.'
 
 wget $source/debian7/uniscan6.2.tar.gz
