@@ -92,19 +92,33 @@ function tool_carding() {
 	echo ""
 	echo "Gunakan dengan bijak !!!"
 	echo ""
-echo "Menu lain langsung ketik di console:
-beef
-birp
-brutex
-clusterd
-commix
-davtest
-fido
+echo "Program lain, keluar quit dr menu ketik di console:
+--------------------
+Program exploitation
+--------------------
+tplmap
 fimap
-gateway-finder
-gladius
----------------------+------------------------------
-untuk keterangan tinggal tambahkan -h di belakang program"
+commix
+metasploit
+setoolkit
+--------------------
+Program vulnerability-analysis
+--------------------
+droopescan
+medusa
+nikto
+nmap
+whatweb
+wpscan
+zmap
+--------------------
+Program Post-exploitation
+--------------------
+powersploit
+pth-toolkit
+unicorn
+----------------------------------------------------------
+untuk keterangan: tambahkan -h di belakang program di atas"
 echo ""
 
 	PS3='Silahkan pilih (1-7):'
