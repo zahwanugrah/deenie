@@ -96,11 +96,14 @@ echo "Program lain, keluar quit dr menu ketik di console:
 --------------------
 Program exploitation
 --------------------
-tplmap
-fimap
-commix
-metasploit
-setoolkit
+
+beef.py
+tplmap.py
+fimap.py
+commix.py
+metasploit.py
+setoolkit.py
+sqlmap.py
 --------------------
 Program vulnerability-analysis
 --------------------
@@ -115,9 +118,11 @@ zmap.py
 --------------------
 Program Post-exploitation
 --------------------
-powersploit
-pth-toolkit
-unicorn
+gpp-decrypt.py
+poshc2.py
+unicorn.py
+powersploit.py
+pth-toolkit.py
 ----------------------------------------------------------
 untuk keterangan: tambahkan -h di belakang program di atas"
 echo ""
