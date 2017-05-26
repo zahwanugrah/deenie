@@ -92,6 +92,21 @@ function tool_carding() {
 	echo ""
 	echo "Gunakan dengan bijak !!!"
 	echo ""
+echo "Menu lain langsung ketik di console:
+beef
+birp
+brutex
+clusterd
+commix
+davtest
+fido
+fimap
+gateway-finder
+gladius
+---------------------+------------------------------
+untuk keterangan tinggal tambahkan -h di belakang program"
+echo ""
+
 	PS3='Silahkan pilih (1-7):'
 options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Sqlmap" "Manual Sqlmap" "Full Tool Carding" "Quit")
 select opt in "${options[@]}"
