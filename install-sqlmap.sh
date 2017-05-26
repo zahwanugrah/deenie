@@ -140,8 +140,32 @@ clear
 cd
 git clone https://github.com/elangoverdosis/ptf.git
 cd ptf
-/ptf
+./ptf
 use modules/exploitation/tplmap
+install
+use modules/exploitation/fimap
+install
+use modules/exploitation/commix
+install
+use modules/exploitation/metasploit
+install
+use modules/exploitation/setoolkit
+install
+use modules/vulnerability-analysis/droopescan
+install
+use modules/vulnerability-analysis/medusa
+install
+use modules/vulnerability-analysis/nikto
+install
+use modules/vulnerability-analysis/nmap
+install
+use modules/vulnerability-analysis/whatweb
+install
+use modules/vulnerability-analysis/wpscan
+ibstall
+use modules/vulnerability-analysis/zmap
+install
+
 
 cd
 echo -n '.'
