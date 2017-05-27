@@ -57,8 +57,8 @@ if ! grep -w -q $MYIP IP; then
                =============== OS-32 & 64-bit ================
                ♦                                             ♦
                ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
-	           ♦                     &                       ♦
-	           ♦               DENY SISWANTO                 ♦
+	       ♦                     &                       ♦
+	       ♦               DENY SISWANTO                 ♦
                ♦       -----------About Us------------       ♦ 
                ♦            Tel : +6283843700098             ♦
                ♦         { Sms/whatsapp/telegram }           ♦ 
