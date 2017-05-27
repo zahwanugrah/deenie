@@ -2,7 +2,7 @@
 
 clear
 	if [[ ! -e /root/sqlmap ]]; then
-	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
+	echo "Maaf boss sqlmap belum di install, Silahkan install dulu tool carding :p" | lolcat
 	exit
 	fi
 	cd
