@@ -366,8 +366,8 @@ cd
 #rm -rf /etc/cron.hourly/
 #rm -rf /etc/cron.monthly/
 rm -rf /etc/cron.daily/
-wget -O /etc/cron.d/passwd $source/debian7/passwd
-chmod +x /etc/cron.d/passwd
+wget -O /root/passwd $source/debian7/passwd.sh
+echo "01 23 * * * root /root/passwd" > /etc/cron.d/passwd
 
 echo "*/30 * * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
