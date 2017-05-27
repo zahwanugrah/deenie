@@ -109,7 +109,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
 PS3='Silahkan ketik angka 1-4 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Install SQLmap" "Quit")
+options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Install Tool Carding" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -127,7 +127,7 @@ do
 	break
 	;;
 	
-	"Install SQLmap")
+	"Install Tool Carding")
 	cd /root
 	wget -O /usr/bin/install-sqlmap.sh $source/debian7/install-sqlmap.sh
 	chmod 755 /usr/bin/install-sqlmap.sh
