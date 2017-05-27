@@ -117,14 +117,14 @@ do
 	"(ON) Auto Kill Multi Login")
 	clear 
 	read -p "Isikan Maximal User Login (1-2): " MULTILOGIN2
-	#echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimitreboot
+	echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimitreboot
 	echo "* * * * * root /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit1
 	   echo "* * * * * root sleep 10; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit2
            echo "* * * * * root sleep 20; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit3
            echo "* * * * * root sleep 30; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit4
            echo "* * * * * root sleep 40; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit5
            echo "* * * * * root sleep 50; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit6
-	   #echo "@reboot root /root/userlimitssh.sh" >> /etc/cron.d/userlimitreboot
+	   echo "@reboot root /root/userlimitssh.sh" >> /etc/cron.d/userlimitreboot
 	   echo "* * * * * root /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit1
 	   echo "* * * * * root sleep 11; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit2
            echo "* * * * * root sleep 21; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit3
