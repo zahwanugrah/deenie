@@ -69,26 +69,24 @@ if ! grep -w -q $MYIP IP; then
 	rm -f /root/IP
 	exit
 fi
-
-
-
 # install openvpn
 apt-get install openvpn -y
-wget -O /etc/openvpn/openvpn.tar $source/debian7/openvpn-debian.tar
+wget -O /etc/openvpn/openvpn.tar $source/debian7/openvpn.tar
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf $source/debian7/1194.conf
+wget -O /etc/openvpn/1194.conf $source/debian7/1194-debian.conf
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-wget -O /etc/iptables.conf $source/debian7/iptables.conf
-sed -i '$ i\iptables-restore < /etc/iptables.conf' /etc/rc.local
-
-myip2="s/ipserver/$MYIP/g";
-sed -i $myip2 /etc/iptables.conf;
-
-iptables-restore < /etc/iptables.conf
+wget -O /etc/iptables.up.rules $source/debian7/iptables.up.rules
+sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
+MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | grep -v '192.168'`;
+myip2="s/xxxxxxxxx/$MYIP/g";
+sed -i 's/port 1194/port 6500/g' /etc/openvpn/1194.conf
+sed -i $myip2 /etc/iptables.up.rules;
+iptables-restore < /etc/iptables.up.rules
 service openvpn restart
+
 
 # configure openvpn client config
 cd /etc/openvpn/
