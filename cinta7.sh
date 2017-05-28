@@ -505,7 +505,7 @@ cd ~/
 rm -f /root/cinta7.sh
 rm -f /root/pptp.sh
 rm -f /root/ovpn.sh
-rm -f /root/dropbear-2016.74.tar.bz2
-rm -rf /root/dropbear-2016.74
+rm -f /root/dropbear-2012.55.tar.bz2
+rm -rf /root/dropbear-2012.55
 rm -f /root/IP
 rm -f /root/IPcarding
