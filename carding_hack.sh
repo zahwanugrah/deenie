@@ -23,9 +23,6 @@ if [[ $ether = "" ]]; then
         ether=eth0
 fi
 
-#vps="zvur";
-vps="aneka";
-
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
