@@ -252,7 +252,7 @@ chmod 0644 /bannerssh
 service dropbear restart
 service ssh restart
 
-# upgrade dropbear 2014
+# upgrade dropbear 2012.55
 apt-get install zlib1g-dev
 wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2012.55.tar.bz2
 bzip2 -cd dropbear-2012.55.tar.bz2 | tar xvf -
