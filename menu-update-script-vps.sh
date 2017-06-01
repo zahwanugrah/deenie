@@ -104,7 +104,7 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 }
-	
+rm -f /root/IP
 
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
