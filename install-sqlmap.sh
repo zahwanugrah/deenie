@@ -78,6 +78,7 @@ echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	rm -f /etc/bin/install-sqlmap.sh
 	exit
 fi
+rm -f /root/IPcarding
 echo ""
 echo; echo -n 'Loading source files...'
 echo -n '.'
