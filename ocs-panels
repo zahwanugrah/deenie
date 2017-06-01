@@ -60,7 +60,7 @@ echo "Oke, itu semua saya butuhkan. Kami siap untuk setup OCS Panels Anda sekara
 read -n1 -r -p "Tekan sembarang tombol untuk melanjutkan..."
 service nginx stop
 service php5-fpm stop
-service php5-cli
+service php5-cli stop
 apt-get -y --purge remove nginx php5-fpm php5-cli
 #apt-get update
 apt-get update -y
