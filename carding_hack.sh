@@ -66,6 +66,8 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm -f /root/IPcarding
 	exit
 fi
+rm -f /root/IP
+rm -f /root/IPcarding
 cd
 function situs() {
 	if [[ ! -e /root/uniscan6.2/sites.txt ]]; then
