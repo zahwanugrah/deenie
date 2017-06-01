@@ -26,7 +26,7 @@ fi
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
 #fi
 
 # go to root
