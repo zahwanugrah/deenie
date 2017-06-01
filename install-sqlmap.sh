@@ -33,7 +33,7 @@ fi
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
 #fi
 
 # go to root
@@ -83,7 +83,7 @@ echo; echo -n 'Loading source files...'
 echo -n '.'
 cd
 apt-get install git
-git clone https://github.com/elangoverdosis/sqlmap.git
+git clone https://github.com/elangoverdosis2/sqlmap.git
 clear
 
 cd sqlmap
@@ -91,7 +91,7 @@ chmod 755 sqlmap.py
 
 echo -n '.'
 cd /root
-git clone https://github.com/elangoverdosis/fimap.git
+git clone https://github.com/elangoverdosis2/fimap.git
 cd fimap
 cd src
 chmod 755 autoawesome.py
@@ -132,7 +132,7 @@ echo -n '.'
 # bingoo
 apt-get install lynx
 apt-get install curl
-git clone https://github.com/elangoverdosis/BinGoo.git
+git clone https://github.com/elangoverdosis2/BinGoo.git
 clear
 
 clear
