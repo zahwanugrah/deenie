@@ -87,7 +87,7 @@ cd
 #wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
 #wget -O /usr/bin/bannermenu $source/debian7/bannermenu
 wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
-echo "0 */6 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
+#echo "0 */6 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 
 #chmod +x /usr/bin/benchmark
 #chmod +x /usr/bin/speedtest
