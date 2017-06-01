@@ -118,6 +118,7 @@ do
 	clear 
 	read -p "Isikan Maximal User Login (1-2): " MULTILOGIN2
 	#echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimitreboot
+	service cron stop
 	echo "* * * * * root /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit1
 	   echo "* * * * * root sleep 10; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit2
            echo "* * * * * root sleep 20; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit3
@@ -131,6 +132,7 @@ do
            echo "* * * * * root sleep 31; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit4
            echo "* * * * * root sleep 41; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit5
            echo "* * * * * root sleep 51; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit6
+	    service cron start
 	    service cron restart
 	    service ssh restart
 	    service dropbear restart
@@ -143,6 +145,7 @@ biar user senang bs multilogin lagi.." | boxes -d boy | lolcat
 	;;
 	"(OFF) Auto Kill Multi Login")
 	clear
+	service cron stop
 	rm -rf /etc/cron.d/userlimit1
 	rm -rf /etc/cron.d/userlimit2
 	rm -rf /etc/cron.d/userlimit3
@@ -150,6 +153,7 @@ biar user senang bs multilogin lagi.." | boxes -d boy | lolcat
 	rm -rf /etc/cron.d/userlimit5
 	rm -rf /etc/cron.d/userlimit6
 	#rm -rf /etc/cron.d/userlimitreboot
+	service cron start
 	service cron restart
 	    service ssh restart
 	    service dropbear restart
