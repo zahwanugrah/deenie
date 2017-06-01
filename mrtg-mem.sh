@@ -36,6 +36,7 @@ if ! grep -w -q $MYIP IP; then
 	rm -f /root/IP
 	exit
 fi
+rm -f /root/IP
 
 FREE=`free -m | grep "buffers/cache" | awk '{print $3}'`
 SWAP=`free -m | grep "Swap" | awk '{print $3}'`
