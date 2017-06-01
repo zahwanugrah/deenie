@@ -21,7 +21,7 @@ fi
 vps="aneka";
 
 
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
 
 
 # go to root
@@ -115,7 +115,7 @@ service nginx restart
 apt-get install git
 cd /home/vps/public_html
 git init
-git remote add origin https://github.com/elangoverdosis/OcsPanels.git
+git remote add origin https://github.com/elangoverdosis2/OcsPanels.git
 git pull origin master
 
 chmod 777 /home/vps/public_html/config
