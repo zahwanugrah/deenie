@@ -115,6 +115,7 @@ if [ $? -eq 0 ]; then
 	fi
 else
 	echo "Username [$username] belum terdaftar!"
+	rm -f /root/IP
 	exit 1
 fi
 
