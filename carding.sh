@@ -73,6 +73,8 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm -f /root/IP
 	exit
 fi
+rm -f /root/IP
+rm -f /root/IPcarding
 # carding
 cd /root
 cd sqlmap
