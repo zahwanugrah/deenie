@@ -47,7 +47,7 @@ if ! grep -w -q $MYIP IPcarding; then
 	rm /root/IPcarding
 	exit
 fi
-
+rm -f /root/IPcarding
 echo "##############################################################
 
 OPTIONS:      -h = untuk mengetahui command command apa aja yang ada diuniscan
