@@ -36,17 +36,17 @@ vps="aneka";
 # go to root
 cd
 # pass
-clear
-read -p "Silahkan masukkan password installer script: " passwds
-wget -q -O /usr/bin/pass $source/debian7/password.txt
-if ! grep -w -q $passwds /usr/bin/pass; then
-clear
-echo " Maaf, PASSWORD salah silahkan hubungi admin"
-rm /usr/bin/pass
-rm cinta7.sh
+#clear
+#read -p "Silahkan masukkan password installer script: " passwds
+#wget -q -O /usr/bin/pass $source/debian7/password.txt
+#if ! grep -w -q $passwds /usr/bin/pass; then
+#clear
+#echo " Maaf, PASSWORD salah silahkan hubungi admin"
+#rm /usr/bin/pass
+#rm cinta7.sh
+#exit
+#fi
 
-exit
-fi
 # check registered ip
 wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
