@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import socket, select, string, sys ,time,os
 if __name__ == "__main__":     
-    dh=os.stat('/root/vpnmon').st_size  
+    dh=os.stat('/usr/bin/vpnmon').st_size  
     #print dh
     if dh <> 3627:
         print '---ERROR---'
