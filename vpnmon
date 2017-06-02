@@ -51,8 +51,8 @@ if __name__ == "__main__":
                              exit()
                             
                     if data.find('OpenVPN CLIENT LIST')<>-1:
-                         print '\n'
-                         print '                OPENVPN User MONITOR' 
+                        # print '\n'
+                         print '=================[ Checking OpenVPN Login ]==================' 
                          print '-------------------------------------------------------------' 
                          print ' USER                IP                       TGL-JAM '
                          print '-------------------------------------------------------------'
@@ -76,6 +76,6 @@ if __name__ == "__main__":
                               if line.find('ROUTING TABLE')<>-1:
                                    startdata='no'
                          print '-------------------------------------------------------------'
-                         print '                         Scrypt  @elangoverdosis' 
+                         print '                                      Scrypt  @elangoverdosis' 
                          print '\n'
                          exit()
