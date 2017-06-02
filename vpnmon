@@ -54,7 +54,7 @@ if __name__ == "__main__":
                          print '\n'
                          print '                OPENVPN User MONITOR' 
                          print '-------------------------------------------------------------' 
-                         print ' Tanggal-Jam                 User             Dari IP '
+                         print ' USER                IP                       TGL-JAM '
                          print '-------------------------------------------------------------'
                          data=data.split('\n')                         
                          for line in data:
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                                            s=s+' '
                                        host=s
                                        dt=lines[4]
-                                       print dt+user+'   '+host
+                                       print user+host+'   '+dt
                               if line.find('Common Name')==0:
                                    startdata='yes'
                               if line.find('ROUTING TABLE')<>-1:
