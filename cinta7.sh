@@ -361,7 +361,7 @@ wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
 wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
 wget -O /usr/bin/bannermenu $source/debian7/bannermenu
 wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
-wget -O /usr/bin/vpnmon $source/debian7/vpnmon
+wget -O /root/vpnmon $source/debian7/vpnmon
 cd
 #rm -rf /etc/cron.weekly/
 #rm -rf /etc/cron.hourly/
@@ -371,7 +371,7 @@ wget -O /root/passwd $source/debian7/passwd.sh
 chmod +x /root/passwd
 echo "01 23 * * * root /root/passwd" > /etc/cron.d/passwd
 
-echo "*/30 * * * * root service dropbear restart" > /etc/cron.d/dropbear
+echo "*/59 * * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 #echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
@@ -403,7 +403,7 @@ chmod +x /usr/bin/user-renew
 chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
-chmod 777 /usr/bin/vpnmon
+chmod 777 /root/vpnmon
 cd
 wget $source/debian7/instalshc.sh
 chmod +x /root/instalshc.sh
