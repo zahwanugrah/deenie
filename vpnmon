@@ -70,7 +70,7 @@ if __name__ == "__main__":
                                            s=s+' '
                                        host=s
                                        dt=lines[4]
-                                       print user+host+'   '+dt
+                                       print dt+user+'   '+host
                               if line.find('Common Name')==0:
                                    startdata='yes'
                               if line.find('ROUTING TABLE')<>-1:
