@@ -361,7 +361,7 @@ wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
 wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
 wget -O /usr/bin/bannermenu $source/debian7/bannermenu
 wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
-wget -O /root/vpnmon $source/debian7/vpnmon
+wget -O /usr/bin/vpnmon $source/debian7/vpnmon
 cd
 #rm -rf /etc/cron.weekly/
 #rm -rf /etc/cron.hourly/
@@ -403,7 +403,7 @@ chmod +x /usr/bin/user-renew
 chmod +x /usr/bin/clearcache.sh
 chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
-chmod 777 /root/vpnmon
+chmod 777 /usr/bin/vpnmon
 cd
 wget $source/debian7/instalshc.sh
 chmod +x /root/instalshc.sh
