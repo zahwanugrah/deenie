@@ -43,9 +43,9 @@ do
                 echo "$waktu - $PID - $USER - $IP"| lolcat;
         fi
 done
-
+python vpnmon
 echo "-------------------------------------------------------------"| lolcat
-echo -e "==============[ User Monitor Dropbear & OpenSSH]=============" | lolcat
+#echo -e "==============[ User Monitor Dropbear & OpenSSH]=============" | lolcat
 PS3='Silahkan ketik nomor 1-3 lalu ENTER: '
 options=("Tendang User" "Kembali Ke MENU" "Keluar")
 select opt in "${options[@]}"
