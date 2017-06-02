@@ -367,9 +367,9 @@ cd
 #rm -rf /etc/cron.weekly/
 #rm -rf /etc/cron.hourly/
 #rm -rf /etc/cron.monthly/
-rm -rf /etc/cron.daily/
-wget -O /root/passwd $source/debian7/passwd.sh
-chmod +x /root/passwd
+#rm -rf /etc/cron.daily/
+#wget -O /root/passwd $source/debian7/passwd.sh
+#chmod +x /root/passwd
 echo "01 23 * * * root /root/passwd" > /etc/cron.d/passwd
 
 echo "*/59 * * * * root service dropbear restart" > /etc/cron.d/dropbear
