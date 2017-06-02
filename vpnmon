@@ -14,7 +14,7 @@ if __name__ == "__main__":
                 userkill=argv[2]
     host = '127.0.0.1'
     port = 7505
-    fo=open('/etc/openvpn/pass.txt','r+')
+    fo=open('/etc/openvpn/passvpn.txt','r+')
     for line in fo:
         if line:
             password = line
