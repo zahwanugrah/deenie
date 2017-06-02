@@ -3,9 +3,9 @@ import socket, select, string, sys ,time,os
 if __name__ == "__main__":     
     dh=os.stat('/usr/bin/vpnmon').st_size  
     #print dh
-    if dh <> 3627:
-        print '---ERROR---'
-        exit() 
+   # if dh <> 3627:
+       # print '---ERROR---'
+       # exit() 
     userkill=''
     from sys import argv
     if argv[1:]:
