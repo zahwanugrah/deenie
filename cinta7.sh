@@ -432,6 +432,8 @@ chmod +x ovpn.sh
 ./ovpn.sh
 rm ./ovpn.sh
 
+echo"deeniedoank" > /etc/openvpn/passvpn.txt
+
 usermod -s /bin/false mail
 echo "mail:deenie" | chpasswd
 useradd -s /bin/false -M deenie11
