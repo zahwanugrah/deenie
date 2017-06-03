@@ -30,7 +30,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="--no-check-certificate https://raw.githubusercontent.com/elangoverdosis2/cinta"
+	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
 #fi
 
 # go to root
@@ -354,7 +354,7 @@ wget -O /usr/bin/unbanned-user $source/debian7/unbanned-user.sh
 wget -O /usr/bin/user-expire-list $source/debian7/user-expire-list.sh
 wget -O /usr/bin/user-gen $source/debian7/user-gen.sh
 wget -O /usr/bin/userlimit.sh $source/debian7/userlimit.sh
-wget -O /usr/bin/userlimitssh.sh $source/debian7/userlimitssh.sh
+#wget -O /usr/bin/userlimitssh.sh $source/debian7/userlimitssh.sh
 wget -O /usr/bin/user-list $source/debian7/user-list.sh
 wget -O /usr/bin/user-login $source/debian7/user-login.sh
 wget -O /usr/bin/user-pass $source/debian7/user-pass.sh
@@ -396,7 +396,7 @@ chmod +x /usr/bin/unbanned-user
 chmod +x /usr/bin/user-expire-list
 chmod +x /usr/bin/user-gen
 chmod +x /usr/bin/userlimit.sh
-chmod +x /usr/bin/userlimitssh.sh
+#chmod +x /usr/bin/userlimitssh.sh
 chmod +x /usr/bin/user-list
 chmod +x /usr/bin/user-login
 chmod +x /usr/bin/user-pass
