@@ -94,7 +94,7 @@ mv /usr/bin/banned-user.x /usr/bin/banned-user
 mv /usr/bin/user-expire-list.x /usr/bin/user-expire-list
 mv /usr/bin/user-gen.x /usr/bin/user-gen
 mv /usr/bin/userlimit.sh.x /usr/bin/userlimit.sh
-mv /usr/bin/userlimitssh.sh.x /usr/bin/userlimitssh.sh
+#mv /usr/bin/userlimitssh.sh.x /usr/bin/userlimitssh.sh
 mv /usr/bin/user-list.x /usr/bin/user-list
 mv /usr/bin/user-login.x /usr/bin/user-login
 mv /usr/bin/user-pass.x /usr/bin/user-pass
@@ -116,7 +116,7 @@ chmod +x /usr/bin/banned-user
 chmod +x /usr/bin/user-expire-list
 chmod +x /usr/bin/user-gen
 chmod +x /usr/bin/userlimit.sh
-chmod +x /usr/bin/userlimitssh.sh
+#chmod +x /usr/bin/userlimitssh.sh
 chmod +x /usr/bin/user-list
 chmod +x /usr/bin/user-login
 chmod +x /usr/bin/user-pass
@@ -139,7 +139,7 @@ rm /usr/bin/banned-user.x.c
 rm /usr/bin/user-expire-list.x.c
 rm /usr/bin/user-gen.x.c
 rm /usr/bin/userlimit.sh.x.c
-rm /usr/bin/userlimitssh.sh.x.c
+#rm /usr/bin/userlimitssh.sh.x.c
 rm /usr/bin/user-list.x.c
 rm /usr/bin/user-login.x.c
 rm /usr/bin/user-pass.x.c
