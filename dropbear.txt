@@ -9,8 +9,6 @@ service dropbear restart
 
 # upgade dropbear
 apt-get install zlib1g-dev
-wget cp /root/hapususer.sh /usr/bin/hapusakun
-chmod +x /usr/bin/hapusakun
 wget http://kallongnet.com/debian32/config/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
 cd dropbear-2016.74
