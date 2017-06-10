@@ -1,4 +1,5 @@
 #!/bin/bash
+rm /root/IP
 clear
 
 # get the VPS IP
