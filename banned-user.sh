@@ -82,7 +82,7 @@ echo ""
 
 # begin of user-list
 echo "-----------------------------------"
-echo "USERNAME              EXP DATE     " | lolcat
+echo "USERNAME              EXP DATE     " 
 echo "-----------------------------------"
 
 while read expired
