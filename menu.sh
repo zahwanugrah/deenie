@@ -20,7 +20,7 @@ echo
 	#fi
 function card() {
 	if [[ ! -e /root/sqlmap ]]; then
-	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
+	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" 
 	exit
 	fi
 	cd
@@ -28,7 +28,7 @@ function card() {
 	}
 	clear
 
-	#echo "--------------- Selamat datang di Server - IP: $MYIP ---------------"
+	
 	echo ""
 	echo ""
 	echo ""
@@ -38,27 +38,15 @@ function card() {
 	echo ""
 	echo ""
 	echo ""
-	#cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
-	#cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
-	#freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
-	#tram=$( free -m | awk 'NR==2 {print $2}' )
-	#swap=$( free -m | awk 'NR==4 {print $2}' )
-	#up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-
-	#echo -e "\e[032;1mCPU model:\e[0m $cname"
-	#echo -e "\e[032;1mNumber of cores:\e[0m $cores"
-	#echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
-	#echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
-	#echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
-	#echo -e "\e[032;1mSystem uptime:\e[0m $up"
-lolcat -F 0.3 -S 0 /usr/bin/bannermenu
-echo "                    Server: $MYIP" | lolcat
-date +"                    %A, %d-%m-%Y" | lolcat
-date +"                            %H:%M:%S %Z" | lolcat
+	
+cat /usr/bin/bannermenu
+echo "                    Server: $MYIP" 
+date +"                    %A, %d-%m-%Y" 
+date +"                            %H:%M:%S %Z"
 echo ""
 echo ""
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring User Dan Tendang" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Ganti Port OpenSSH" "Ganti Port Dropbear" "Ganti Port Squid3" "Ganti Port OpenVPN" "Update Script VPS" "Carding" "Quit")
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring User Dan Tendang" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Ganti Port OpenSSH" "Ganti Port Dropbear" "Ganti Port Squid3" "Ganti Port OpenVPN" "Update Script VPS" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -136,11 +124,11 @@ do
 	    service cron restart
 	    service ssh restart
 	    service dropbear restart
-	    echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" | lolcat
+	    echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" 
 	    
 	echo "Dasar pelit!!! user ente marah2 jangan salahkan ane ya boss¡¡¡
 nanti jangan lupa di matikan boss
-biar user senang bs multilogin lagi.." | boxes -d boy | lolcat
+biar user senang bs multilogin lagi.."
 	break
 	;;
 	"(OFF) Auto Kill Multi Login")
@@ -158,21 +146,22 @@ biar user senang bs multilogin lagi.." | boxes -d boy | lolcat
 	    service ssh restart
 	    service dropbear restart
 	clear
+	echo ""
 	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS 
-User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
+User Sudah Bisa Multi Login Lagi!!!" 
 	break
 	;;
 	"Ganti Password VPS")
 	clear
 	read -p "Silahkan isi password baru untuk VPS anda: " pass	
         echo "root:$pass" | chpasswd
-	echo "Ciieeee.. Ciieeeeeee.. Abis Ganti Password VPS Nie Yeeee...!!!"| boxes -d boy | lolcat
+	echo "Ciieeee.. Ciieeeeeee.. Abis Ganti Password VPS Nie Yeeee...!!!"
 	break
 	;;
 	"Bersihkan Cache Ram Manual")
 	clear
 	echo "---------------------------------------------"
-	echo "Sebelum..." | lolcat
+	echo "Sebelum..." 
 	echo "---------------------------------------------"
        free -h
 	echo 1 > /proc/sys/vm/drop_caches
@@ -186,18 +175,18 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	echo "---------------------------------------------"
 	free -h
 	echo "---------------------------------------------"
-	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d boy | lolcat
+	echo "SUKSES..!!!Cache ram anda sudah di bersihkan."
         echo ""
 	break
 	;;
 	"Daftar User Aktif")
 	clear
-	user-active-list | boxes -d dog | lolcat
+	user-active-list 
 	break
 	;;
 	"Daftar User Kadaluarsa")
 	clear
-	user-expire-list | lolcat
+	user-expire-list
 	break
 	;;
 	"Disable User Kadaluarsa")
@@ -222,94 +211,96 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	;;
 	"Penggunaan Ram")
 	clear
-	ps-mem | boxes -d dog | lolcat
+	ps-mem 
 	break
 	;;
 	"Speedtest")
 	clear
-	echo "SPEEDTEST SERVER" | boxes -d peek | lolcat
+	echo ""
+	echo "SPEEDTEST SERVER" 
 	echo "-----------------------------------------"
-	speedtest --share | lolcat
+	speedtest --share
 	echo "-----------------------------------------"
 	break
 	;;
 	"Benchmark")
 	clear
-	echo "BENCHMARK" | boxes -d peek | lolcat
-	benchmark | lolcat
+	echo "BENCHMARK" 
+	benchmark 
 	break
 	;;
         "Edit Banner Login")
 	clear
-	echo "-----------------------------------------------------------" | lolcat
-	echo -e "1.) Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) " | lolcat
-	echo -e "2.) Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" | lolcat
-	echo "-----------------------------------------------------------" | lolcat
-	read -p "Tekan ENTER untuk melanjutkan........................ " | lolcat
+	echo "-----------------------------------------------------------" 
+	echo -e "1.) Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) " 
+	echo -e "2.) Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" 
+	echo "-----------------------------------------------------------" 
+	read -p "Tekan ENTER untuk melanjutkan........................ " 
 	nano /bannerssh
 	service dropbear restart && service ssh restart
 	break
 	;;
 	"Edit Banner Menu")
 	clear
-	echo "--------------------------------------------------------" | lolcat
-	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan ENTER)" | lolcat
-	echo -e "2. Membatalkan edit text (CTRL + X,lalu ketik N dan tekan ENTER)" | lolcat
-	echo "--------------------------------------------------------" | lolcat
-	read -p "Tekan ENTER untuk melanjutkan..................." | lolcat
+	echo "--------------------------------------------------------" 
+	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan ENTER)" 
+	echo -e "2. Membatalkan edit text (CTRL + X,lalu ketik N dan tekan ENTER)" 
+	echo "--------------------------------------------------------" 
+	read -p "Tekan ENTER untuk melanjutkan..................." 
 	nano /usr/bin/bannermenu
 	break
 	;;
 	"Lihat Lokasi User")
 	clear
 	user-login
-	echo "Contoh: 112.123.345.126 lalu Enter" | lolcat
+	echo "Contoh: 112.123.345.126 lalu Enter" 
         read -p "Ketik Salah Satu Alamat IP User: " userip
         curl ipinfo.io/$userip
-	echo "-----------------------------------" | lolcat
+	echo "-----------------------------------" 
         break
 	;;
 	"Restart Webmin")
 	clear
 	 service webmin restart
-	 echo "Webmin sudah di restart boss!!!" | boxes -d boy | lolcat
+	 echo "Webmin sudah di restart boss!!!" 
 	 break
 	 ;;
 	 "Restart Server VPS")
 	 clear
 	 reboot
-	 echo "sudah di restart tunggu sebentar ya boss!!!" | boxes -d boy | lolcat
+	 echo "sudah di restart tunggu sebentar ya boss!!!" 
 	 break
 	 ;;
 	 "Restart Dropbear")
 	 clear
 	 service dropbear restart
-	 echo "Dropbear sudah di restart boss!!!" | boxes -d boy | lolcat
+	 echo "Dropbear sudah di restart boss!!!" 
 	 break
 	 ;;
 	 "Restart OpenSSH")
 	 clear
 	 service ssh restart
-	 echo "OpenSSH sudah di restart boss!!!" | boxes -d boy | lolcat
+	 echo "OpenSSH sudah di restart boss!!!" 
 	 break
 	 ;;
 	 "Restart OpenVPN")
 	 clear
 	 service openvpn restart
-	 echo "openvpn sudah di restart boss!!!" | boxes -d boy | lolcat
+	 echo "openvpn sudah di restart boss!!!" 
 	 break
 	 ;;
 	 "Restart Squid3")
 	 clear
 	 service squid3 restart
-	 echo "Squid3 sudah di restart boss!!!" | boxes -d boy | lolcat
+	 echo "Squid3 sudah di restart boss!!!" 
 	 break
 	 ;;
 	 "Ganti Port OpenSSH")
 	 clear
-            echo "Silahkan ganti port Openssh anda lalu klik enter."| boxes -d peek | lolcat
-            echo "Port default dan Port 2 tidak boleh sama !!!"| lolcat
-	    echo "Port default: 22"| lolcat
+	 echo ""
+            echo "Silahkan ganti port Openssh anda lalu klik enter."
+            echo "Port default dan Port 2 tidak boleh sama !!!"
+	    echo "Port default: 22"
 	    read -p "Port 2: " -e -i 143 PORT
 	    service dropbear stop
 	    service ssh stop
@@ -318,13 +309,13 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
            service ssh start 
 	   service dropbear start
 	   service openvpn start
-            echo "Openssh Updated Port: $PORT"| lolcat
+            echo "Openssh Updated Port: $PORT"
 	 break
          ;;
 	 "Ganti Port Dropbear")
 	 clear
             echo "Silahkan ganti port Dropbear anda lalu klik ENTER!!!
-Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d peek | lolcat
+Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"
            echo "Port1: 443 (Default)"
 	    read -p "Port2: " -e -i 80 PORT
 	    service dropbear stop
@@ -335,31 +326,32 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
             service dropbear start
 	    service ssh start
 	    service openvpn start
-            echo "Dropbear Updated Port2 : $PORT"| lolcat
+            echo "Dropbear Updated Port2 : $PORT"
 	    #echo "Dropbear Updated : Port2 $PORT2" | lolcat
 	    #echo "Dropbear Updated : Port3 $PORT3" | lolcat
 	 break
 	 ;;
 	 "Ganti Port Squid3")
 	 clear
-	 echo "Silahkan ganti port Squid3 anda lalu klik enter"| boxes -d dog | lolcat
-	    echo "Isi dengan angka tidak boleh huruf !!!"| lolcat
+	 echo "Silahkan ganti port Squid3 anda lalu klik enter"
+	    echo "Isi dengan angka tidak boleh huruf !!!"
 	    echo -e "Port Squid3 1: 8080"
 	    read -p "Port Squid3 2: " -e -i 3128 PORT
             #sed -i 's/http_port [0-9]*\nhttp_port [0-9]*/http_port $PORT1\nhttp_port $PORT2/g' /etc/squid3/squid.conf
             sed -i "23s/http_port [0-9]*/http_port $PORT/" /etc/squid3/squid.conf
 	   service squid3 restart
-            echo "Squid3 Updated Port: $PORT"| lolcat
+            echo "Squid3 Updated Port: $PORT"
 			break
 			;;
 			"Speedtest")
 			clear
-			python speedtest.py --share | lolcat
+			python speedtest.py --share
 			break		
 	 ;;
 	 "Ganti Port OpenVPN")
 	 clear
-	           echo "Silahkan ganti port OpenVPN anda lalu klik enter?"| boxes -d peek | lolcat
+	 echo ""
+	           echo "Silahkan ganti port OpenVPN anda lalu klik enter?"
             read -p "Port: " -e -i 55 PORT
 	    service dropbear stop
 	    service ssh stop
@@ -376,11 +368,6 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	 "Update Script VPS")
 	 clear
 	 /usr/bin/menu-update-script-vps.sh
-	 break
-	 ;;
-	 "Carding")
-	 clear
-	 card
 	 break
 	 ;;
 	"Quit")
