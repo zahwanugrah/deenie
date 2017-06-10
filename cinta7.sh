@@ -414,10 +414,7 @@ echo "IPv6              : [off]" | tee -a log-install.txt
 echo "Auto Lock User Expire tiap jam 00:00" | tee -a log-install.txt
 echo "Auto Reboot tiap jam 00:00 dan jam 12:00" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-
 echo "ALL SUPPORTED BY TEAM HACKER" | tee -a log-install.txt
-	
-fi
 echo "Credit to all developers script, Yusuf ardiansyah" | tee -a log-install.txt
 echo "Thanks to Allah swt" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
