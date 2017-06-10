@@ -79,7 +79,7 @@ wget -O /usr/bin/ocs-panels $source/debian7/ocs-panels
 	}
 function anti_ddos() {
 if [ -d '/usr/local/ddos' ]; then
-echo; echo; echo "Gagal boss,Anti ddos sudah terinstal silahkan uninstall terlebih dulu."
+echo; echo; echo "Gagal boss,Anti ddos sudah terinstal silahkan hapus folder di /usr/local/ddos terlebih dulu."
 exit 0
 else
 mkdir /usr/local/ddos
@@ -107,9 +107,11 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 rm -f /root/IP
 
 clear
-echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
+echo "-----------------------------------------"
+echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS"
+echo "-----------------------------------------"
 PS3='Silahkan ketik angka 1-4 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Install Tool Carding" "Quit")
+options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -127,17 +129,6 @@ do
 	break
 	;;
 	
-	"Install Tool Carding")
-	cd /root
-	wget -O /usr/bin/install-sqlmap.sh $source/debian7/install-sqlmap.sh
-	chmod 755 /usr/bin/install-sqlmap.sh
-	clear
-	/usr/bin/install-sqlmap.sh
-	rm -f /root/IPcarding
-	rm /usr/bin/install-sqlmap.sh
-
-	break
-	;;
         "Quit")
         exit
         break
