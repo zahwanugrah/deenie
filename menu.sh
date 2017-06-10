@@ -39,7 +39,7 @@ date +"                            %H:%M:%S %Z"
 echo ""
 echo ""
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring User Dan Tendang" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Ganti Port OpenSSH" "Ganti Port Dropbear" "Ganti Port Squid3" "Ganti Port OpenVPN" "Update Script VPS" "Quit")
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Ganti Port OpenSSH" "Ganti Port Dropbear" "Ganti Port Squid3" "Ganti Port OpenVPN" "Update Script VPS" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -65,7 +65,7 @@ do
 	;;
 	"Semua User Dan Tanggal Kadaluarsa")
 	clear
-	user-list | lolcat
+	user-list 
 	break
 	;;
 	"Hapus User")
@@ -78,14 +78,9 @@ do
 	user-add-pptp
 	break
 	;;
-	"Monitoring User Dan Tendang")
+	"Monitoring User Login")
 	clear
 	dropmon
-	break
-	;;
-	"Monitor User Login")
-	clear
-	user-login
 	break
 	;;
 	"Manual Kill Multi Login")
@@ -164,7 +159,7 @@ User Sudah Bisa Multi Login Lagi!!!"
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 	sleep 1
 	echo "---------------------------------------------"
-	echo "Sesudah..." | lolcat
+	echo "Sesudah..." 
 	echo "---------------------------------------------"
 	free -h
 	echo "---------------------------------------------"
@@ -320,8 +315,8 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"
 	    service ssh start
 	    service openvpn start
             echo "Dropbear Updated Port2 : $PORT"
-	    #echo "Dropbear Updated : Port2 $PORT2" | lolcat
-	    #echo "Dropbear Updated : Port3 $PORT3" | lolcat
+	    #echo "Dropbear Updated : Port2 $PORT2"
+	    #echo "Dropbear Updated : Port3 $PORT3" 
 	 break
 	 ;;
 	 "Ganti Port Squid3")
