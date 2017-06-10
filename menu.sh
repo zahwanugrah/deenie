@@ -88,7 +88,7 @@ do
 	clear
         read -p "Isikan Maximal User Login (1-2): " MULTILOGIN
         userlimit.sh $MULTILOGIN
-	userlimitssh.sh $MULTILOGIN
+	#userlimitssh.sh $MULTILOGIN
 	break
 	;;
 	"(ON)AutoKill Multi Login")
