@@ -18,14 +18,7 @@ echo
 	#if [ "$MYIP" = "" ]; then
 		#MYIP=$(wget -qO- ipv4.icanhazip.com)
 	#fi
-function card() {
-	if [[ ! -e /root/sqlmap ]]; then
-	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" 
-	exit
-	fi
-	cd
-	carding_hack
-	}
+
 	clear
 
 	
@@ -232,8 +225,8 @@ User Sudah Bisa Multi Login Lagi!!!"
         "Edit Banner Login")
 	clear
 	echo "-----------------------------------------------------------" 
-	echo -e "1.) Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) " 
-	echo -e "2.) Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" 
+	echo -e "1.) Simpan text          = (CTRL + X, lalu ketik Y dan tekan Enter) " 
+	echo -e "2.) Membatalkan edit text= (CTRL + X, lalu ketik N dan tekan Enter)" 
 	echo "-----------------------------------------------------------" 
 	read -p "Tekan ENTER untuk melanjutkan........................ " 
 	nano /bannerssh
@@ -243,8 +236,8 @@ User Sudah Bisa Multi Login Lagi!!!"
 	"Edit Banner Menu")
 	clear
 	echo "--------------------------------------------------------" 
-	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan ENTER)" 
-	echo -e "2. Membatalkan edit text (CTRL + X,lalu ketik N dan tekan ENTER)" 
+	echo -e "1. Simpan text          = (CTRL + X, lalu ketik Y dan tekan ENTER)" 
+	echo -e "2. Membatalkan edit text= (CTRL + X,lalu ketik N dan tekan ENTER)" 
 	echo "--------------------------------------------------------" 
 	read -p "Tekan ENTER untuk melanjutkan..................." 
 	nano /usr/bin/bannermenu
