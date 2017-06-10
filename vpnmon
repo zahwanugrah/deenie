@@ -75,7 +75,7 @@ if __name__ == "__main__":
                                    startdata='yes'
                               if line.find('ROUTING TABLE')<>-1:
                                    startdata='no'
-                         print '-------------------------------------------------------------'
-                         print '                                      Scrypt  @elangoverdosis' 
+                       #  print '-------------------------------------------------------------'
+                       #  print '                                      Scrypt  @elangoverdosis' 
                          print '\n'
                          exit()
