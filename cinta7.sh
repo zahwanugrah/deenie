@@ -426,3 +426,4 @@ rm -f /root/pptp.sh
 rm -f /root/ovpn.sh
 rm -f /root/IP
 rm -f /root/IPcarding
+echo 3 > /proc/sys/vm/drop_caches
