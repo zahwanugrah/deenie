@@ -71,7 +71,7 @@ rm -f /root/IPcarding
 cd
 function situs() {
 	if [[ ! -e /root/uniscan6.2/sites.txt ]]; then
-	echo "Zonk, tidak ada situs tersimpan" | lolcat
+	echo "Zonk, tidak ada situs tersimpan"
 	exit
 	fi
 	cd
@@ -116,7 +116,7 @@ do
 	    cd sqlmap && ./sqlmap.py -h
 	    echo "Contoh: 
 	    
-	    Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" | lolcat
+	    Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" 
 	   cd sqlmap
 	   
 	
