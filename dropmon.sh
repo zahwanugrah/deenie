@@ -57,7 +57,7 @@ echo "-------------------------------------------------------------"
 last | grep ppp
 echo ""
 #echo -e "==============[ User Monitor Dropbear & OpenSSH]=============" 
-PS3='Silahkan ketik nomor 1-3 lalu ENTER: '
+PS3='Silahkan ketik nomor 1-2 lalu ENTER: '
 options=("Tendang User" "Keluar")
 select opt in "${options[@]}"
 do
