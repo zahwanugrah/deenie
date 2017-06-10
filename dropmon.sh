@@ -46,6 +46,16 @@ do
 done
 python /usr/bin/vpnmon
 echo "-------------------------------------------------------------"
+echo "=================[ Checking PPTP login ]====================="
+echo "-------------------------------------------------------------"
+last | grep ppp | grep still
+echo "";
+#Melihat Riwayat Login User
+echo "-------------------------------------------------------------"
+echo "===============[ Checking PPTP Riwayat Login ]===============" 
+echo "-------------------------------------------------------------"
+last | grep ppp
+echo ""
 #echo -e "==============[ User Monitor Dropbear & OpenSSH]=============" 
 PS3='Silahkan ketik nomor 1-3 lalu ENTER: '
 options=("Tendang User" "Kembali Ke MENU" "Keluar")
