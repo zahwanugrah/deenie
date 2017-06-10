@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#vps="zvur";
-vps="aneka";
-
 source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
 
 
