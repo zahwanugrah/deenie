@@ -12,11 +12,11 @@ tar xvfz shc-3.8.7.tgz
 
 echo "=========================================================="
 echo "-------------------Tanggal Kadaluarsa MENU----------------"
-echo "##########################################################"
-echo -e "Wajib di isi bos yusuf ardiansyah" | boxes -d peek | lolcat
+echo "=========================================================="
+echo -e "Wajib di isi bos yusuf ardiansyah" 
 
 echo -e "Contoh Format Tanggal: 30/07/2018 (2 digit/2 digit/4 digit)"
-echo -e "Angka semua ya boss!" | lolcat
+echo -e "Angka semua ya boss!" 
 echo ""
 read -p "Silahkan Ketikan Tanggal Kadaluarsa (menu): " deeniemenu
 cd shc-3.8.7
