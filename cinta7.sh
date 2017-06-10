@@ -8,12 +8,7 @@ fi
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
-#MYIP=$(wget -qO- ipv4.icanhazip.com);
 
-# get the VPS IP
-#ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
-
-#MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 MYIP=$(ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
@@ -24,28 +19,11 @@ if [[ $ether = "" ]]; then
         ether=eth0
 fi
 
-#vps="zvur";
-vps="aneka";
-
-#if [[ $vps = "zvur" ]]; then
-	#source="http://"
-#else
 	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
-#fi
+
 
 # go to root
 cd
-# pass
-#clear
-#read -p "Silahkan masukkan password installer script: " passwds
-#wget -q -O /usr/bin/pass $source/debian7/password.txt
-#if ! grep -w -q $passwds /usr/bin/pass; then
-#clear
-#echo " Maaf, PASSWORD salah silahkan hubungi admin"
-#rm /usr/bin/pass
-#rm cinta7.sh
-#exit
-#fi
 
 # check registered ip
 wget -q -O IP $source/debian7/IP.txt
@@ -89,11 +67,6 @@ fi
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
-#sed -i 's/net.ipv6.conf.all.disable_ipv6 = 0/net.ipv6.conf.all.disable_ipv6 = 1/g' /etc/sysctl.conf
-#sed -i 's/net.ipv6.conf.default.disable_ipv6 = 0/net.ipv6.conf.default.disable_ipv6 = 1/g' /etc/sysctl.conf
-#sed -i 's/net.ipv6.conf.lo.disable_ipv6 = 0/net.ipv6.conf.lo.disable_ipv6 = 1/g' /etc/sysctl.conf
-#sed -i 's/net.ipv6.conf.eth0.disable_ipv6 = 0/net.ipv6.conf.eth0.disable_ipv6 = 1/g' /etc/sysctl.conf
-#sysctl -p
 
 # install wget and curl
 apt-get update;apt-get -y install wget curl;
@@ -131,7 +104,7 @@ cd
 # install essential package
 #echo "mrtg mrtg/conf_mods boolean true" | debconf-set-selections
 #apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
-apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh unzip unrar rsyslog debsums rkhunter
+apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs less screen psmisc apt-file whois ptunnel ngrep mtr git zsh unzip unrar rsyslog debsums rkhunter
 apt-get -y install build-essential
 
 # disable exim
@@ -142,25 +115,11 @@ sysv-rc-conf exim4 off
 apt-file update
 
 # setting vnstat
-vnstat -u -i $ether
-service vnstat restart
-
-# install screenfetch
+#vnstat -u -i $ether
+#service vnstat restart
 cd
-#wget $source/debian7/screenfetch-dev
-#mv screenfetch-dev /usr/bin/screenfetch
-#chmod +x /usr/bin/screenfetch
-#echo "clear" >> .profile
-#echo "screenfetch" >> .profile
 
-#text gambar
-apt-get install boxes
-
-# text pelangi
-sudo apt-get install ruby
-sudo gem install lolcat
-
-# text warna
+# text wrn
 cd
 rm -rf /root/.bashrc
 wget -O /root/.bashrc $source/debian7/.bashrc
@@ -177,24 +136,16 @@ wget -O /etc/nginx/conf.d/vps.conf $source/debian7/vps.conf
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 service php5-fpm restart
 service nginx restart
-
-#PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-#useradd -M -s /bin/false deenie11
-#echo "deenie11:$PASS" | chpasswd
-#echo "deenie11" >> pass.txt
-#echo "$PASS" >> pass.txt
-#cp pass.txt /home/vps/public_html/
-#rm -f /root/pass.txt
 cd
 
 # install badvpn
-#wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw
-#if [[ $OS == "x86_64" ]]; then
-#wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw64
-#fi
-#sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
-#chmod +x /usr/bin/badvpn-udpgw
-#screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
+wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw
+if [[ $OS == "x86_64" ]]; then
+wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw64
+fi
+sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
+chmod +x /usr/bin/badvpn-udpgw
+screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 cd
 
 # install mrtg
@@ -218,25 +169,13 @@ cd
 cd
 
 # setting port ssh
-#sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
-#sed -i '/Port 22/a Port 80' /etc/ssh/sshd_config
-#sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
 sed -i '$ i\Banner bannerssh' /etc/ssh/sshd_config
 service ssh restart
 
 # install dropbear
-#apt-get -y update
-#apt-get -y install dropbear
-#sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-#sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
-#sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
-#echo "/bin/false" >> /etc/shells
-#echo "/usr/sbin/nologin" >> /etc/shells
-#service ssh restart
-#service dropbear restart
-
+apt-get -y update
 apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=80/g' /etc/default/dropbear
@@ -253,18 +192,7 @@ chmod 0644 /bannerssh
 service dropbear restart
 service ssh restart
 
-# upgrade dropbear 2012.55
-#apt-get install zlib1g-dev
-#wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2012.55.tar.bz2
-#bzip2 -cd dropbear-2012.55.tar.bz2 | tar xvf -
-#cd dropbear-2012.55
-#./configure
-#make && make install
-#mv /usr/sbin/dropbear /usr/sbin/dropbear1
-#ln /usr/local/sbin/dropbear /usr/sbin/dropbear
-#service dropbear restart
-
-# upgade dropbear
+# upgade dropbear 2016.74
 apt-get install zlib1g-dev
 wget $source/debian7/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
@@ -276,27 +204,18 @@ ln /usr/local/sbin/dropbear /usr/sbin/dropbear
 cd && rm -rf dropbear-2016.74 && rm -rf dropbear-2016.74.tar.bz2
 
 # install vnstat gui
-cd /home/vps/public_html/
-wget $source/debian7/vnstat_php_frontend-1.5.1.tar.gz
-tar xvfz vnstat_php_frontend-1.5.1.tar.gz
-rm vnstat_php_frontend-1.5.1.tar.gz
-mv vnstat_php_frontend-1.5.1 vnstat
-cd vnstat
-sed -i "s/eth0/$ether/g" config.php
-sed -i "s/\$iface_list = array('venet0', 'sixxs');/\$iface_list = array($ether);/g" config.php
-sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
-sed -i 's/Internal/Internet/g' config.php
-sed -i '/SixXS IPv6/d' config.php
+#cd /home/vps/public_html/
+#wget $source/debian7/vnstat_php_frontend-1.5.1.tar.gz
+#tar xvfz vnstat_php_frontend-1.5.1.tar.gz
+#rm vnstat_php_frontend-1.5.1.tar.gz
+#mv vnstat_php_frontend-1.5.1 vnstat
+#cd vnstat
+#sed -i "s/eth0/$ether/g" config.php
+#sed -i "s/\$iface_list = array('venet0', 'sixxs');/\$iface_list = array($ether);/g" config.php
+#sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
+#sed -i 's/Internal/Internet/g' config.php
+#sed -i '/SixXS IPv6/d' config.php
 cd
-
-#if [[ $ether = "eth0" ]]; then
-#	wget -O /etc/iptables.conf $source/Debian7/iptables.up.rules.eth0
-#else
-#	wget -O /etc/iptables.conf $source/Debian7/iptables.up.rules.venet0
-#fi
-
-#sed -i $MYIP2 /etc/iptables.conf;
-#iptables-restore < /etc/iptables.conf;
 
 # block all port except
 sed -i '$ i\iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT' /etc/rc.local
@@ -332,7 +251,6 @@ service squid3 restart
 
 # install webmin
 cd
-#wget -O webmin-current.deb http://prdownloads.sourceforge.net/webadmin/webmin_1.760_all.deb
 wget -O webmin-current.deb $source/debian7/webmin-current.deb
 dpkg -i --force-all webmin-current.deb
 apt-get -y -f install;
@@ -375,19 +293,12 @@ wget -O /usr/bin/bannermenu $source/debian7/bannermenu
 wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
 wget -O /usr/bin/vpnmon $source/debian7/vpnmon
 cd
-#rm -rf /etc/cron.weekly/
-#rm -rf /etc/cron.hourly/
-#rm -rf /etc/cron.monthly/
-#rm -rf /etc/cron.daily/
-#wget -O /root/passwd $source/debian7/passwd.sh
-#chmod +x /root/passwd
-echo "01 23 * * * root /root/passwd" > /etc/cron.d/passwd
-
-echo "*/59 * * * * root service dropbear restart" > /etc/cron.d/dropbear
+# cronjob
+echo "*/30 * * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 #echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
-echo "*/59 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
+echo "*/30 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 
 cd
 chmod +x /usr/bin/benchmark
@@ -492,7 +403,7 @@ echo "" | tee -a log-install.txt
 echo "Fitur lain :" | tee -a log-install.txt
 echo "------------" | tee -a log-install.txt
 echo "Webmin            : http://$MYIP:10000/" | tee -a log-install.txt
-echo "vnstat            : http://$MYIP:81/vnstat/ [Cek Bandwith]" | tee -a log-install.txt
+#echo "vnstat            : http://$MYIP:81/vnstat/ [Cek Bandwith]" | tee -a log-install.txt
 #echo "MRTG              : http://$MYIP:81/mrtg/" | tee -a log-install.txt
 echo "Timezone          : Asia/Jakarta " | tee -a log-install.txt
 echo "Fail2Ban          : [on]" | tee -a log-install.txt
@@ -504,16 +415,11 @@ echo "Auto Lock User Expire tiap jam 00:00" | tee -a log-install.txt
 echo "Auto Reboot tiap jam 00:00 dan jam 12:00" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 
-if [[ $vps = "zvur" ]]; then
-	echo "ALL SUPPORTED BY CLIENT VPS" | tee -a log-install.txt
-else
-	echo "ALL SUPPORTED BY TEAM HACKER" | tee -a log-install.txt
+echo "ALL SUPPORTED BY TEAM HACKER" | tee -a log-install.txt
 	
 fi
 echo "Credit to all developers script, Yusuf ardiansyah" | tee -a log-install.txt
 echo "Thanks to Allah swt" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "Log Instalasi --> /root/log-install.txt" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "SILAHKAN REBOOT VPS ANDA !" | tee -a log-install.txt
 echo "=======================================================" | tee -a log-install.txt
@@ -521,7 +427,5 @@ cd ~/
 rm -f /root/cinta7.sh
 rm -f /root/pptp.sh
 rm -f /root/ovpn.sh
-rm -f /root/dropbear-2012.55.tar.bz2
-rm -rf /root/dropbear-2012.55
 rm -f /root/IP
 rm -f /root/IPcarding
