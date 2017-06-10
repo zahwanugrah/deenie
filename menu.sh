@@ -78,7 +78,7 @@ do
 	user-add-pptp
 	break
 	;;
-	"Monitoring User Login")
+	"Monitor User Login")
 	clear
 	dropmon
 	break
