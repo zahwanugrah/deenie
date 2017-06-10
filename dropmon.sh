@@ -58,7 +58,7 @@ last | grep ppp
 echo ""
 #echo -e "==============[ User Monitor Dropbear & OpenSSH]=============" 
 PS3='Silahkan ketik nomor 1-3 lalu ENTER: '
-options=("Tendang User" "Kembali Ke MENU" "Keluar")
+options=("Tendang User" "Keluar")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -68,11 +68,6 @@ do
 	echo "Tunggu..." 
 	sleep 3
 	echo "Ok.. User Sudah Ditendang Boss.. !!" 
-	break
-	;;
-	"Kembali Ke MENU")
-	cd /root
-	menu
 	break
 	;;
 	"Keluar")
