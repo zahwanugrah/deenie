@@ -117,7 +117,8 @@ do
 	    echo "Contoh: 
 	    
 	    Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" 
-	   cd sqlmap
+	   cd 
+	   cd /root/sqlmap
 	   
 	
 	    break
