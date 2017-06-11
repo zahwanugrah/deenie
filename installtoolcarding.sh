@@ -69,7 +69,7 @@ echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 
 	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
 	rm -f /root/IPcarding
-	rm -f /etc/bin/install-sqlmap.sh
+	rm -f /etc/bin/installtoolcarding.sh
 	exit
 fi
 rm -f /root/IPcarding
@@ -118,10 +118,10 @@ tar xf uniscan6.2.tar.gz
 sed -i 's/$func->CheckUpdate();/#$func->CheckUpdate();/g' /root/uniscan6.2/uniscan.pl
 sudo apt-get install libmoose-perl
 cd
-wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
-chmod +x /usr/bin/carding_hack
+wget -O /usr/bin/hack $source/debian7/carding_hack.sh
+chmod +x /usr/bin/hack
 cd /root
-rm /usr/bin/install_sqlmap
+
 clear
 echo "OK, sukses boss!!!"
 
