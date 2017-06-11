@@ -36,12 +36,6 @@ fi
 	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
 #fi
 
-# go to root
-cd
-echo; echo -n 'Loading...'
-echo -n '.'
-sleep 1
-echo -n '.'
 cd
 # check registered ip
 wget -q -O IPcarding $source/debian7/IPcarding.txt
@@ -79,9 +73,6 @@ echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	exit
 fi
 rm -f /root/IPcarding
-echo ""
-echo; echo -n 'Loading source files...'
-echo -n '.'
 cd
 apt-get install git
 git clone https://github.com/elangoverdosis2/sqlmap.git
@@ -111,55 +102,25 @@ chmod 755 report.py
 chmod 755 singleScan.py
 chmod 755 ssh.py
 chmod 755 targetScanner.py
-
-clear
 cd /root
 wget -O /usr/bin/carding.sh $source/debian7/carding.sh
 chmod +x /usr/bin/carding.sh
-clear
 cd /root
-
-echo -n '.'
-
 wget -O /usr/bin/web-vuln.sh $source/debian7/web-vuln.sh
 chmod +x /usr/bin/web-vuln.sh
-clear
 cd /root
-echo -n '.'
-#wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
-#chmod +x /usr/bin/carding_hack
-#clear
-#cd
 # bingoo
 apt-get install lynx
 apt-get install curl
 git clone https://github.com/elangoverdosis2/BinGoo.git
-clear
-
-clear
-
-cd
-echo -n '.'
-
 wget $source/debian7/uniscan6.2.tar.gz
-clear
 tar xf uniscan6.2.tar.gz
 sed -i 's/$func->CheckUpdate();/#$func->CheckUpdate();/g' /root/uniscan6.2/uniscan.pl
-#wget -O /root/uniscan6.2/Languages/en.lang $source/debian7/en.lang
-#chmod 644 /root/uniscan6.2/Languages/en.lang
-rm uniscan6.2.tar.gz
-cd
-echo -n '.'
-clear
 sudo apt-get install libmoose-perl
-echo -n '.'
-clear
-cd /root
+cd
 wget -O /usr/bin/carding_hack $source/debian7/carding_hack.sh
 chmod +x /usr/bin/carding_hack
-clear
 cd /root
-echo -n '.'
 rm /usr/bin/install_sqlmap
 clear
 echo "OK, sukses boss!!!"
