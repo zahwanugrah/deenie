@@ -22,14 +22,9 @@ if [[ $ether = "" ]]; then
         ether=eth0
 fi
 
-#vps="zvur";
-vps="aneka";
 
-#if [[ $vps = "zvur" ]]; then
-	#source="http://"
-#else
 	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
-#fi
+
 
 # go to root
 cd
