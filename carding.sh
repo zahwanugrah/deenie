@@ -24,59 +24,13 @@ if [[ $ether = "" ]]; then
         ether=eth0
 fi
 
-#vps="zvur";
-vps="aneka";
-
-#if [[ $vps = "zvur" ]]; then
-	#source="http://"
-#else
 	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
 #fi
 
 # go to root
 cd
 
-# check registered ip
-wget -q -O IPcarding $source/debian7/IPcarding.txt
-if ! grep -w -q $MYIP IPcarding; then
-	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-        echo "     
-                       
-               =============== OS-32 & 64-bit ================
-               ♦                                             ♦
-               ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
-	       ♦                     &                       ♦
-	       ♦               DENY SISWANTO                 ♦
-               ♦       -----------About Us------------       ♦ 
-               ♦            Tel : +6283843700098             ♦
-               ♦         { Sms/whatsapp/telegram }           ♦ 
-               ♦       http://facebook.com/t34mh4ck3r        ♦    
-               ♦   http://www.facebook.com/elang.overdosis   ♦
-               ♦                                             ♦
-               =============== OS-32 & 64-bit ================
-               
-                 Please make payment before use auto script
-                 ..........................................
-                 .        Price: Rp.20.000 = 1IP          .
-                 .          *****************             .
-                 .           Maybank Account              .
-                 .           =================            .
-                 .          No   : Hubungi admin          .
-                 .          Name : Yusuf Ardiansyah       .
-                 ..........................................   
-                          Thank You For Choice Us"
-
-	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
-	
-	
-	rm -f /etc/bin/carding.sh
-	rm -f /root/IP
-	exit
-fi
-rm -f /root/IP
-rm -f /root/IPcarding
 # carding
-cd /root
 cd sqlmap
 clear
 read -p "Masukkan Link atau Web Yang Error (VULN): " cardinger
