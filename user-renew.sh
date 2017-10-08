@@ -14,14 +14,14 @@ if [ "$MYIP" = "" ]; then
 fi
 #MYIP=$(wget -qO- ipv4.icanhazip.com)
 
-echo "----------------- TAMBAH MASA AKTIF AKUN SSH --------------------"
+echo "----------------- TAMBAH MASA AKTIF AKUN SSH --------------------" | lolcat
 
-	echo "        DEVELOPED BY YUSUF ARDIANSYAH n ELANG OVERDOSIS           "
+	echo "        DEVELOPED BY YUSUF ARDIANSYAH n ELANG OVERDOSIS           " | lolcat
 echo ""
 
 # begin of user-list
 echo "-----------------------------------"
-echo "USERNAME              EXP DATE     " 
+echo "USERNAME              EXP DATE     "  | lolcat
 echo "-----------------------------------"
 
 while read expired
@@ -54,26 +54,26 @@ clear
 	
 echo -e ""
 echo -e "==========================================="
-echo -e "|         Informasi Akun Baru SSH         |" 
+echo -e "|         Informasi Akun Baru SSH         |"  | lolcat
 echo -e "===========[[-SERVER PREMIUM-]]============" 
-echo -e "     Host: $MYIP" 
-echo -e "     Username: $username" 
+echo -e "     Host: $MYIP"  | lolcat
+echo -e "     Username: $username"  | lolcat
 echo -e "                                           " 
-echo -e "     Port default dropbear: 443,80         " 
-echo -e "     Port default openSSH : 22,143         "
-echo -e "     Port default squid   : 8080,3128      " 
+echo -e "     Port default dropbear: 443,80         "  | lolcat
+echo -e "     Port default openSSH : 22,143         " | lolcat
+echo -e "     Port default squid   : 8080,3128      "  | lolcat
 echo -e "                                           " 
 #echo -e "                                           " 
 echo -e "-------------------------------------------" 
-echo -e "   Aktif Sampai: $(date -d "$AKTIF days" +"%d-%m-%Y")"
+echo -e "   Aktif Sampai: $(date -d "$AKTIF days" +"%d-%m-%Y")" | lolcat
 echo -e "===========================================" 
-echo -e "   DI LARANG:                              "
-echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        "
-echo -e "   CARDING-CRIMINAL CYBER.                 "
+echo -e "   DI LARANG:                              " | lolcat
+echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
+echo -e "   CARDING-CRIMINAL CYBER.                 " | lolcat
 echo -e "===========================================" 
-echo -e "   Script by Yusuf Ardiansyah              "
-echo -e "   Config OVPN:                            "
-echo -e "   http://$MYIP:81/client.ovpn        " 
+echo -e "   Script by Yusuf Ardiansyah              " | lolcat
+echo -e "   Config OVPN:                            " | lolcat
+echo -e "   http://$MYIP:81/client.ovpn        "  | lolcat
 echo -e "-------------------------------------------" 
 echo -e ""
 echo -e ""
