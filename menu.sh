@@ -34,9 +34,9 @@ echo
 	echo ""
 	
 cat /usr/bin/bannermenu  | lolcat
-echo "                    Server: $MYIP" 
-date +"                    %A, %d-%m-%Y" 
-date +"                            %H:%M:%S %Z"
+echo "                    Server: $MYIP"  | lolcat
+date +"                    %A, %d-%m-%Y"  | lolcat
+date +"                            %H:%M:%S %Z" | lolcat
 echo ""
 echo ""
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
