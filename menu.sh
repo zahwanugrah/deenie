@@ -214,8 +214,10 @@ User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	;;
 	"Benchmark")
 	clear
-	echo "BENCHMARK" 
-	benchmark  | lolcat
+	echo ""
+	echo ""
+	echo "     #----------BENCHMARK-----------#" | lolcat
+	benchmark
 	break
 	;;
         "Edit Banner Login")
