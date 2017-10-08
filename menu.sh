@@ -33,7 +33,7 @@ echo
 	echo ""
 	echo ""
 	
-cat /usr/bin/bannermenu
+cat /usr/bin/bannermenu | Lolcat
 echo "                    Server: $MYIP" 
 date +"                    %A, %d-%m-%Y" 
 date +"                            %H:%M:%S %Z"
@@ -113,11 +113,11 @@ do
 	    service cron restart
 	    service ssh restart
 	    service dropbear restart
-	    echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" 
+	    echo "------------+ AUTO KILL SUDAH DI AKTIFKAN BOSS +--------------" | Lolcat
 	    
 	echo "Dasar pelit!!! user ente marah2 jangan salahkan ane ya boss¡¡¡
 nanti jangan lupa di matikan boss
-biar user senang bs multilogin lagi.."
+biar user senang bs multilogin lagi.." | Lolcat
 	break
 	;;
 	"(OFF)AutoKill Multi Login")
@@ -137,20 +137,20 @@ biar user senang bs multilogin lagi.."
 	clear
 	echo ""
 	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS 
-User Sudah Bisa Multi Login Lagi!!!" 
+User Sudah Bisa Multi Login Lagi!!!" | Lolcat
 	break
 	;;
 	"Ganti Password VPS")
 	clear
 	read -p "Silahkan isi password baru untuk VPS anda: " pass	
         echo "root:$pass" | chpasswd
-	echo "Ciieeee.. Ciieeeeeee.. Abis Ganti Password VPS Nie Yeeee...!!!"
+	echo "Ciieeee.. Ciieeeeeee.. Abis Ganti Password VPS Nie Yeeee...!!!" | Lolcat
 	break
 	;;
 	"Bersihkan Cache Ram Manual")
 	clear
 	echo "---------------------------------------------"
-	echo "Sebelum..." 
+	echo "Sebelum..." | Lolcat
 	echo "---------------------------------------------"
        free -h
 	echo 1 > /proc/sys/vm/drop_caches
@@ -160,11 +160,11 @@ User Sudah Bisa Multi Login Lagi!!!"
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 	sleep 1
 	echo "---------------------------------------------"
-	echo "Sesudah..." 
+	echo "Sesudah..." | Lolcat
 	echo "---------------------------------------------"
 	free -h
 	echo "---------------------------------------------"
-	echo "SUKSES..!!!Cache ram anda sudah di bersihkan."
+	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | Lolcat
         echo ""
 	break
 	;;
@@ -200,7 +200,7 @@ User Sudah Bisa Multi Login Lagi!!!"
 	;;
 	"Penggunaan Ram")
 	clear
-	ps-mem 
+	ps-mem | Lolcat
 	break
 	;;
 	"Speedtest")
@@ -208,21 +208,21 @@ User Sudah Bisa Multi Login Lagi!!!"
 	echo ""
 	echo "SPEEDTEST SERVER" 
 	echo "-----------------------------------------"
-	speedtest --share
+	speedtest --share | Lolcat
 	echo "-----------------------------------------"
 	break
 	;;
 	"Benchmark")
 	clear
 	echo "BENCHMARK" 
-	benchmark 
+	benchmark | Lolcat
 	break
 	;;
         "Edit Banner Login")
 	clear
 	echo "-----------------------------------------------------------" 
-	echo -e "1.) Simpan text          = (CTRL + X, lalu ketik Y dan tekan Enter) " 
-	echo -e "2.) Membatalkan edit text= (CTRL + X, lalu ketik N dan tekan Enter)" 
+	echo -e "1.) Simpan text          = (CTRL + X, lalu ketik Y dan tekan Enter) " | Lolcat
+	echo -e "2.) Membatalkan edit text= (CTRL + X, lalu ketik N dan tekan Enter)" | Lolcat
 	echo "-----------------------------------------------------------" 
 	read -p "Tekan ENTER untuk melanjutkan........................ " 
 	nano /bannerssh
@@ -232,8 +232,8 @@ User Sudah Bisa Multi Login Lagi!!!"
 	"Edit Banner Menu")
 	clear
 	echo "--------------------------------------------------------" 
-	echo -e "1. Simpan text          = (CTRL + X, lalu ketik Y dan tekan ENTER)" 
-	echo -e "2. Membatalkan edit text= (CTRL + X,lalu ketik N dan tekan ENTER)" 
+	echo -e "1. Simpan text          = (CTRL + X, lalu ketik Y dan tekan ENTER)" | Lolcat
+	echo -e "2. Membatalkan edit text= (CTRL + X,lalu ketik N dan tekan ENTER)" | Lolcat
 	echo "--------------------------------------------------------" 
 	read -p "Tekan ENTER untuk melanjutkan..................." 
 	nano /usr/bin/bannermenu
@@ -242,7 +242,7 @@ User Sudah Bisa Multi Login Lagi!!!"
 	"Lihat Lokasi User")
 	clear
 	user-login
-	echo "Contoh: 112.123.345.126 lalu Enter" 
+	echo "Contoh: 112.123.345.126 lalu Enter" | Lolcat
         read -p "Ketik Salah Satu Alamat IP User: " userip
         curl ipinfo.io/$userip
 	echo "-----------------------------------" 
@@ -251,44 +251,45 @@ User Sudah Bisa Multi Login Lagi!!!"
 	"Restart Webmin")
 	clear
 	 service webmin restart
-	 echo "Webmin sudah di restart boss!!!" 
+	 echo "Webmin sudah di restart boss!!!" | Lolcat
 	 break
 	 ;;
 	 "Restart Server VPS")
 	 clear
 	 reboot
-	 echo "sudah di restart tunggu sebentar ya boss!!!" 
+	 echo "Sudah di restart tung gu sebentar ya boss!!!" | Lolcat
+	 echo "Sebentar lagi CONSOLE akan log out" | Lolcat
 	 break
 	 ;;
 	 "Restart Dropbear")
 	 clear
 	 service dropbear restart
-	 echo "Dropbear sudah di restart boss!!!" 
+	 echo "Dropbear sudah di restart boss!!!" | Lolcat
 	 break
 	 ;;
 	 "Restart OpenSSH")
 	 clear
 	 service ssh restart
-	 echo "OpenSSH sudah di restart boss!!!" 
-	 break
+	 echo "OpenSSH sudah di restart boss!!!" | Lolcat
+	 break| Lolcat
 	 ;;
 	 "Restart OpenVPN")
 	 clear
 	 service openvpn restart
-	 echo "openvpn sudah di restart boss!!!" 
+	 echo "openvpn sudah di restart boss!!!" | Lolcat
 	 break
 	 ;;
 	 "Restart Squid3")
 	 clear
 	 service squid3 restart
-	 echo "Squid3 sudah di restart boss!!!" 
+	 echo "Squid3 sudah di restart boss!!!" | Lolcat
 	 break
 	 ;;
 	 "Ganti Port OpenSSH")
 	 clear
 	 echo ""
-            echo "Silahkan ganti port Openssh anda lalu klik enter."
-            echo "Port default dan Port 2 tidak boleh sama !!!"
+            echo "Silahkan ganti port Openssh anda lalu klik enter."| Lolcat
+            echo "Port default dan Port 2 tidak boleh sama !!!" | Lolcat
 	    echo "Port default: 22"
 	    read -p "Port 2: " -e -i 143 PORT
 	    service dropbear stop
@@ -304,7 +305,7 @@ User Sudah Bisa Multi Login Lagi!!!"
 	 "Ganti Port Dropbear")
 	 clear
             echo "Silahkan ganti port Dropbear anda lalu klik ENTER!!!
-Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"
+Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!" | Lolcat
            echo "Port1: 443 (Default)"
 	    read -p "Port2: " -e -i 80 PORT
 	    service dropbear stop
@@ -322,8 +323,8 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"
 	 ;;
 	 "Ganti Port Squid3")
 	 clear
-	 echo "Silahkan ganti port Squid3 anda lalu klik enter"
-	    echo "Isi dengan angka tidak boleh huruf !!!"
+	 echo "Silahkan ganti port Squid3 anda lalu klik enter"| Lolcat
+	    echo "Isi dengan angka tidak boleh huruf !!!"| Lolcat
 	    echo -e "Port Squid3 1: 8080"
 	    read -p "Port Squid3 2: " -e -i 3128 PORT
             #sed -i 's/http_port [0-9]*\nhttp_port [0-9]*/http_port $PORT1\nhttp_port $PORT2/g' /etc/squid3/squid.conf
@@ -340,7 +341,7 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"
 	 "Ganti Port OpenVPN")
 	 clear
 	 echo ""
-	           echo "Silahkan ganti port OpenVPN anda lalu klik enter?"
+	           echo "Silahkan ganti port OpenVPN anda lalu klik enter?"| Lolcat
             read -p "Port: " -e -i 55 PORT
 	    service dropbear stop
 	    service ssh stop
