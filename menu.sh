@@ -81,7 +81,7 @@ do
 	;;
 	"Monitor User Login")
 	clear
-	dropmon | lolcat
+	dropmon
 	break
 	;;
 	"Manual Kill Multi Login")
@@ -151,7 +151,7 @@ User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	clear
 	echo "---------------------------------------------" | lolcat
 	echo "Sebelum..."  | lolcat
-	echo "---------------------------------------------"
+	echo "---------------------------------------------" | lolcat
        free -h
 	echo 1 > /proc/sys/vm/drop_caches
 	sleep 1
@@ -161,9 +161,9 @@ User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	sleep 1
 	echo "---------------------------------------------" | lolcat
 	echo "Sesudah..."  | lolcat
-	echo "---------------------------------------------"
+	echo "---------------------------------------------" | lolcat
 	free -h
-	echo "---------------------------------------------"
+	echo "---------------------------------------------" | lolcat
 	echo "SUKSES..!!!Cache ram anda sudah di bersihkan."  | lolcat
         echo ""
 	break
