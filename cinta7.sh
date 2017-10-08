@@ -123,9 +123,9 @@ cd
 cd
 rm -rf /root/.bashrc
 wget -O /root/.bashrc $source/debian7/.bashrc
-cd
-sudo apt-get install ruby
- sudo gem install lolcat
+# text pelangi
+sudo apt-get install ruby -y
+sudo gem install lolcat
  
 # install webserver
 cd
