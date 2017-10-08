@@ -33,7 +33,7 @@ echo
 	echo ""
 	echo ""
 	
-cat /usr/bin/bannermenu
+cat /usr/bin/bannermenu  | lolcat
 echo "                    Server: $MYIP" 
 date +"                    %A, %d-%m-%Y" 
 date +"                            %H:%M:%S %Z"
@@ -56,32 +56,32 @@ do
 	;;
 	"Perbarui User")
 	clear
-	user-renew
+	user-renew  | lolcat
 	break
 	;;
 	"Ganti Password User SSH/OVPN")
 	clear
-	user-pass
+	user-pass  | lolcat
 	break
 	;;
 	"Semua User Dan Tanggal Kadaluarsa")
 	clear
-	user-list 
+	user-list  | lolcat
 	break
 	;;
 	"Hapus User")
 	clear
-	user-del
+	user-del  | lolcat
 	break
 	;;
 	"Buat User PPTP VPN")
 	clear
-	user-add-pptp
+	user-add-pptp 
 	break
 	;;
 	"Monitor User Login")
 	clear
-	dropmon
+	dropmon  | lolcat
 	break
 	;;
 	"Manual Kill Multi Login")
