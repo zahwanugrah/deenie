@@ -46,17 +46,17 @@ do
     case $opt in
         "Buat User SSH/OVPN")
 	clear
-        user-add
+        user-add | lolcat
         break
             ;;
 	"Buat User SSH/OVPN Trial")
 	clear
-	user-gen
+	user-gen | lolcat
 	break
 	;;
 	"Perbarui User")
 	clear
-	user-renew  | lolcat
+	user-renew | lolcat
 	break
 	;;
 	"Ganti Password User SSH/OVPN")
