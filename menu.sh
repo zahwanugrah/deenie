@@ -46,32 +46,32 @@ do
     case $opt in
         "Buat User SSH/OVPN")
 	clear
-        user-add | lolcat
+        user-add
         break
             ;;
 	"Buat User SSH/OVPN Trial")
 	clear
-	user-gen | lolcat
+	user-gen
 	break
 	;;
 	"Perbarui User")
 	clear
-	user-renew | lolcat
+	user-renew
 	break
 	;;
 	"Ganti Password User SSH/OVPN")
 	clear
-	user-pass  | lolcat
+	user-pass
 	break
 	;;
 	"Semua User Dan Tanggal Kadaluarsa")
 	clear
-	user-list  | lolcat
+	user-list | lolcat
 	break
 	;;
 	"Hapus User")
 	clear
-	user-del  | lolcat
+	user-del
 	break
 	;;
 	"Buat User PPTP VPN")
@@ -81,7 +81,7 @@ do
 	;;
 	"Monitor User Login")
 	clear
-	dropmon  | lolcat
+	dropmon | lolcat
 	break
 	;;
 	"Manual Kill Multi Login")
@@ -149,7 +149,7 @@ User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	;;
 	"Bersihkan Cache Ram Manual")
 	clear
-	echo "---------------------------------------------"
+	echo "---------------------------------------------" | lolcat
 	echo "Sebelum..."  | lolcat
 	echo "---------------------------------------------"
        free -h
@@ -159,7 +159,7 @@ User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	sleep 1
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 	sleep 1
-	echo "---------------------------------------------"
+	echo "---------------------------------------------" | lolcat
 	echo "Sesudah..."  | lolcat
 	echo "---------------------------------------------"
 	free -h
@@ -170,12 +170,12 @@ User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	;;
 	"Daftar User Aktif")
 	clear
-	user-active-list 
+	user-active-list | lolcat
 	break
 	;;
 	"Daftar User Kadaluarsa")
 	clear
-	user-expire-list
+	user-expire-list | lolcat
 	break
 	;;
 	"Disable User Kadaluarsa")
