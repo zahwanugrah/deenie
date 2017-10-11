@@ -298,7 +298,7 @@ wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vp
 wget -O /usr/bin/vpnmon $source/debian7/vpnmon
 cd
 # cronjob
-echo "*/45 * * * * root service dropbear restart" > /etc/cron.d/dropbear
+# echo "*/45 * * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
