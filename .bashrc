@@ -118,25 +118,26 @@ red='\e[1;32m'
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 #echo -e $green' ☠>_________________'
 clear
-echo "" 
-echo "" 
-echo "" 
-echo "        ====================================================="
-echo "        [  ----[SELAMAT DATANG DI VPS YUSUF ARDIANSYAH]---  ]"
-echo "        ====================================================="
-echo "        #           WhatsApp     : 082139743432             #"
-echo "        #           Telegram     : CyberSS                  #"
-echo "        #           Facebook     : fb.com/t34mh4ck3r        #"
-echo "        #           Pin-BBM      : yu-suf                   #"
-echo "        #                                                   #"
-echo "        #   Silahkan ketik menu lalu ENTER untuk pilihan    #"
-echo "        #                                                   #"
-echo "        #        Copyright # yusuf-ardiansyah   2017        #"
-echo "        ====================================================="
-date +"                    %A, %d-%m-%Y" 
-date +"                            %H:%M:%S %Z" 
+echo "" | lolcat
+echo "" | lolcat
+echo "" | lolcat
+echo ""| lolcat
+echo "          --[SELAMAT DATANG DI VPS ZHANG-ZI]--"| boxes -d cat | lolcat
+echo "        ====================================================="| lolcat
+echo "        #           WhatsApp     : 082139743432             #"| lolcat
+echo "        #           Telegram     : CyberSS                  #"| lolcat
+echo "        #           Facebook     : fb.com/t34mh4ck3r        #"| lolcat
+echo "        #           Pin-BBM      : zhang-zi                 #"| lolcat
+echo "        #                                                   #"| lolcat
+echo "        #   Silahkan ketik menu lalu ENTER untuk pilihan    #"| lolcat
+echo "        #                                                   #"| lolcat
+echo "        #        Copyright # yusuf-ardiansyah               #"| lolcat
+echo "        #                  # deeni siswanto & zhangzi 2017. #"| lolcat
+echo "        ====================================================="| lolcat
+date +"                    %A, %d-%m-%Y" | lolcat
+date +"                            %H:%M:%S %Z" | lolcat
 echo ""
-echo -e "        Server - IP: $MYIP " 
+echo -e "        Server - IP: $MYIP " | lolcat
 echo ""
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
