@@ -121,7 +121,7 @@ clear
 echo "" | lolcat
 echo "" | lolcat
 echo "" | lolcat
-echo "          --[SELAMAT DATANG DI VPS ZHANG-ZI]--"| boxes -d dog | lolcat
+echo "          [ ------[SELAMAT DATANG DI VPS ZHANG-ZI]------  ]" | lolcat
 echo "        ====================================================="| lolcat
 echo "        #           WhatsApp     : 082139743432             #"| lolcat
 echo "        #           Telegram     : CyberSS                  #"| lolcat
