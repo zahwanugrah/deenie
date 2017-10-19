@@ -121,8 +121,7 @@ clear
 echo "" | lolcat
 echo "" | lolcat
 echo "" | lolcat
-echo ""| lolcat
-echo "          --[SELAMAT DATANG DI VPS ZHANG-ZI]--"| boxes -d cat | lolcat
+echo "          --[SELAMAT DATANG DI VPS ZHANG-ZI]--"| boxes -d dog | lolcat
 echo "        ====================================================="| lolcat
 echo "        #           WhatsApp     : 082139743432             #"| lolcat
 echo "        #           Telegram     : CyberSS                  #"| lolcat
@@ -146,12 +145,12 @@ echo ""
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 
-echo -e "        \e[032;1mCPU model:\e[0m $cname" 
-echo -e "        \e[032;1mNumber of cores:\e[0m $cores" 
-echo -e "        \e[032;1mCPU frequency:\e[0m $freq MHz"
-echo -e "        \e[032;1mTotal amount of ram:\e[0m $tram MB" 
-echo -e "        \e[032;1mTotal amount of swap:\e[0m $swap MB" 
-echo -e "        \e[032;1mSystem uptime:\e[0m $up" 
+echo -e "        \e[032;1mCPU model:\e[0m $cname" | lolcat
+echo -e "        \e[032;1mNumber of cores:\e[0m $cores" | lolcat
+echo -e "        \e[032;1mCPU frequency:\e[0m $freq MHz"| lolcat
+echo -e "        \e[032;1mTotal amount of ram:\e[0m $tram MB" | lolcat
+echo -e "        \e[032;1mTotal amount of swap:\e[0m $swap MB" | lolcat
+echo -e "        \e[032;1mSystem uptime:\e[0m $up" | lolcat
 echo ""
-echo "------------------------------------------------------------------------" 
+echo "------------------------------------------------------------------------" | lolcat
 echo ""
