@@ -121,9 +121,9 @@ clear
 echo "" | lolcat
 echo "" | lolcat
 echo "" | lolcat
-echo "           ------[SELAMAT DATANG DI VPS ZHANG-ZI]------"| boxes -d cat | lolcat
+echo "         ------[SELAMAT DATANG DI VPS ZHANG-ZI]------"| boxes -d cat | lolcat
 echo "        ====================================================="| lolcat
-echo "        #           WhatsApp     : 082139743432             #"| lolcat
+echo "        #           WhatsApp     : 60146309176              #"| lolcat
 echo "        #           Telegram     : CyberSS                  #"| lolcat
 echo "        #           Facebook     : fb.com/t34mh4ck3r        #"| lolcat
 echo "        #           Pin-BBM      : zhang-zi                 #"| lolcat
