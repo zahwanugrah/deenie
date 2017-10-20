@@ -138,7 +138,7 @@ do
 	"Install cgi-proxy bypass")
 cgi-proxy
 echo "Silahkan test cgi-proxy di browser"
-echo "Url cgi-proxy: http://urldomainkamu/~root/nph-proxy.cgi"
+echo "Url cgi-proxy: http://$MYIP:81/~root/nph-proxy.cgi"
 	break
 	;;
         "Quit")
