@@ -107,10 +107,9 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 function cgi-proxy() {
 cd
-
 wget -O /home/vps/public_html/nph-proxy.cgi https://raw.githubusercontent.com/elangoverdosis2/cinta/debian7/nph-proxy.cgi && chmod 755 /home/vps/public_html/nph-proxy.cgi
 
-
+}
 
 rm -f /root/IP
 
@@ -136,7 +135,12 @@ do
 	ocspanel
 	break
 	;;
-	
+	"Install cgi-proxy bypass")
+cgi-proxy
+echo "Silahkan test cgi-proxy di browser"
+echo "Url cgi-proxy: http://urldomainkamu/~root/nph-proxy.cgi"
+	break
+	;;
         "Quit")
         exit
         break
