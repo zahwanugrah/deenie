@@ -118,10 +118,18 @@ red='\e[1;32m'
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 #echo -e $green' ☠>_________________'
 clear
-echo "" | lolcat
-echo "" | lolcat
-echo "" | lolcat
-echo "         ------[SELAMAT DATANG DI VPS ZHANG-ZI]------"| boxes -d cat | lolcat
+	
+echo "                        __   _,--="=--,_   __"
+echo "                       /  \."    .-.    "./  \"
+echo "                      /  ,/  _   : :   _  \/` \"
+echo "                      \  `| /o\  :_:  /o\ |\__/"
+echo "                       `-'| :="~` _ `~"=: |"
+echo "                          \`     (_)     `/"
+echo "                   .-"-.   \      |      /   .-"-."
+echo "        .---------{     }--|  /,.-'-.,\  |--{     }---------."
+echo "         )        (_)_)_)  \_/`~-===-~`\_/  (_(_(_)        ("
+echo "        (---------[SELAMAT DATANG DI VPS @ZHANG_ZI]---------)"
+echo "         '-------------------------------------------------'"
 echo "        ====================================================="| lolcat
 echo "        #           WhatsApp     : 60146309176              #"| lolcat
 echo "        #           Telegram     : CyberSS                  #"| lolcat
