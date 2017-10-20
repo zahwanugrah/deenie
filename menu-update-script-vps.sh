@@ -107,6 +107,8 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 function cgi-proxy() {
 cd
+apt-get update
+apt-get install apache2
 wget -O /var/www/nph-proxy.cgi https://raw.githubusercontent.com/elangoverdosis2/cinta/debian7/nph-proxy.cgi && chmod 755 /var/www/nph-proxy.cgi
 apt-get install libnet-ssleay-perl
 apt-get install libcrypt-ssleay-perl
