@@ -107,7 +107,10 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 function cgi-proxy() {
 cd
+cd /home/vps/public_html/
 git clone https://github.com/mauricio/golang-proxies.git
+
+
 }
 
 rm -f /root/IP
