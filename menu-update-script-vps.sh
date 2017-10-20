@@ -118,7 +118,7 @@ echo "-----------------------------------------"
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS"
 echo "-----------------------------------------"
 PS3='Silahkan ketik angka 1-4 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" " Install cgi-proxy bypass" "Quit")
+options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Install cgi-proxy bypass" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
