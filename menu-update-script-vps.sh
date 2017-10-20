@@ -104,6 +104,14 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 }
+
+function cgi-proxy() {
+cd
+
+wget -O /home/vps/public_html/nph-proxy.cgi https://raw.githubusercontent.com/elangoverdosis2/cinta/debian7/nph-proxy.cgi && chmod 755 /home/vps/public_html/nph-proxy.cgi
+
+
+
 rm -f /root/IP
 
 clear
@@ -111,7 +119,7 @@ echo "-----------------------------------------"
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS"
 echo "-----------------------------------------"
 PS3='Silahkan ketik angka 1-4 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Quit")
+options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" " Install cgi-proxy bypass" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
