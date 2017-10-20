@@ -107,14 +107,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 function cgi-proxy() {
 cd
-apt-get update
-apt-get install apache2
-wget -O /var/www/nph-proxy.cgi https://raw.githubusercontent.com/elangoverdosis2/cinta/debian7/nph-proxy.cgi && chmod 755 /var/www/nph-proxy.cgi
-apt-get install libnet-ssleay-perl
-apt-get install libcrypt-ssleay-perl
-sed -i 's/#AddHandler cgi-script .cgi/AddHandler cgi-script .cgi/g' /etc/apache2/mods-enabled/mime.conf
-
-/etc/init.d/apache2 restart
+git clone https://github.com/mauricio/golang-proxies.git
 }
 
 rm -f /root/IP
