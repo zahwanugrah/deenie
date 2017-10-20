@@ -105,13 +105,11 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 }
 
-function cgi-proxy() {
-cd
-cd /home/vps/public_html/
-git clone https://github.com/mauricio/golang-proxies.git
-
-
-}
+#function cgi-proxy() {
+#cd
+#cd /home/vps/public_html/
+#git clone https://github.com/mauricio/golang-proxies.git
+#}
 
 rm -f /root/IP
 
@@ -120,7 +118,7 @@ echo "-----------------------------------------"
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS"
 echo "-----------------------------------------"
 PS3='Silahkan ketik angka 1-5 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Install cgi-proxy bypass" "Quit")
+options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -135,12 +133,6 @@ do
 	;;
 	"Install OCS Panel")
 	ocspanel
-	break
-	;;
-	"Install cgi-proxy bypass")
-cgi-proxy
-echo "Silahkan test cgi-proxy di browser"
-echo "Url cgi-proxy: http://$MYIP:81/~root/nph-proxy.cgi"
 	break
 	;;
         "Quit")
