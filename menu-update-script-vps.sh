@@ -110,6 +110,7 @@ cd
 wget -O /var/www/nph-proxy.cgi https://raw.githubusercontent.com/elangoverdosis2/cinta/debian7/nph-proxy.cgi && chmod 755 /var/www/nph-proxy.cgi
 apt-get install libnet-ssleay-perl
 apt-get install libcrypt-ssleay-perl
+sed -i 's/#AddHandler cgi-script .cgi/AddHandler cgi-script .cgi/g' /etc/apache2/mods-enabled/mime.conf
 }
 
 rm -f /root/IP
