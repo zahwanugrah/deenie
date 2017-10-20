@@ -107,7 +107,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 function cgi-proxy() {
 cd
-wget -O /home/vps/public_html/nph-proxy.cgi https://raw.githubusercontent.com/elangoverdosis2/cinta/debian7/nph-proxy.cgi && chmod 755 /home/vps/public_html/nph-proxy.cgi
+wget -O /var/www/nph-proxy.cgi https://raw.githubusercontent.com/elangoverdosis2/cinta/debian7/nph-proxy.cgi && chmod 755 /var/www/nph-proxy.cgi
 
 }
 
