@@ -123,6 +123,9 @@ cd
 cd
 rm -rf /root/.bashrc
 wget -O /root/.bashrc $source/debian7/.bashrc
+
+#text gambar
+apt-get install boxes
 # text pelangi
 sudo apt-get install ruby -y
 sudo gem install lolcat
@@ -338,7 +341,7 @@ chmod +x /root/instalshc.sh
 rm /root/instalshc.sh
 
 # swap ram
-dd if=/dev/zero of=/swapfile bs=1024 count=1024k
+dd if=/dev/zero of=/swapfile bs=1024 count=4096k
 # buat swap
 mkswap /swapfile
 # jalan swapfile
@@ -411,9 +414,9 @@ echo "Webmin            : http://$MYIP:10000/" | tee -a log-install.txt
 #echo "MRTG              : http://$MYIP:81/mrtg/" | tee -a log-install.txt
 echo "Timezone          : Asia/Jakarta " | tee -a log-install.txt
 echo "Fail2Ban          : [on]" | tee -a log-install.txt
-echo "DDoS Deflate.     : [on] Install di menu no 37" | tee -a log-install.txt
+echo "DDoS Deflate.     : [on] Install di menu no 36" | tee -a log-install.txt
 echo "Block Torrent     : [off]" | tee -a log-install.txt
-echo "Ocs panel reseller: Install di menu no 37"
+echo "Ocs panel reseller: Install di menu no 36"
 echo "IPv6              : [off]" | tee -a log-install.txt
 echo "Auto Lock User Expire tiap jam 00:00" | tee -a log-install.txt
 echo "Auto Reboot tiap jam 00:00 dan jam 12:00" | tee -a log-install.txt
