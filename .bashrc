@@ -126,13 +126,14 @@ echo "         -------[SELAMAT DATANG DI VPS ZHANG-ZI]-------"| boxes -d cat | l
 echo "        ====================================================="| lolcat
 echo "        #           WhatsApp     : 60146309176              #"| lolcat
 echo "        #           Telegram     : CyberSS                  #"| lolcat
-echo "        #           Facebook     : fb.com/t34mh4ck3r        #"| lolcat
+echo "        #           Facebook     : fb.com/team-hecker       #"| lolcat
 echo "        #           Pin-BBM      : zhang-zi                 #"| lolcat
 echo "        #                                                   #"| lolcat
 echo "        #   Silahkan ketik menu lalu ENTER untuk pilihan    #"| lolcat
 echo "        #                                                   #"| lolcat
 echo "        #        Copyright # yusuf-ardiansyah               #"| lolcat
-echo "        #                  # deeni siswanto & zhangzi 2017. #"| lolcat
+echo "        #                  # deenie siswanto                #"| lolcat
+echo "        #                  # zhangzi                        #"| lolcat 
 echo "        ====================================================="| lolcat
 date +"                    %A, %d-%m-%Y" | lolcat
 date +"                            %H:%M:%S %Z" | lolcat
