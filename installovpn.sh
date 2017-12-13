@@ -23,8 +23,8 @@ if [[ $ether = "" ]]; then
 fi
 
 
-	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
-
+	source="https://raw.githubusercontent.com/elangoverdosis88/deenie"
+ 
 
 # go to root
 cd
