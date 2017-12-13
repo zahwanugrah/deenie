@@ -416,6 +416,7 @@ echo "Timezone          : Asia/Jakarta " | tee -a log-install.txt
 echo "Fail2Ban          : [on]" | tee -a log-install.txt
 echo "DDoS Deflate.     : [on] Install di menu no 36" | tee -a log-install.txt
 echo "Block Torrent     : [off]" | tee -a log-install.txt
+echo "support ssl       : [Yes]"
 echo "Ocs panel reseller: Install di menu no 36"
 echo "IPv6              : [off]" | tee -a log-install.txt
 echo "Auto Lock User Expire tiap jam 00:00" | tee -a log-install.txt
