@@ -259,7 +259,7 @@ User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	 "Restart Server VPS")
 	 clear
 	 reboot
-	 echo "Sudah di restart tung gu sebentar ya boss!!!" | lolcat
+	 echo "Sudah di restart tunggu sebentar ya boss!!!" | lolcat
 	 echo "Sebentar lagi CONSOLE akan log out" | lolcat
 	 break
 	 ;;
