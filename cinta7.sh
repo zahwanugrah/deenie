@@ -384,7 +384,7 @@ rm ./ovpn.sh
 echo "deenie" > /etc/openvpn/pass.txt
 
 usermod -s /bin/false mail
-echo "mail:deeni
+echo "mail:deenie" | chpasswd
 useradd -s /bin/false -M deenie11
 echo "deenie11:deenie" | chpasswd
 # finishing
