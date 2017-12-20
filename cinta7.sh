@@ -398,48 +398,6 @@ cd
 rm -f /root/.bash_history && history -c
 echo "unset HISTFILE" >> /etc/profile
 
-# info
-clear
-echo "Autoscript Edited elang overdosis and yusuf ardiansyah:" | tee log-install.txt
-echo "=======================================================" | tee -a log-install.txt
-echo "Service :" | tee -a log-install.txt
-echo "---------" | tee -a log-install.txt
-echo "OpenSSH  : 22, 143" | tee -a log-install.txt
-echo "Dropbear : 443, 80" | tee -a log-install.txt
-echo "Squid3   : 8080 limit to IP $MYIP" | tee -a log-install.txt
-echo "OpenVPN  : client config : http://$MYIP:81/client.ovpn" | tee -a log-install.txt
-echo "badvpn   : badvpn-udpgw port 7300" | tee -a log-install.txt
-echo "PPTP VPN : TCP 1723" | tee -a log-install.txt
-echo "nginx    : 81" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "Tools :" | tee -a log-install.txt
-echo "-------" | tee -a log-install.txt
-echo "axel, bmon, htop, iftop, mtr, rkhunter, nethogs: nethogs $ether" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "Script :" | tee -a log-install.txt
-echo "--------" | tee -a log-install.txt
-echo "MENU"
-echo "" | tee -a log-install.txt
-echo "Fitur lain :" | tee -a log-install.txt
-echo "------------" | tee -a log-install.txt
-echo "Webmin            : http://$MYIP:10000/" | tee -a log-install.txt
-#echo "vnstat            : http://$MYIP:81/vnstat/ [Cek Bandwith]" | tee -a log-install.txt
-#echo "MRTG              : http://$MYIP:81/mrtg/" | tee -a log-install.txt
-echo "Timezone          : Asia/Jakarta " | tee -a log-install.txt
-echo "Fail2Ban          : [on]" | tee -a log-install.txt
-echo "DDoS Deflate.     : [on] Install di menu no 36" | tee -a log-install.txt
-echo "Block Torrent     : [off]" | tee -a log-install.txt
-echo "support ssl       : [Yes]"
-echo "Ocs panel reseller: Install di menu no 36"
-echo "IPv6              : [off]" | tee -a log-install.txt
-echo "Auto Lock User Expire tiap jam 00:00" | tee -a log-install.txt
-echo "Auto Reboot tiap jam 00:00 dan jam 12:00" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "ALL SUPPORTED BY TEAM HACKER" | tee -a log-install.txt
-echo "Credit to all developers script, Yusuf ardiansyah" | tee -a log-install.txt
-echo "Thanks to Allah swt" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "SILAHKAN REBOOT VPS ANDA !" | tee -a log-install.txt
 echo "=======================================================" | tee -a log-install.txt
 cd ~/
 rm -f /root/cinta7.sh
