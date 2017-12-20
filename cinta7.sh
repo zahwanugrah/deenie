@@ -356,6 +356,17 @@ chown root:root /swapfile
 chmod 0600 /swapfile
 cd
 
+#install stunnel ssl
+apt-get update
+apt-get upgrade
+apt-get install stunnel4 -y
+
+openssl genrsa -out key.pem 2048
+openssl req -new -x509 -key key.pem -out cert.pem -days 1095
+cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
+
+/etc/init.d/stunnel4 restart
+
 #ovpn
 wget -O ovpn.sh $source/debian7/installovpn.sh
 chmod +x ovpn.sh
@@ -365,7 +376,7 @@ rm ./ovpn.sh
 echo "deenie" > /etc/openvpn/pass.txt
 
 usermod -s /bin/false mail
-echo "mail:deenie" | chpasswd
+echo "mail:deeni
 useradd -s /bin/false -M deenie11
 echo "deenie11:deenie" | chpasswd
 # finishing
