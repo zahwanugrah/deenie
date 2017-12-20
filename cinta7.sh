@@ -14,6 +14,7 @@ if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
 MYIP2="s/xxxxxxxxx/$MYIP/g";
+MYIP3="s/xxxxxxxxx:443/$MYIP:443/g";
 ether=`ifconfig | cut -c 1-8 | sort | uniq -u | grep venet0 | grep -v venet0:`
 if [[ $ether = "" ]]; then
         ether=eth0
@@ -367,7 +368,7 @@ mv stunnel.pem /etc/stunnel/
 
 
 wget -O /etc/stunnel/stunnel.conf $source/debian7/stunnel.conf
-sed -i $MYIP2 /etc/stunnel/stunnel.conf
+sed -i $MYIP3 /etc/stunnel/stunnel.conf
 #openssl genrsa -out key.pem 2048
 #openssl req -new -x509 -key key.pem -out cert.pem -days 1095
 #cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
