@@ -402,7 +402,7 @@ service webmin restart
 
 cd
 rm -f /root/.bash_history && history -c
-echo "unset HISTFILE" >> /etc/profile
+# echo "unset HISTFILE" >> /etc/profile
 
 echo "=======================================================" | tee -a log-install.txt
 cd ~/
