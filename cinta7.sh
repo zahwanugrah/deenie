@@ -366,8 +366,8 @@ cat stunnel.crt stunnel.key > stunnel.pem
 mv stunnel.pem /etc/stunnel/
 
 
-#wget -O /etc/stunnel/stunnel.conf $source/debian7/stunnel.conf
-#sed -i 's/ipserver/$MYIP/g' /etc/stunnel/stunnel.conf
+wget -O /etc/stunnel/stunnel.conf $source/debian7/stunnel.conf
+sed -i 's/ipserver/$MYIP/g' /etc/stunnel/stunnel.conf
 #openssl genrsa -out key.pem 2048
 #openssl req -new -x509 -key key.pem -out cert.pem -days 1095
 #cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
