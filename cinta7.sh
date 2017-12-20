@@ -360,12 +360,12 @@ cd
 apt-get update
 apt-get upgrade
 apt-get install stunnel4 -y
-#sed -i '/ENABLED=0/a ENABLED=1' /etc/stunnel/stunnel.conf
+
 
 openssl genrsa -out key.pem 2048
 openssl req -new -x509 -key key.pem -out cert.pem -days 1095
 cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
-sed -i '/ENABLED=0/a ENABLED=1' /etc/default/stunnel4
+sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
 /etc/init.d/stunnel4 restart
 
