@@ -59,7 +59,8 @@ echo -e "===========[[-SERVER PREMIUM-]]============"
 echo -e "     Host: $MYIP"  | lolcat
 echo -e "     Username: $username"  | lolcat
 echo -e "                                           " 
-echo -e "     Port default dropbear: 443,80         "  | lolcat
+echo -e "     Port default dropbear: 442,80         "  | lolcat
+echo -e "     Port default SSL/TLS : 443            " | lolcat
 echo -e "     Port default openSSH : 22,143         " | lolcat
 echo -e "     Port default squid   : 8080,3128      "  | lolcat
 echo -e "                                           " 
