@@ -44,7 +44,7 @@ echo -e "     Host: $MYIP"  | lolcat
 echo -e "     Username: $uname"  | lolcat
 echo -e "     Password: $pass                       "  | lolcat
 echo -e "     Port default dropbear: 442,80         "  | lolcat
-echo -e "     Port default SSL/TSL : 443            " | lolcat
+echo -e "     Port default SSL/TLS : 443            " | lolcat
 echo -e "     Port default openSSH : 22,143         " | lolcat
 echo -e "     Port default squid   : 8080,3128      "  | lolcat
 echo -e "                                           "  | lolcat
