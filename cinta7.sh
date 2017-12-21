@@ -362,23 +362,11 @@ cd
 apt-get update
 apt-get upgrade
 apt-get install stunnel4
-#openssl genrsa 1024 > stunnel.key
-#openssl req -new -key stunnel.key -x509 -days 1000 -out stunnel.crt
-#cat stunnel.crt stunnel.key > stunnel.pem
-#mv stunnel.pem /etc/stunnel/
-
-
 wget -O /etc/stunnel/stunnel.conf $source/debian7/stunnel.conf
 openssl genrsa -out key.pem 2048
 openssl req -new -x509 -key key.pem -out cert.pem -days 1095
 cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
-
-#sed -i $MYIP3 /etc/stunnel/stunnel.conf
-#openssl genrsa -out key.pem 2048
-#openssl req -new -x509 -key key.pem -out cert.pem -days 1095
-#cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-
 /etc/init.d/stunnel4 restart
 
 #ovpn
