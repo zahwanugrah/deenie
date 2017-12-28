@@ -185,7 +185,7 @@ service ssh restart
 apt-get -y update
 apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=80/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=777/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 442"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
@@ -199,16 +199,16 @@ chmod 0644 /bannerssh
 service dropbear restart
 service ssh restart
 
-# upgade dropbear 2016.74
+# upgade dropbear 2017.75
 apt-get install zlib1g-dev
-wget $source/debian7/dropbear-2016.74.tar.bz2
-bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
-cd dropbear-2016.74
+wget $source/debian7/dropbear-2017.75.tar.bz2
+bzip2 -cd dropbear-2017.75.tar.bz2 | tar xvf -
+cd dropbear-2017.75
 ./configure
 make && make install
 mv /usr/sbin/dropbear /usr/sbin/dropbear.old
 ln /usr/local/sbin/dropbear /usr/sbin/dropbear
-cd && rm -rf dropbear-2016.74 && rm -rf dropbear-2016.74.tar.bz2
+cd && rm -rf dropbear-2017.75 && rm -rf dropbear-2017.75.tar.bz2
 
 # install vnstat gui
 #cd /home/vps/public_html/
@@ -259,7 +259,7 @@ service squid3 restart
 
 # install webmin
 cd
-wget -O webmin-current.deb http://prdownloads.sourceforge.net/webadmin/webmin_1.760_all.deb
+wget -O webmin-current.deb http://prdownloads.sourceforge.net/webadmin/webmin_1.870_all.deb
 #wget -O webmin-current.deb $source/debian7/webmin-current.deb
 dpkg -i --force-all webmin-current.deb
 apt-get -y -f install;
