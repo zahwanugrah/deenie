@@ -305,9 +305,10 @@ cd
 # cronjob
 echo "02 */12 * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
-echo "0 */02 * * * root /sbin/reboot" > /etc/cron.d/reboot
+echo "00 */00 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
 echo "*/3 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
+echo "01 */00 * * * root /etc/init.d/stunnel4 restart" > /etc/cron.d/ssl
 
 cd
 chmod +x /usr/bin/benchmark
@@ -370,10 +371,10 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #ovpn
-wget -O installovpn.sh $source/debian7/installovpn.sh
-chmod +x ./installovpn.sh
-./installovpn.sh
-rm ./installovpn.sh
+#wget -O installovpn.sh $source/debian7/installovpn.sh
+#chmod +x ./installovpn.sh
+#./installovpn.sh
+#rm ./installovpn.sh
 
 #echo "deenie" > /etc/openvpn/pass.txt
 
