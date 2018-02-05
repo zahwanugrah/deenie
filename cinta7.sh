@@ -305,10 +305,10 @@ cd
 # cronjob
 echo "1 */12 * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "0 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
-echo "0 */0 * * * root /sbin/reboot" > /etc/cron.d/reboot
-echo "0 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
+echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
+echo "0 1 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
 echo "*/3 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
-echo "1 */0 * * * root /etc/init.d/stunnel4 restart" > /etc/cron.d/ssl
+echo "1 0 * * * root /etc/init.d/stunnel4 restart" > /etc/cron.d/ssl
 
 cd
 chmod +x /usr/bin/benchmark
