@@ -185,7 +185,7 @@ service ssh restart
 apt-get -y update
 apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=777/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=80/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 442"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
@@ -305,7 +305,7 @@ cd
 # cronjob
 echo "02 */12 * * * root service dropbear restart" > /etc/cron.d/dropbear
 echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
-echo "00 */00 * * * root /sbin/reboot" > /etc/cron.d/reboot
+echo "00 */24 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
 echo "*/3 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 echo "01 */00 * * * root /etc/init.d/stunnel4 restart" > /etc/cron.d/ssl
@@ -380,8 +380,8 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
 usermod -s /bin/false mail
 echo "mail:deenie" | chpasswd
-useradd -s /bin/false -M deenie11
-echo "deenie11:deenie" | chpasswd
+#//useradd -s /bin/false -M deenie11
+#echo "deenie11:deenie" | chpasswd
 # finishing
 chown -R www-data:www-data /home/vps/public_html
 service cron restart
