@@ -13,8 +13,6 @@ if [ "$MYIP" = "" ]; then
 fi
 #MYIP=$(wget -qO- ipv4.icanhazip.com)
 
-disable-user-expire
-clear
 
 echo "----------------- DAFTAR AKUN SSH EXPIRE -------------------"
 
