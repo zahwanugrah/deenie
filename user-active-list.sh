@@ -16,8 +16,8 @@ fi
 
 
 
-disable-user-expire
-clear
+
+
 
 #echo "---------------------------- DAFTAR AKUN SSH ACTIVE ----------------------------"
 
