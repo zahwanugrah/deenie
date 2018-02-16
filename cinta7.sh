@@ -231,12 +231,17 @@ sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 21 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 22 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 53 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT' /etc/rc.local
+sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 80 -j ACCEPT' /etc/rc.local
+sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 2083 -j ACCEPT' /etc/rc.local
+sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 2083 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 81 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 109 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 110 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 143 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT' /etc/rc.local
+sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 443 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 442 -j ACCEPT' /etc/rc.local
+sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 442 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 1194 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 3128 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 8000 -j ACCEPT' /etc/rc.local
@@ -245,6 +250,8 @@ sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 10000 -j ACCEPT' /etc/rc.lo
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 55 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 2500 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 53 -j ACCEPT' /etc/rc.local
+sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 777 -j ACCEPT' /etc/rc.local
+sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 777 -j ACCEPT' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p udp -m udp -j DROP' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp -j DROP' /etc/rc.local
 
