@@ -375,8 +375,7 @@ wget -O installovpn.sh $source/debian7/installovpn.sh
 chmod +x ./installovpn.sh
 ./installovpn.sh
 rm ./installovpn.sh
-
-#echo "deenie" > /etc/openvpn/pass.txt
+echo "deenie" > /etc/openvpn/pass.txt
 
 usermod -s /bin/false mail
 echo "mail:deenie" | chpasswd
