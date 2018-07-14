@@ -2,11 +2,11 @@
 #shc
 # pendukung shc
 
-apt-get install yum
+sudo apt-get install yum
 yum -y install make automake autoconf gcc gcc++
-apt-get -y install build-essential
+sudo apt-get -y install build-essential
 aptitude -y install build-essential
-apt-get install tar
+sudo apt-get install tar
 wget https://raw.githubusercontent.com/elangoverdosis88/deenie/debian7/shc-3.8.7.tgz
 tar xvfz shc-3.8.7.tgz
 
