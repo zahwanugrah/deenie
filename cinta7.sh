@@ -378,11 +378,11 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #ovpn
-wget -O installovpn.sh $source/debian7/installovpn.sh
-chmod +x ./installovpn.sh
-./installovpn.sh
-rm ./installovpn.sh
-echo "deenie" > /etc/openvpn/pass.txt
+#wget -O installovpn.sh $source/debian7/installovpn.sh
+#chmod +x ./installovpn.sh
+#./installovpn.sh
+#rm ./installovpn.sh
+#echo "deenie" > /etc/openvpn/pass.txt
 
 usermod -s /bin/false mail
 echo "mail:deenie" | chpasswd
