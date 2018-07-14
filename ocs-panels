@@ -21,7 +21,7 @@ fi
 vps="aneka";
 
 
-	source="https://raw.githubusercontent.com/elangoverdosis88/deenie"
+	source="https://raw.githubusercontent.com/zahwanugrah/deenie"
 
 
 # go to root
@@ -61,12 +61,12 @@ read -n1 -r -p "Tekan sembarang tombol untuk melanjutkan..."
 service nginx stop
 service php5-fpm stop
 service php5-cli stop
-apt-get -y --purge remove nginx php5-fpm php5-cli
+sudo apt-get -y --purge remove nginx php5-fpm php5-cli
 #apt-get update
-apt-get update -y
-apt-get install build-essential expect -y
+sudo apt-get update -y
+sudo apt-get install build-essential expect -y
 
-apt-get install -y mysql-server
+sudo apt-get install -y mysql-server
 
 #mysql_secure_installation
 so1=$(expect -c "
@@ -93,7 +93,7 @@ echo "$so1"
 chown -R mysql:mysql /var/lib/mysql/
 chmod -R 755 /var/lib/mysql/
 
-apt-get install -y nginx php5 php5-fpm php5-cli php5-mysql php5-mcrypt
+sudo apt-get install -y nginx php5 php5-fpm php5-cli php5-mysql php5-mcrypt
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.old
@@ -112,7 +112,7 @@ chmod -R g+rw /home/vps/public_html
 service php5-fpm restart
 service nginx restart
 
-apt-get install git
+sudo apt-get install git
 cd /home/vps/public_html
 git init
 git remote add origin https://github.com/elangoverdosis2/OcsPanels.git
@@ -165,13 +165,13 @@ sed -i '$ i\deb http://download.webmin.com/download/repository sarge contrib' /e
 sed -i '$ i\deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib' /etc/apt/sources.list
 cd /root
 wget http://www.webmin.com/jcameron-key.asc
-apt-key add jcameron-key.asc
-apt-get update
+sudo apt-key add jcameron-key.asc
+sudo apt-get update
 apt-get install -y webmin
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 service webmin restart
 
-apt-get -y --force-yes -f install libxml-parser-perl
+sudo apt-get -y --force-yes -f install libxml-parser-perl
 
 rm -R /home/vps/public_html/installation
 
