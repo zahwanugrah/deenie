@@ -70,8 +70,8 @@ echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
 # install wget and curl
-apt-get update;apt-get -y install wget curl;
-apt-get install gem
+sudo apt-get update;apt-get -y install wget curl;
+sudo apt-get install gem
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
@@ -87,33 +87,33 @@ cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 cat jcameron-key.asc | apt-key add -;rm jcameron-key.asc
 
 # remove unused
-apt-get -y --purge remove samba*;
-apt-get -y --purge remove apache2*;
-apt-get -y --purge remove sendmail*;
-apt-get -y --purge remove bind9*;
-apt-get -y --purge remove dropbear*;
+sudo apt-get -y --purge remove samba*;
+sudo apt-get -y --purge remove apache2*;
+sudo apt-get -y --purge remove sendmail*;
+sudo apt-get -y --purge remove bind9*;
+sudo apt-get -y --purge remove dropbear*;
 #apt-get -y autoremove;
 
 # update
-apt-get update;apt-get -y upgrade;
+sudo apt-get update;apt-get -y upgrade;
 
 # install webserver
-apt-get -y install nginx php5-fpm php5-cli
-apt-get -y install zip tar
-apt-get install python
+sudo apt-get -y install nginx php5-fpm php5-cli
+sudo apt-get -y install zip tar
+sudo apt-get install python
 cd
 # install essential package
 #echo "mrtg mrtg/conf_mods boolean true" | debconf-set-selections
 #apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
-apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs less screen psmisc apt-file whois ptunnel ngrep mtr git zsh unzip unrar rsyslog debsums rkhunter
-apt-get -y install build-essential
+sudo apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs less screen psmisc apt-file whois ptunnel ngrep mtr git zsh unzip unrar rsyslog debsums rkhunter
+sudo apt-get -y install build-essential
 
 # disable exim
 service exim4 stop
 sysv-rc-conf exim4 off
 
 # update apt-file
-apt-file update
+sudo apt-file update
 
 # setting vnstat
 #vnstat -u -i $ether
@@ -126,7 +126,7 @@ rm -rf /root/.bashrc
 wget -O /root/.bashrc $source/debian7/.bashrc
 
 #text gambar
-apt-get install boxes
+sudo apt-get install boxes
 # text pelangi
 sudo apt-get install ruby -y
 sudo gem install lolcat
@@ -182,8 +182,8 @@ sed -i '$ i\Banner bannerssh' /etc/ssh/sshd_config
 service ssh restart
 
 # install dropbear
-apt-get -y update
-apt-get install dropbear
+sudo apt-get -y update
+sudo apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=80/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 442"/g' /etc/default/dropbear
@@ -200,7 +200,7 @@ service dropbear restart
 service ssh restart
 
 # upgade dropbear 2016.74
-apt-get install zlib1g-dev
+sudo apt-get install zlib1g-dev
 wget $source/debian7/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
 cd dropbear-2016.74
@@ -256,10 +256,10 @@ sed -i '$ i\iptables -A OUTPUT -p udp -m udp -j DROP' /etc/rc.local
 sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp -j DROP' /etc/rc.local
 
 # install fail2ban
-apt-get update;apt-get -y install fail2ban;service fail2ban restart
+sudo apt-get update;apt-get -y install fail2ban;service fail2ban restart
 
 # install squid3
-apt-get -y install squid3
+sudo apt-get -y install squid3
 wget -O /etc/squid3/squid.conf $source/debian7/squid3.conf
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
@@ -272,7 +272,7 @@ dpkg -i --force-all webmin-current.deb
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 rm -f /root/webmin-current.deb
-apt-get -y --force-yes -f install libxml-parser-perl
+sudo apt-get -y --force-yes -f install libxml-parser-perl
 service webmin restart
 service vnstat restart
 
@@ -367,9 +367,9 @@ chmod 0600 /swapfile
 cd
 
 #install stunnel ssl
-apt-get update
-apt-get upgrade
-apt-get install stunnel4
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install stunnel4
 wget -O /etc/stunnel/stunnel.conf $source/debian7/stunnel.conf
 openssl genrsa -out key.pem 2048
 openssl req -new -x509 -key key.pem -out cert.pem -days 1095
