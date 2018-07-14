@@ -315,7 +315,7 @@ User Sudah Bisa Multi Login Lagi!!!" | lolcat
 	 clear
             echo "Silahkan ganti port Dropbear anda lalu klik ENTER!!!
 Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!" | lolcat
-           echo "Port1: 443 (Default)"
+           echo "Port1: 442 (Default)"
 	    read -p "Port2: " -e -i 80 PORT
 	    service dropbear stop
 	    service ssh stop
