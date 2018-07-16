@@ -200,7 +200,7 @@ service dropbear restart
 service ssh restart
 
 # upgade dropbear 2016.74
-sudo apt-get install zlib1g-dev
+apt-get install zlib1g-dev
 wget $source/debian7/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
 cd dropbear-2016.74
@@ -345,11 +345,6 @@ chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
 chmod 777 /usr/bin/vpnmon
 cd
-wget $source/debian7/instalshc.sh
-chmod +x /root/instalshc.sh
-/root/instalshc.sh
-rm /root/instalshc.sh
-
 # swap ram
 dd if=/dev/zero of=/swapfile bs=1024 count=4096k
 # buat swap
